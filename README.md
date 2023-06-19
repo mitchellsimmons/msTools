@@ -1,6 +1,12 @@
 # msTools
 
-Repository containing tools, primarily for interfacing with Autodesk Maya and related APIs.
+A set of libraries and tools, primarily for interfacing with Autodesk Maya and related APIs.
+
+**_NOTE:_**  This repository is no longer actively maintained.
+
+## _Documentation_
+
+Complete documentation found [here](https://mitchellsimmons.github.io/msTools/).
 
 ## _Distribution_
 
@@ -49,7 +55,3 @@ Open the `msTools.mod` file and change the relative path of the module directory
 Now looks like this line:
 
 `+ msTools 1.0 <absolute path to>/msTools/module/`
-
-## _Documentation_
-
-Find documentation ***here***
