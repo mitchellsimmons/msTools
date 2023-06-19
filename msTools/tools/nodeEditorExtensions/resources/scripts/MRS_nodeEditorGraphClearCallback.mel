@@ -1,0 +1,29 @@
+global proc NodeEditorGraphClearGraph()
+//
+// Description:
+//		This is an override of the default run time command used to clear the graph
+//		Query using `runTimeCommand -q -command NodeEditorGraphClearGraph`
+//		The override clears `Layout Tool` items before clearing the graph to ensure they won't be reloaded
+{
+    string $importScript = "\n\
+from msTools.coreUI.maya import inspect_utils\n\
+from msTools.coreUI.maya import nodeEditor_utils\n\
+from msTools.tools.nodeEditorExtensions.controllers.layoutTool_controller import LayoutToolController";
+
+	string $layoutToolScript = "\n\
+nodeEditor = inspect_utils.getWidget(\"^1s\")\n\
+nodeEditorPanel = nodeEditor_utils.getNodeEditorPanelFromDescendant(nodeEditor)\n\
+iconBar = nodeEditor_utils.getNodeEditorIconBarFromPanel(nodeEditorPanel)\n\
+layoutToolController = iconBar.findChild(LayoutToolController)\n\
+if layoutToolController:\n\t\
+layoutToolController.clearVisibleItems(clearMetadata=True)";
+
+    string $ned = `getCurrentNodeEditor`;
+
+    if ("" != $ned) {
+        python($importScript);
+        python(`format -stringArg $ned $layoutToolScript`);
+
+        nodeEditor -e -rootNode "" $ned;
+    }
+}

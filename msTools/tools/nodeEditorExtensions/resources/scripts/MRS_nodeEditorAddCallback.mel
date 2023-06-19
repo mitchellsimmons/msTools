@@ -1,0 +1,19 @@
+global proc MRS_NodeEditor_AddCallback(string $panelName)
+//
+// Description:
+//		This is an override of the `nodeEditorPanel` type `scriptedPanelType` `addCallback`
+//      In most cases we will be overriding the default "nodeEdAddCallback" proc
+// 		Found at <drive>:\Program Files\Autodesk\Maya<version>\scripts\others\nodeEditorPanel.mel
+//		The override calls the overriden proc then installs extensions into the Node Editor window which was just created
+{
+    global string $MRS_NodeEditor_AddCallback_Overridden;
+    eval($MRS_NodeEditor_AddCallback_Overridden + " " + $panelName);
+
+    string $installScript = "\n\
+from msTools.tools.nodeEditorExtensions import setup\n\
+import functools\n\
+cmds.evalDeferred(functools.partial(setup.install, \"^1s\"), lp = True)";
+
+    if (`optionVar -q "MRS_NEExtensions_OptionVar_NEAC"`)
+        python(`format -stringArg $panelName $installScript`);
+}

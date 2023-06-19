@@ -1,0 +1,11 @@
+QLineEdit {
+    font-size: 13px;
+}
+
+QPushButton {
+    font-size: 13px;
+}
+
+QTreeView { 
+    font-size: 13px;
+}

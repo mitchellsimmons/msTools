@@ -1,0 +1,7 @@
+# Sphinx inventory version 2
+# Project: Python
+# Version: 2.7
+# The remainder of this file is compressed using zlib.
+tuple py:class 1 library/functions.html#$ -
+list py:class 1 library/functions.html#func-$ -
+basestring py:class 1 library/functions.html#$ -

@@ -1,0 +1,13 @@
+global proc MRS_NodeEditor_RemoveCallback(string $panelName)
+//
+// Description:
+//		This is an override of the `nodeEditorPanel` type `scriptedPanelType` `removeCallback`
+//      In most cases we will be overriding the default "nodeEdRemoveCallback" proc
+// 		Found at <drive>:\Program Files\Autodesk\Maya<version>\scripts\others\nodeEditorPanel.mel
+//		The override deselects the "MayaNodeEditorSavedTabsInfo" node if it exists, then calls the overridden proc
+{
+    if(`objExists MayaNodeEditorSavedTabsInfo`){select -d MayaNodeEditorSavedTabsInfo;}
+
+    global string $MRS_NodeEditor_RemoveCallback_Overridden;
+    eval($MRS_NodeEditor_RemoveCallback_Overridden + " " + $panelName);
+}
