@@ -1,6 +1,6 @@
 # msTools
 
-A set of libraries and tools, primarily for interfacing with Autodesk Maya and related APIs.
+A set of libraries and tools for interfacing with Autodesk Maya and related APIs.
 
 **_NOTE:_**  This repository is no longer actively maintained.
 
