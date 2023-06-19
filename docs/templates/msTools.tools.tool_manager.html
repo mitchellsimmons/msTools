@@ -1,0 +1,642 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tool_manager &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="uuid_manager" href="msTools.tools.uuid_manager.html" />
+    <link rel="prev" title="callback_manager" href="msTools.tools.callback_manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tool_manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.tools.tool_manager">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#terminology">Terminology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decoration">Decoration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#considerations">Considerations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>tool_manager</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.tools.tool_manager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tool-manager">
+<h1>tool_manager<a class="headerlink" href="#tool-manager" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.deregisterToolType" title="msTools.tools.tool_manager.deregisterToolType"><code class="xref py py-func docutils literal notranslate"><span class="pre">deregisterToolType()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.install" title="msTools.tools.tool_manager.install"><code class="xref py py-func docutils literal notranslate"><span class="pre">install()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.installer" title="msTools.tools.tool_manager.installer"><code class="xref py py-func docutils literal notranslate"><span class="pre">installer()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.isInstalled" title="msTools.tools.tool_manager.isInstalled"><code class="xref py py-func docutils literal notranslate"><span class="pre">isInstalled()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.iterInstalled" title="msTools.tools.tool_manager.iterInstalled"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterInstalled()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.iterToolTypes" title="msTools.tools.tool_manager.iterToolTypes"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterToolTypes()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.uninstall" title="msTools.tools.tool_manager.uninstall"><code class="xref py py-func docutils literal notranslate"><span class="pre">uninstall()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.uninstallFromAll" title="msTools.tools.tool_manager.uninstallFromAll"><code class="xref py py-func docutils literal notranslate"><span class="pre">uninstallFromAll()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.tool_manager.uninstaller" title="msTools.tools.tool_manager.uninstaller"><code class="xref py py-func docutils literal notranslate"><span class="pre">uninstaller()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.tools.tool_manager">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.tools.tool_manager" title="Permalink to this headline">¶</a></h2>
+<p>Install and uninstall tools through a common interface.</p>
+<hr class="docutils" />
+<div class="section" id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The following terminology is adopted by this module.</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Term</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><cite>Tool type</cite></td>
+<td>An identifier for a specific type of tool, consisting of a namespace and a name.</td>
+</tr>
+<tr class="row-odd"><td><cite>Installer</cite>:</td>
+<td>A callable which has been registered to a <cite>tool type</cite> via the <a class="reference internal" href="#msTools.tools.tool_manager.installer" title="msTools.tools.tool_manager.installer"><code class="xref py py-func docutils literal notranslate"><span class="pre">installer()</span></code></a> decorator factory.
+The callable is responsible for creating tools associated with the specified <cite>tool type</cite>.</td>
+</tr>
+<tr class="row-even"><td><cite>Uninstaller</cite>:</td>
+<td>A callable which has been registered to a <cite>tool type</cite> via the <a class="reference internal" href="#msTools.tools.tool_manager.uninstaller" title="msTools.tools.tool_manager.uninstaller"><code class="xref py py-func docutils literal notranslate"><span class="pre">uninstaller()</span></code></a> decorator factory.
+The callable is responsible for removing tools associated with the specified <cite>tool type</cite>.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="decoration">
+<h3>Decoration<a class="headerlink" href="#decoration" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Once a pair of <cite>installer</cite> and <cite>uninstaller</cite> callables have been decorated, the associated <cite>tool type</cite> is considered registered to this interface.
+A registered <cite>tool type</cite> can be used to install, uninstall and retrieve tools via this interface.</p>
+<dl class="docutils">
+<dt>Example:</dt>
+<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@installer</span><span class="p">(</span><span class="s2">&quot;MyToolNamespace&quot;</span><span class="p">,</span> <span class="s2">&quot;MyToolName&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">installMyTool</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a tool under the given `parent` and registers it with the interface.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QDialog</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">)</span>
+
+<span class="nd">@uninstaller</span><span class="p">(</span><span class="s2">&quot;MyToolNamespace&quot;</span><span class="p">,</span> <span class="s2">&quot;MyToolName&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">uninstallMyTool</span><span class="p">(</span><span class="n">tool</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Removes a tool and deregisters it from the interface.&quot;&quot;&quot;</span>
+    <span class="n">tool</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+
+<span class="c1"># Create a tool under a parent</span>
+<span class="n">parent</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">()</span>
+<span class="n">tool</span> <span class="o">=</span> <span class="n">installMyTool</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Returns the existing tool since `force=False`</span>
+<span class="n">tool</span> <span class="o">=</span> <span class="n">install</span><span class="p">(</span><span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;MyToolNamespace&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyToolName&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Reinstalls the tool since `force=True`</span>
+<span class="n">tool</span> <span class="o">=</span> <span class="n">installMyTool</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Uninstalls the tool</span>
+<span class="n">uninstallMyTool</span><span class="p">(</span><span class="n">tool</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>A tool can be installed by directly invoking a decorated <cite>installer</cite> or by indirectly invoking the <cite>installer</cite> by passing the registered <cite>tool type</cite> to <a class="reference internal" href="#msTools.tools.tool_manager.install" title="msTools.tools.tool_manager.install"><code class="xref py py-func docutils literal notranslate"><span class="pre">install()</span></code></a>.
+Either invocation will result in the installed tool being tracked within the internal tool data registry.
+Any action which results in the removal of the tool will result in the removal of the internal tool data for that tool.</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="considerations">
+<h3>Considerations<a class="headerlink" href="#considerations" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Registered tools are retrieved dynamically from a static identifier (memory address of the c++ object).
+Refer to <a class="reference internal" href="msTools.coreUI.qt.widget_utils.html#msTools.coreUI.qt.widget_utils.retain" title="msTools.coreUI.qt.widget_utils.retain"><code class="xref py py-func docutils literal notranslate"><span class="pre">msTools.coreUI.qt.widget_utils.retain()</span></code></a> for details relating to the safe handling of <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> objects.</div></blockquote>
+<hr class="docutils" />
+<dl class="function">
+<dt id="msTools.tools.tool_manager.deregisterToolType">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">deregisterToolType</code><span class="sig-paren">(</span><em>namespace=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.deregisterToolType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister a <cite>tool type</cite>.</p>
+<p>Designed for use when developing a tool as it is necessary to deregister a tool before reloading a module.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> namespace.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> name.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.tool_manager.install">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">install</code><span class="sig-paren">(</span><em>namespace</em>, <em>name</em>, <em>parent=None</em>, <em>force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.install" title="Permalink to this definition">¶</a></dt>
+<dd><p>Install a tool to a given parent by indirectly invoking the registered <cite>installer</cite> which corresponds to the given <cite>tool type</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> namespace.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> name.</li>
+<li><strong>parent</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a>, optional) – The parent object for the tool. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - the tool has no parent.</li>
+<li><strong>force</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to reinstall the tool if one already exists under <code class="docutils literal notranslate"><span class="pre">parent</span></code>.
+If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>, skip installation if a tool whose <cite>tool type</cite> corresponds to the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> already exists under <code class="docutils literal notranslate"><span class="pre">parent</span></code>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> do not correspond to a registered <cite>tool type</cite>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a> – A tool parented under <code class="docutils literal notranslate"><span class="pre">parent</span></code> whose registered <cite>tool type</cite> corresponds to the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">force</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>, this could be an existing tool.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.tool_manager.installer">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">installer</code><span class="sig-paren">(</span><em>namespace</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.installer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator factory for producing a decorator which can be used to register a callable as a tool installer.</p>
+<p>A tool <cite>installer</cite> must be implemented in accordance with the following guidelines:</p>
+<ol class="arabic simple">
+<li>The return value must be the installed tool, whose type is a non-strict subclass of <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a>.</li>
+<li>The first argument must be named <code class="docutils literal notranslate"><span class="pre">parent</span></code> and is responsible for receiving the tool’s parent. It can be an optional argument whose default value is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li>The <cite>installer</cite> is allowed to implement an optional <code class="docutils literal notranslate"><span class="pre">force</span></code> argument which accepts a <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> value.
+The argument determines whether a tool should be reinstalled if there is already an existing tool under <code class="docutils literal notranslate"><span class="pre">parent</span></code>.
+When an existing tool is found under <code class="docutils literal notranslate"><span class="pre">parent</span></code>, installation will be skipped if <code class="docutils literal notranslate"><span class="pre">force</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> and the existing tool will be returned.
+This argument defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> if the <cite>installer</cite> does not choose to reimplement it.</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – The tool namespace used to register the decorated tool <cite>installer</cite> within the internal <cite>tool type</cite> registry.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – The tool name used to register the decorated tool <cite>installer</cite> within the internal <cite>tool type</cite> registry.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the first argument is not named <code class="docutils literal notranslate"><span class="pre">parent</span></code>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If there is already an <cite>installer</cite> registered to the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> combination.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.tool_manager.isInstalled">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">isInstalled</code><span class="sig-paren">(</span><em>namespace</em>, <em>name</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.isInstalled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a tool corresponding to the given <cite>tool type</cite> is installed to a given parent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> namespace.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> name.</li>
+<li><strong>parent</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a>, optional) – The parent object to check for a registered tool. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - the tool has no parent.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">parent</span></code> is the parent of a tool whose <cite>tool type</cite> corresponds to the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.tool_manager.iterInstalled">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">iterInstalled</code><span class="sig-paren">(</span><em>namespace=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.iterInstalled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over tools corresponding to the given <cite>tool type</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> namespace.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> name.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last">T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a> – A tool whose <cite>tool type</cite> corresponds to the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.tool_manager.iterToolTypes">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">iterToolTypes</code><span class="sig-paren">(</span><em>namespace=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.iterToolTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over registered <cite>tool types</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – A registered <cite>tool type</cite> namespace, used to filter the results to a specific namespace.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - yield <cite>tool types</cite> for all registered <cite>tool type</cite> namespaces.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><p class="first">(<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – A two <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> for each <cite>tool type</cite>:</p>
+<ol class="last arabic simple">
+<li>The namespace of a registered <cite>tool type</cite>.</li>
+<li>The name of a registered <cite>tool type</cite> under the namespace.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.tool_manager.uninstall">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">uninstall</code><span class="sig-paren">(</span><em>namespace</em>, <em>name</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.uninstall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uninstall a tool from a given parent by indirectly invoking the registered <cite>uninstaller</cite> which corresponds to the given <cite>tool type</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> namespace.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> name.</li>
+<li><strong>parent</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a>, optional) – The parent object for the tool. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - the tool has no parent.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> do not correspond to a registered <cite>tool type</cite>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The result of the registered <cite>uninstaller</cite>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.tool_manager.uninstallFromAll">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">uninstallFromAll</code><span class="sig-paren">(</span><em>namespace</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.uninstallFromAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uninstall all tools corresponding to the given <cite>tool type</cite> by indirectly invoking the registered <cite>uninstaller</cite> for each existing parent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> namespace.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – A registered <cite>tool type</cite> name.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> do not correspond to a registered <cite>tool type</cite>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.tool_manager.uninstaller">
+<code class="descclassname">msTools.tools.tool_manager.</code><code class="descname">uninstaller</code><span class="sig-paren">(</span><em>namespace</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.tool_manager.uninstaller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator factory for producing a decorator which can be used to register a callable as a tool <cite>uninstaller</cite>.</p>
+<p>A tool <cite>uninstaller</cite> must be implemented in accordance with the following guidelines:</p>
+<ol class="arabic simple">
+<li>The first argument must be named <code class="docutils literal notranslate"><span class="pre">tool</span></code> and is responsible for receiving the tool to uninstall.</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – The tool namespace used to register the decorated tool <cite>uninstaller</cite> within the internal <cite>tool type</cite> registry.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – The tool name used to register the decorated tool <cite>uninstaller</cite> within the internal <cite>tool type</cite> registry.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the first argument is not named <code class="docutils literal notranslate"><span class="pre">tool</span></code>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If there is already an <cite>uninstaller</cite> registered to the given <code class="docutils literal notranslate"><span class="pre">namespace</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> combination.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.tools.uuid_manager.html" class="btn btn-neutral float-right" title="uuid_manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.tools.callback_manager.html" class="btn btn-neutral float-left" title="callback_manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>context_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="decorator_utils" href="msTools.core.py.decorator_utils.html" />
+    <link rel="prev" title="class_utils" href="msTools.core.py.class_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">context_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.py.context_utils">Description</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>context_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.py.context_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="context-utils">
+<h1>context_utils<a class="headerlink" href="#context-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.core.py.context_utils.Null" title="msTools.core.py.context_utils.Null"><code class="xref py py-class docutils literal notranslate"><span class="pre">Null</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+</tbody>
+</table>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.core.py.context_utils.Suppress" title="msTools.core.py.context_utils.Suppress"><code class="xref py py-class docutils literal notranslate"><span class="pre">Suppress</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.py.context_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.py.context_utils" title="Permalink to this headline">¶</a></h2>
+<p>General purpose context managers.</p>
+<hr class="docutils" />
+<dl class="class">
+<dt id="msTools.core.py.context_utils.Null">
+<em class="property">class </em><code class="descclassname">msTools.core.py.context_utils.</code><code class="descname">Null</code><span class="sig-paren">(</span><em>enterResult=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.context_utils.Null" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A context manager that returns <code class="docutils literal notranslate"><span class="pre">enterResult</span></code> from <code class="xref py py-meth docutils literal notranslate"><span class="pre">__enter__()</span></code>, but otherwise does nothing.
+It is intended to be used as a stand-in for an optional context manager.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Designed to resemble <cite>contextlib.nullcontext</cite> which was added in Python 3.7.</p>
+</div>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myfunction</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">ignore_exceptions</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">ignore_exceptions</span><span class="p">:</span>
+        <span class="c1"># Use Suppress to ignore all exceptions.</span>
+        <span class="n">cm</span> <span class="o">=</span> <span class="n">Suppress</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Do not ignore any exceptions, cm has no effect.</span>
+        <span class="n">cm</span> <span class="o">=</span> <span class="n">Null</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">cm</span><span class="p">:</span>
+        <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="msTools.core.py.context_utils.Suppress">
+<em class="property">class </em><code class="descclassname">msTools.core.py.context_utils.</code><code class="descname">Suppress</code><span class="sig-paren">(</span><em>*exceptions</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.context_utils.Suppress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A context manager that suppresses any of the specified exceptions if they occur in the body of a with statement and then resumes execution with the first statement following the end of the with statement.</p>
+<p>As with any other mechanism that completely suppresses exceptions, this context manager should be used only to cover very specific errors where silently continuing with program execution is known to be the right thing to do.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Designed to resemble <cite>contextlib.suppress</cite> which was added in Python 3.4.</p>
+</div>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;somefile.tmp&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.core.py.decorator_utils.html" class="btn btn-neutral float-right" title="decorator_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.core.py.class_utils.html" class="btn btn-neutral float-left" title="class_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

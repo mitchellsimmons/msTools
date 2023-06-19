@@ -1,0 +1,1464 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nodeEditor_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="widget_utils" href="msTools.coreUI.maya.widget_utils.html" />
+    <link rel="prev" title="inspect_utils" href="msTools.coreUI.maya.inspect_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">nodeEditor_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.coreUI.maya.nodeEditor_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#widget-hierarchy">Widget Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#widget-lifetime">Widget Lifetime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>nodeEditor_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.coreUI.maya.nodeEditor_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nodeeditor-utils">
+<h1>nodeEditor_utils<a class="headerlink" href="#nodeeditor-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeEditorGraphicsItem</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NODE</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PATH" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PATH"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PATH</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PLUG" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PLUG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PLUG</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.SIMPLE_TEXT" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.SIMPLE_TEXT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SIMPLE_TEXT</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeEditorObject</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.EDITOR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.EDITOR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">EDITOR</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.ICON_BAR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.ICON_BAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ICON_BAR</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.MENU_BAR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.MENU_BAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MENU_BAR</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PAGE</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE_AREA" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE_AREA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PAGE_AREA</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PANEL" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PANEL"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PANEL</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SCENE</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.TAB_BAR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.TAB_BAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TAB_BAR</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW"><code class="xref py py-attr docutils literal notranslate"><span class="pre">VIEW</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>NodeEditorObject</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">VIEWPORT</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditor" title="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCurrentNodeEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsItemsFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsItemsFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCurrentNodeEditorGraphicsItemsFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsSceneFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsSceneFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCurrentNodeEditorGraphicsSceneFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsViewFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsViewFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCurrentNodeEditorGraphicsViewFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorPageFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorPageFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCurrentNodeEditorPageFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorViewportFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorViewportFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCurrentNodeEditorViewportFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getGraphicsItemFromNode" title="msTools.coreUI.maya.nodeEditor_utils.getGraphicsItemFromNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">getGraphicsItemFromNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getInterestingNodeEditorWidgetsFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getInterestingNodeEditorWidgetsFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getInterestingNodeEditorWidgetsFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getInterestingNodeEditorWidgetsFromPanel" title="msTools.coreUI.maya.nodeEditor_utils.getInterestingNodeEditorWidgetsFromPanel"><code class="xref py py-func docutils literal notranslate"><span class="pre">getInterestingNodeEditorWidgetsFromPanel()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorFromPanel" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorFromPanel"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorFromPanel()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorGraphicsScenesFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorGraphicsScenesFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorGraphicsScenesFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorGraphicsViewsFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorGraphicsViewsFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorGraphicsViewsFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorIconBarFromPanel" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorIconBarFromPanel"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorIconBarFromPanel()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorMenuBarFromPanel" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorMenuBarFromPanel"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorMenuBarFromPanel()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPageAreaFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPageAreaFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorPageAreaFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPagesFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPagesFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorPagesFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPanelFromDescendant" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPanelFromDescendant"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorPanelFromDescendant()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorTabBarFromEditor" title="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorTabBarFromEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeEditorTabBarFromEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeFromGraphicsItem" title="msTools.coreUI.maya.nodeEditor_utils.getNodeFromGraphicsItem"><code class="xref py py-func docutils literal notranslate"><span class="pre">getNodeFromGraphicsItem()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.getPrimaryNodeEditor" title="msTools.coreUI.maya.nodeEditor_utils.getPrimaryNodeEditor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getPrimaryNodeEditor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.isNodeEditorObject" title="msTools.coreUI.maya.nodeEditor_utils.isNodeEditorObject"><code class="xref py py-func docutils literal notranslate"><span class="pre">isNodeEditorObject()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.coreUI.maya.nodeEditor_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.coreUI.maya.nodeEditor_utils" title="Permalink to this headline">¶</a></h2>
+<p>Utility functions relating to the Maya Node Editor.</p>
+<hr class="docutils" />
+<div class="section" id="widget-hierarchy">
+<h3>Widget Hierarchy<a class="headerlink" href="#widget-hierarchy" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The Node Editor has the following simplified widget hierarchy (<strong>verified for Maya 2019</strong>):</p>
+<p>- <cite>Window</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>)</p>
+<blockquote>
+<div><p>- <cite>Panel</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>)</p>
+<blockquote>
+<div><p>- <cite>Menu Bar</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QMenuBar.html#PySide2.QtWidgets.QMenuBar" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMenuBar</span></code></a>)</p>
+<p>- Container (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> - placeholder for <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/formLayout.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.formLayout()</span></code></a>)</p>
+<blockquote>
+<div><p>- Container (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> - placeholder for <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/frameLayout.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.frameLayout()</span></code></a>)</p>
+<blockquote>
+<div><p>- Container (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QFrame.html#PySide2.QtWidgets.QFrame" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QFrame</span></code></a>)</p>
+<blockquote>
+<div>- <cite>Icon Bar</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> - placeholder for <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/flowLayout.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.flowLayout()</span></code></a>)</div></blockquote>
+</div></blockquote>
+<p>- Container (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> - placeholder for <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/paneLayout.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.paneLayout()</span></code></a>)</p>
+<blockquote>
+<div><p>- Container (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>)</p>
+<blockquote>
+<div><p>- <cite>Editor</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabWidget.html#PySide2.QtWidgets.QTabWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabWidget</span></code></a>)</p>
+<blockquote>
+<div><p>- <cite>Tab Bar</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.QTabBar" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar</span></code></a>)</p>
+<p>- <cite>Page Area</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.QStackedWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget</span></code></a>)</p>
+<blockquote>
+<div><p>- <cite>Pages</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>)</p>
+<blockquote>
+<div><p>- <cite>View</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsView.html#PySide2.QtWidgets.QGraphicsView" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsView</span></code></a>)</p>
+<blockquote>
+<div>- <cite>Viewport</cite> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>)</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="widget-lifetime">
+<h3>Widget Lifetime<a class="headerlink" href="#widget-lifetime" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The following groups of Node Editor widgets should share the same lifetimes.</p>
+<ul class="simple">
+<li><cite>window</cite>, <cite>panel</cite>, <cite>menu bar</cite>, <cite>icon bar</cite>.</li>
+<li><cite>editor</cite>, <cite>tab bar</cite>, <cite>page area</cite>.</li>
+<li><cite>page</cite>, <cite>view</cite>, <cite>viewport</cite>, <cite>scene</cite>.</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>A Node Editor <cite>panel</cite> can be created with <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/scriptedPanel.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.scriptedPanel()</span></code></a> using <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;nodeEditorPanel&quot;</span></code>.
+The initial Node Editor <cite>panel</cite> will contain the primary Node Editor <cite>editor</cite>.
+There can only ever be a single primary Node Editor. The primary <cite>editor</cite> is the only one that has a visible <cite>tab bar</cite>.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="2">
+<li>A Node Editor <cite>editor</cite> can be queried and modified with <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/nodeEditor.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.nodeEditor()</span></code></a>.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="3">
+<li>The name of the primary Node Editor <cite>editor</cite> can be retrieved with the MEL command <code class="docutils literal notranslate"><span class="pre">getPrimaryNodeEditor</span></code>.</li>
+</ol>
+</div>
+<div class="admonition note" id="note-4">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="4">
+<li>A reference to a <cite>page</cite> must be kept in memory in order to access its descendant widgets. The <cite>editor</cite> maintains ownership of all <cite>page</cite> widgets.
+Any reference to a descendant will be automatically invalidated unless a reference to the <cite>page</cite> remains in memory.</li>
+</ol>
+</div>
+<div class="admonition note" id="note-5">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="5">
+<li>When opening a new scene, Maya will delete each <cite>page</cite> for any existing tab in the Node Editor.
+The tab count will sequentially decrement to zero then increment back to one.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="6">
+<li>Whilst a tab is being dragged, the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QTabWidget.count" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabWidget.count()</span></code></a> (<cite>editor</cite>) and <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.PySide2.QtWidgets.QTabBar.count" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar.count()</span></code></a> (<cite>tab bar</cite>) will decrement.
+Only the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QStackedWidget.count" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget.count()</span></code></a> (<cite>page area</cite>) will remain unchanged.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="7">
+<li>The <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QTabWidget.count" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabWidget.count()</span></code></a> (<cite>editor</cite>) and <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.PySide2.QtWidgets.QTabBar.count" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar.count()</span></code></a> (<cite>tab bar</cite>) are influenced by the ‘Add a new tab’ button.
+Their value is one greater than the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QStackedWidget.count" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget.count()</span></code></a> (<cite>page area</cite>), even for non-primary editors whose tab bar is hidden.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="8">
+<li>Whilst a tab is being dragged, the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QTabWidget.currentIndex" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabWidget.currentIndex()</span></code></a> (<cite>editor</cite>) and <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.PySide2.QtWidgets.QTabBar.currentIndex" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar.currentIndex()</span></code></a> (<cite>tab bar</cite>) and
+<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QStackedWidget.currentIndex" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget.currentIndex()</span></code></a> (<cite>page area</cite>) will all update dynamically.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="9">
+<li>The <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QTabWidget.currentIndex" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabWidget.currentIndex()</span></code></a> (<cite>editor</cite>) and <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.PySide2.QtWidgets.QTabBar.currentIndex" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar.currentIndex()</span></code></a> (<cite>tab bar</cite>) may be influenced by the ‘Add a new tab’ button.
+It is possible to select this button with <cite>ctrl + tab</cite>, meaning only <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QStackedWidget.currentIndex" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget.currentIndex()</span></code></a> (<cite>page area</cite>) is reliable.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="10">
+<li>There is a margin of two units between the <cite>viewport</cite> and its parent <cite>view</cite>. Therefore the <cite>viewport</cite> should be used to acquire dimensions.</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<ol class="last arabic simple">
+<li>Using <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/nodeEditor.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.nodeEditor()</span></code></a> to query the <cite>panel</cite> of an <cite>editor</cite> will just remove <code class="docutils literal notranslate"><span class="pre">&quot;NodeEditorEd&quot;</span></code> from the name of the <cite>editor</cite>.
+It does not consider the possibility that the <cite>editor</cite> has been unparented and reparented to a different <cite>panel</cite> using <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/nodeEditor.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.nodeEditor()</span></code></a>.</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<ol class="last arabic simple" start="2">
+<li>Using the MEL procedure <code class="docutils literal notranslate"><span class="pre">getCurrentNodeEditor</span></code> to query the <cite>editor</cite> which has focus will just add <code class="docutils literal notranslate"><span class="pre">&quot;NodeEditorEd&quot;</span></code> to the result of <code class="docutils literal notranslate"><span class="pre">getCurrentNodeEditorPanel</span></code>.
+It does not consider the possibility that the <cite>editor</cite> has been unparented and no longer exists.</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<ol class="last arabic simple" start="3">
+<li>Do not attempt to access a Node Editor <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsView.html#PySide2.QtWidgets.QGraphicsView" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsView</span></code></a> via <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#id12" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject.findChildren()</span></code></a>.<ul>
+<li>A <cite>view</cite> will often show as a <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> within the descendant hierarchy, requiring a cast.</li>
+<li>When opening a new scene, Maya will create a new <cite>view</cite> as discussed in <a class="reference internal" href="#note-5"><span class="std std-ref">note-5</span></a>.
+However previous invalidated <cite>views</cite> may remain temporarily parented to an existing <cite>page</cite> before being removed.</li>
+<li>When a <cite>view</cite> is created it is initially parented to the <cite>editor</cite>. Only when Maya reaches idle will a <cite>view</cite> be reparented to its associated <cite>page</cite>.
+Operating on a <cite>view</cite> which has not been reparented may cause it to be deleted.</li>
+</ul>
+</li>
+</ol>
+</div>
+<hr class="docutils" />
+<dl class="class">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem">
+<em class="property">class </em><code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">NodeEditorGraphicsItem</code><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A namespace for Node Editor graphics item type constants.</p>
+<p>These are the unique values returned from <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsItem.html#PySide2.QtWidgets.PySide2.QtWidgets.QGraphicsItem.type" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsItem.type()</span></code></a>.</p>
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE">
+<code class="descname">NODE</code><em class="property"> = 65545</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PATH">
+<code class="descname">PATH</code><em class="property"> = 65548</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PLUG">
+<code class="descname">PLUG</code><em class="property"> = 65540</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PLUG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.SIMPLE_TEXT">
+<code class="descname">SIMPLE_TEXT</code><em class="property"> = 65549</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.SIMPLE_TEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject">
+<em class="property">class </em><code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">NodeEditorObject</code><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msTools.vendor.enum.Enum</span></code></p>
+<p>Node Editor object enumerations.</p>
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.EDITOR">
+<code class="descname">EDITOR</code><em class="property"> = &lt;NodeEditorObject.EDITOR: 3&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.EDITOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.ICON_BAR">
+<code class="descname">ICON_BAR</code><em class="property"> = &lt;NodeEditorObject.ICON_BAR: 2&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.ICON_BAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.MENU_BAR">
+<code class="descname">MENU_BAR</code><em class="property"> = &lt;NodeEditorObject.MENU_BAR: 1&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.MENU_BAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE">
+<code class="descname">PAGE</code><em class="property"> = &lt;NodeEditorObject.PAGE: 6&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE_AREA">
+<code class="descname">PAGE_AREA</code><em class="property"> = &lt;NodeEditorObject.PAGE_AREA: 5&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE_AREA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PANEL">
+<code class="descname">PANEL</code><em class="property"> = &lt;NodeEditorObject.PANEL: 0&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PANEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE">
+<code class="descname">SCENE</code><em class="property"> = &lt;NodeEditorObject.SCENE: 9&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.TAB_BAR">
+<code class="descname">TAB_BAR</code><em class="property"> = &lt;NodeEditorObject.TAB_BAR: 4&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.TAB_BAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW">
+<code class="descname">VIEW</code><em class="property"> = &lt;NodeEditorObject.VIEW: 7&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT">
+<code class="descname">VIEWPORT</code><em class="property"> = &lt;NodeEditorObject.VIEWPORT: 8&gt;</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getCurrentNodeEditor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>editor</cite> for the <cite>panel</cite> which currently has focus.</p>
+<p>The <cite>editor</cite> manages associations between the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.QTabBar" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar</span></code></a> tabs and the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.QStackedWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget</span></code></a> <cite>pages</cite>.
+The current tab determines the current <cite>page</cite> shown in the <cite>editor</cite>. The user can show a different <cite>page</cite> by clicking on its associated tab.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only the primary <cite>editor</cite> allows tabs (ie. multiple <cite>views</cite>).
+Non-primary editors are only allowed to display a single <cite>view</cite> (the <cite>tab bar</cite> is hidden).</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If a current Node Editor <cite>editor</cite> could not be identified (ie. there is no <cite>panel</cite> with focus).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabWidget.html#PySide2.QtWidgets.QTabWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabWidget</span></code></a> – The current Node Editor <cite>editor</cite> widget.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsItemsFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getCurrentNodeEditorGraphicsItemsFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em>, <em>itemType=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsItemsFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor graphics items that exist within the <cite>scene</cite> for the <cite>view</cite> that is currently visible in the given Node Editor <cite>editor</cite>.</p>
+<p>Graphics items provide a graphical interface for objects such as nodes, plugs and edges.
+Each item is contained within a <cite>scene</cite>. A <cite>view</cite> is used to visualise the contents of a <cite>scene</cite> by rendering to a <cite>viewport</cite>.
+The current tab determines the current <cite>scene</cite> visualised within the <cite>editor</cite>. The user can visualise a different <cite>scene</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</li>
+<li><strong>itemType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – Specify the type of graphics items to return based on their <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsItem.html#PySide2.QtWidgets.PySide2.QtWidgets.QGraphicsItem.type" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsItem.type()</span></code></a> constant.
+Possible values include <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorGraphicsItem.NODE</span></code></a>, <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PLUG" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PLUG"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorGraphicsItem.PLUG</span></code></a>, <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PATH" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.PATH"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorGraphicsItem.PATH</span></code></a> and
+<a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.SIMPLE_TEXT" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.SIMPLE_TEXT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorGraphicsItem.SIMPLE_TEXT</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - all graphics items will be included.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have a current <cite>scene</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#func-list" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> [T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsItem.html#PySide2.QtWidgets.QGraphicsItem" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsItem</span></code></a>] – The graphics items that exist within the <cite>scene</cite> for the <cite>view</cite> that is currently visible in the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsSceneFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getCurrentNodeEditorGraphicsSceneFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsSceneFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>scene</cite> for the <cite>view</cite> that is currently visible in the given Node Editor <cite>editor</cite>.</p>
+<p>A <cite>scene</cite> serves as a container for graphics items. A <cite>view</cite> is used to visualise the contents of a <cite>scene</cite> by rendering to a <cite>viewport</cite>.
+The current tab determines the current <cite>scene</cite> visualised within the <cite>editor</cite>. The user can visualise a different <cite>scene</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have a current <cite>scene</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsScene.html#PySide2.QtWidgets.QGraphicsScene" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsScene</span></code></a> – The <cite>scene</cite> for the <cite>view</cite> that is currently visible in the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsViewFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getCurrentNodeEditorGraphicsViewFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorGraphicsViewFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>view</cite> which is visible in the given Node Editor <cite>editor</cite>.</p>
+<p>A <cite>view</cite> is used to visualise the contents of a <cite>scene</cite> by rendering graphics items to a <cite>viewport</cite>. There exists a <cite>view</cite> for each <cite>page</cite>.
+The current tab determines the current <cite>view</cite> shown in the <cite>editor</cite>. The user can show a different <cite>view</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have a current <cite>view</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsView.html#PySide2.QtWidgets.QGraphicsView" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsView</span></code></a> – The current <cite>view</cite> widget shown in the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorPageFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getCurrentNodeEditorPageFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorPageFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>page</cite> which is visible in the given Node Editor <cite>editor</cite>.</p>
+<p>A <cite>page</cite> is used to display the contents of a <cite>view</cite> for a specific tab.
+The current tab determines the current <cite>page</cite> shown in the <cite>editor</cite>. The user can show a different <cite>page</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have a current <cite>page</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> – The current <cite>page</cite> widget shown in the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorViewportFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getCurrentNodeEditorViewportFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getCurrentNodeEditorViewportFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>viewport</cite> that is currently visible in the given Node Editor <cite>editor</cite>.</p>
+<p>A <cite>viewport</cite> provides a scrollable area for visualising a <cite>scene</cite> within a <cite>view</cite>. It allows the user to determine which region of a <cite>scene</cite> is visualised.
+The current tab determines the current <cite>viewport</cite> shown in the <cite>editor</cite>. The user can show a different <cite>viewport</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The results of this function are c++ widget references which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have a current <cite>viewport</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> – The <cite>viewport</cite> that is currently visible in the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getGraphicsItemFromNode">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getGraphicsItemFromNode</code><span class="sig-paren">(</span><em>node</em>, <em>nodeEditorGraphicsScene</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getGraphicsItemFromNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a <cite>graphics item</cite> for the given dependency node wrapper, if one exists within the given Node Editor <cite>graphics scene</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – A dependency node wrapper.</li>
+<li><strong>nodeEditorGraphicsScene</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsScene.html#PySide2.QtWidgets.QGraphicsScene" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsScene</span></code></a>) – The Node Editor <cite>graphics scene</cite> containing a <cite>graphics item</cite> for the given <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorGraphicsScene</span></code> does not reference a Node Editor <cite>graphics scene</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If a <cite>graphics item</cite> could not be identified for the given <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsItem.html#PySide2.QtWidgets.QGraphicsItem" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsItem</span></code></a> – A <cite>graphics item</cite> within the given <code class="docutils literal notranslate"><span class="pre">nodeEditorGraphicsScene</span></code>, corresponding to the given <code class="docutils literal notranslate"><span class="pre">node</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getInterestingNodeEditorWidgetsFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getInterestingNodeEditorWidgetsFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em>, <em>allTabs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getInterestingNodeEditorWidgetsFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return interesting objects in the descendant hierarchy of the given Node Editor <cite>editor</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</li>
+<li><strong>allTabs</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to return objects for each existing tab.
+If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>, the <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.PAGE</span></code></a>, <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.VIEW</span></code></a>, <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.VIEWPORT</span></code></a> and <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.SCENE</span></code></a>
+keys will each map to a list of objects instead of a single object for the current tab. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeEditorObject</span></code></a>, T &lt;= <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QObject</span></code>] – A dictionary mapping enumerations to objects in the descendant hierarchy of <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.<ul class="simple">
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.EDITOR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.EDITOR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.EDITOR</span></code></a>: The given <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.TAB_BAR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.TAB_BAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.TAB_BAR</span></code></a>: The Node Editor <cite>tab bar</cite>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE_AREA" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE_AREA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.PAGE_AREA</span></code></a>: The Node Editor <cite>page area</cite>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.PAGE</span></code></a>: The Node Editor <cite>pages</cite>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.VIEW</span></code></a>: The Node Editor <cite>views</cite>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.VIEWPORT</span></code></a>: The Node Editor <cite>viewports</cite>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.SCENE</span></code></a>: The Node Editor <cite>scenes</cite>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getInterestingNodeEditorWidgetsFromPanel">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getInterestingNodeEditorWidgetsFromPanel</code><span class="sig-paren">(</span><em>nodeEditorPanel</em>, <em>allTabs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getInterestingNodeEditorWidgetsFromPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return interesting objects in the descendant hierarchy of the given Node Editor <cite>panel</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nodeEditorPanel</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>panel</cite> widget.</li>
+<li><strong>allTabs</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to return objects for each existing tab.
+If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>, the <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.PAGE</span></code></a>, <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.VIEW</span></code></a>, <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.VIEWPORT</span></code></a> and <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.SCENE</span></code></a>
+keys will each map to a list of objects instead of a single object for the current tab. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code> does not reference a Node Editor <cite>panel</cite>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeEditorObject</span></code></a>, T &lt;= <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QObject</span></code>] – A dictionary mapping enumerations to objects in the descendant hierarchy of <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code>.<ul class="simple">
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PANEL" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PANEL"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.PANEL</span></code></a>: The given <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.MENU_BAR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.MENU_BAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.MENU_BAR</span></code></a>: The Node Editor <cite>menu bar</cite>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.ICON_BAR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.ICON_BAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.ICON_BAR</span></code></a>: The Node Editor <cite>icon bar</cite>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.EDITOR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.EDITOR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.EDITOR</span></code></a>: The Node Editor <cite>editor</cite> if one exists, else <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.TAB_BAR" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.TAB_BAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.TAB_BAR</span></code></a>: The Node Editor <cite>tab bar</cite> if an <cite>editor</cite> exists, else <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE_AREA" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE_AREA"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.PAGE_AREA</span></code></a>: The Node Editor <cite>page area</cite> if an <cite>editor</cite> exists, else <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.PAGE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.PAGE</span></code></a>: The Node Editor <cite>pages</cite> if an <cite>editor</cite> exists, else <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEW"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.VIEW</span></code></a>: The Node Editor <cite>views</cite> if an <cite>editor</cite> exists, else <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.VIEWPORT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.VIEWPORT</span></code></a>: The Node Editor <cite>viewports</cite> if an <cite>editor</cite> exists, else <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject.SCENE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorObject.SCENE</span></code></a>: The Node Editor <cite>scenes</cite> if an <cite>editor</cite> exists, else <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorFromPanel">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorFromPanel</code><span class="sig-paren">(</span><em>nodeEditorPanel</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorFromPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>editor</cite> for the given Node Editor <cite>panel</cite>.</p>
+<p>The <cite>editor</cite> manages associations between the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.QTabBar" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar</span></code></a> tabs and the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.QStackedWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget</span></code></a> <cite>pages</cite>.
+The current tab determines the current <cite>page</cite> shown in the <cite>editor</cite>. The user can show a different <cite>page</cite> by clicking on its associated tab.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>It is possible to unparent a Node Editor <cite>editor</cite> from its <cite>panel</cite>.
+Meaning it is not guaranteed a Node Editor <cite>panel</cite> will have an <cite>editor</cite>.</p>
+<p class="last">Only the primary <cite>editor</cite> allows tabs (ie. multiple <cite>views</cite>).
+Non-primary <cite>editors</cite> are only allowed to display a single <cite>view</cite> (the <cite>tab bar</cite> is hidden).</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditorPanel</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>panel</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code> does not reference a Node Editor <cite>panel</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code> does not have a descendant <cite>editor</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabWidget.html#PySide2.QtWidgets.QTabWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabWidget</span></code></a> – The descendant Node Editor <cite>editor</cite> widget for the <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorGraphicsScenesFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorGraphicsScenesFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorGraphicsScenesFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>scenes</cite> for the given Node Editor <cite>editor</cite>.</p>
+<p>A <cite>scene</cite> serves as a container for graphics items. A <cite>view</cite> is used to visualise the contents of a <cite>scene</cite> by rendering to a <cite>viewport</cite>.
+The current tab determines the current <cite>scene</cite> visualised within the <cite>editor</cite>. The user can visualise a different <cite>scene</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have any <cite>scenes</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#func-list" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsScene.html#PySide2.QtWidgets.QGraphicsScene" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsScene</span></code></a>] – Sequence of <cite>scene</cite> objects for the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorGraphicsViewsFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorGraphicsViewsFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorGraphicsViewsFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>views</cite> for the given Node Editor <cite>editor</cite>.</p>
+<p>A <cite>view</cite> is used to visualise the contents of a <cite>scene</cite> by rendering graphics items to a <cite>viewport</cite>. There exists a <cite>view</cite> for each <cite>page</cite>.
+The current tab determines the current <cite>view</cite> shown in the <cite>editor</cite>. The user can show a different <cite>view</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The results of this function are c++ widget references which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have any <cite>views</cite>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#func-list" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsView.html#PySide2.QtWidgets.QGraphicsView" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsView</span></code></a>] – Sequence of <cite>view</cite> widgets for the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorIconBarFromPanel">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorIconBarFromPanel</code><span class="sig-paren">(</span><em>nodeEditorPanel</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorIconBarFromPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>icon bar</cite> for the given Node Editor <cite>panel</cite>.</p>
+<p>The <cite>icon bar</cite> contains all icon elements directly below the <cite>menu bar</cite> (eg. <cite>create node</cite>, <cite>layout</cite>, <cite>search</cite>, etc).
+The <cite>icon bar</cite> widget exists as a placeholder for a <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/flowLayout.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.flowLayout()</span></code></a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditorPanel</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>panel</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code> does not reference a Node Editor <cite>panel</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code> does not have a descendant <cite>icon bar</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> – The descendant <cite>icon bar</cite> widget for the <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorMenuBarFromPanel">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorMenuBarFromPanel</code><span class="sig-paren">(</span><em>nodeEditorPanel</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorMenuBarFromPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>menu bar</cite> for the given Node Editor <cite>panel</cite>.</p>
+<p>The <cite>menu bar</cite> contains all menu items (eg. <cite>Edit</cite>, <cite>View</cite>, <cite>Bookmarks</cite>, etc).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditorPanel</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>panel</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code> does not reference a Node Editor <cite>panel</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code> does not have a child <cite>menu bar</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QMenuBar.html#PySide2.QtWidgets.QMenuBar" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMenuBar</span></code></a> – The child <cite>menu bar</cite> widget for the <code class="docutils literal notranslate"><span class="pre">nodeEditorPanel</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPageAreaFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorPageAreaFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPageAreaFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>page area</cite> for the given Node Editor <cite>editor</cite>.</p>
+<p>The <cite>page area</cite> provides an area for displaying <cite>pages</cite>. Each <cite>page</cite> contains a <cite>view</cite> for rendering graphics items.
+The current tab determines the current <cite>page</cite> shown in the <cite>editor</cite>. The user can show a different <cite>page</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have a child <cite>page area</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.QStackedWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget</span></code></a> – The child Node Editor <cite>page area</cite> widget for the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPagesFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorPagesFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPagesFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>pages</cite> for the given Node Editor <cite>editor</cite>.</p>
+<p>A <cite>page</cite> is used to display the contents of a <cite>view</cite> for a specific tab.
+The current tab determines the current <cite>page</cite> shown in the <cite>editor</cite>. The user can show a different <cite>page</cite> by clicking on its associated tab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The results of this function are c++ widget references which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have any <cite>pages</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#func-list" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>] – The <cite>page</cite> widgets owned by the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPanelFromDescendant">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorPanelFromDescendant</code><span class="sig-paren">(</span><em>nodeEditorDescendant</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorPanelFromDescendant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>panel</cite> for the given Node Editor descendant widget.</p>
+<p>The <cite>panel</cite> contains a <cite>menu bar</cite>, <cite>icon bar</cite> and usually an <cite>editor</cite>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>nodeEditorDescendant</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditorDescendant</span></code> does not have an ancestral <cite>panel</cite>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> – The ancestral <cite>panel</cite> widget for the <code class="docutils literal notranslate"><span class="pre">nodeEditorDescendant</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeEditorTabBarFromEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeEditorTabBarFromEditor</code><span class="sig-paren">(</span><em>nodeEditor</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeEditorTabBarFromEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Node Editor <cite>tab bar</cite> for the given Node Editor <cite>editor</cite>.</p>
+<p>The <cite>tab bar</cite> provides a user interface for managing the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.QStackedWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget</span></code></a> <cite>pages</cite>.
+The current tab determines the current <cite>page</cite> shown in the <cite>editor</cite>. The user can show a different <cite>page</cite> by clicking on its associated tab.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <cite>tab bar</cite> will only be visible in the primary <cite>editor</cite>.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeEditor</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor <cite>editor</cite> widget.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not reference a Node Editor <cite>editor</cite>.</li>
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code> does not have a child <cite>tab bar</cite>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.QTabBar" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar</span></code></a> – The child Node Editor <cite>tab bar</cite> widget for the <code class="docutils literal notranslate"><span class="pre">nodeEditor</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getNodeFromGraphicsItem">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getNodeFromGraphicsItem</code><span class="sig-paren">(</span><em>nodeGraphicsItem</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getNodeFromGraphicsItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dependency node wrapper for the given Node Editor graphical node item.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nodeGraphicsItem</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsItem.html#PySide2.QtWidgets.QGraphicsItem" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsItem</span></code></a>) – A graphical node item whose type is equivalent to <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorGraphicsItem.NODE</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUITypeError" title="msTools.coreUI.maya.exceptions.MayaUITypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUITypeError</span></code></a> – If the <code class="docutils literal notranslate"><span class="pre">nodeGraphicsItem</span></code> type is not equivalent to <a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorGraphicsItem.NODE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeEditorGraphicsItem.NODE</span></code></a>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If a dependency node could not be identified for the given <code class="docutils literal notranslate"><span class="pre">nodeGraphicsItem</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – A dependency node wrapper corresponding to the given <code class="docutils literal notranslate"><span class="pre">nodeGraphicsItem</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.getPrimaryNodeEditor">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">getPrimaryNodeEditor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.getPrimaryNodeEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the primary Node Editor <cite>editor</cite>.</p>
+<p>The <cite>editor</cite> manages associations between the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabBar.html#PySide2.QtWidgets.QTabBar" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabBar</span></code></a> tabs and the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QStackedWidget.html#PySide2.QtWidgets.QStackedWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStackedWidget</span></code></a> <cite>pages</cite>.
+The current tab determines the current <cite>page</cite> shown in the <cite>editor</cite>. The user can show a different <cite>page</cite> by clicking on its associated tab.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only the primary <cite>editor</cite> allows tabs (ie. multiple <cite>views</cite>).
+Non-primary editors are only allowed to display a single <cite>view</cite> (the <cite>tab bar</cite> is hidden).</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The result of this function is a c++ widget reference which should be discarded at the next idle.</p>
+<p class="last">This function is not guaranteed to remain operable.
+It relies on a specific state of the Maya UI which is subject to change in future versions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If a primary Node Editor <cite>editor</cite> could not be identified.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QTabWidget.html#PySide2.QtWidgets.QTabWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTabWidget</span></code></a> – The primary Node Editor <cite>editor</cite> widget.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.isNodeEditorObject">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">isNodeEditorObject</code><span class="sig-paren">(</span><em>nodeEditorObject</em>, <em>nodeEditorObjectType</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.isNodeEditorObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify the type of a Node Editor object based on a set of compiled expectations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>nodeEditorObject</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – A Node Editor object.</li>
+<li><strong>nodeEditorObjectType</strong> (<a class="reference internal" href="#msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject" title="msTools.coreUI.maya.nodeEditor_utils.NodeEditorObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeEditorObject</span></code></a>) – An enumeration representing the expected <code class="docutils literal notranslate"><span class="pre">nodeEditorObject</span></code> type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">nodeEditorObject</span></code> corresponds to the <code class="docutils literal notranslate"><span class="pre">nodeEditorObjectType</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.GRAPHICS_SCENE_TO_GRAPHVIZ_TRANSFORM">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">GRAPHICS_SCENE_TO_GRAPHVIZ_TRANSFORM</code><em class="property"> = PySide2.QtGui.QTransform(0.010000, 0.000000, 0.000000, 0.000000, -0.010000, 0.000000, 0.000000, 0.000000, 1.000000)</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.GRAPHICS_SCENE_TO_GRAPHVIZ_TRANSFORM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsScene.html#PySide2.QtWidgets.QGraphicsScene" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsScene</span></code></a> coordinates into a Graphviz coordinate space.</p>
+<p>Coordinates in this space can be used to position nodes within the Node Editor by passing a minimal graph description to the <code class="docutils literal notranslate"><span class="pre">dotFormat</span></code> argument of the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/nodeEditor.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.nodeEditor()</span></code></a> command.
+The graph description must be provided in the <a class="reference external" href="https://graphviz.org/doc/info/output.html#d:plain">plain</a> format of the DOT language.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The transformation inverts the vertical axis. The <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsScene.html#PySide2.QtWidgets.QGraphicsScene" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsScene</span></code></a> adopts y-down coordinates whilst Graphviz adopts standard y-up coordinates.</p>
+</div>
+<p class="rubric">Example</p>
+<p>The following example demonstrates how to position the node named <code class="docutils literal notranslate"><span class="pre">&quot;transform1&quot;</span></code> on the cursor.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nodeEditor</span> <span class="o">=</span> <span class="n">getPrimaryNodeEditor</span><span class="p">()</span>
+<span class="n">graphicsView</span> <span class="o">=</span> <span class="n">getCurrentNodeEditorGraphicsViewFromEditor</span><span class="p">(</span><span class="n">nodeEditor</span><span class="p">)</span>
+<span class="n">viewport</span> <span class="o">=</span> <span class="n">graphicsView</span><span class="o">.</span><span class="n">viewport</span><span class="p">()</span>
+
+<span class="c1"># Determine the cursor position in QGraphicsView viewport coordinates</span>
+<span class="n">cursorPos_viewport</span> <span class="o">=</span> <span class="n">viewport</span><span class="o">.</span><span class="n">mapFromGlobal</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
+<span class="c1"># The QGraphicsView is used to map viewport coordinates to QGraphicsScene coordinates</span>
+<span class="n">cursorPos_scene</span> <span class="o">=</span> <span class="n">graphicsView</span><span class="o">.</span><span class="n">mapToScene</span><span class="p">(</span><span class="n">cursorPos_viewport</span><span class="p">)</span>
+<span class="c1"># Offset the position so that the node title is centered on the cursor</span>
+<span class="n">nodePos_scene</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QPointF</span><span class="p">(</span><span class="n">cursorPos_scene</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">-</span> <span class="mf">67.5</span><span class="p">,</span> <span class="n">cursorPos_scene</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+<span class="c1"># Determine the node position in Graphviz coordinates</span>
+<span class="n">nodePos_graphviz</span> <span class="o">=</span> <span class="n">nodePos_scene</span> <span class="o">*</span> <span class="n">GRAPHICS_SCENE_TO_GRAPHVIZ_TRANSFORM</span>
+
+<span class="c1"># Generate a plain formatted DOT language graph description</span>
+<span class="c1"># The `graphWidth`, `graphHeight`, `nodeWidth` and `nodeHeight` should be ignored in this case</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="s2">&quot;graph </span><span class="si">{graphScale}</span><span class="s2"> </span><span class="si">{graphWidth}</span><span class="s2"> </span><span class="si">{graphHeight}</span><span class="se">\n</span><span class="s2">node </span><span class="si">{nodeName}</span><span class="s2"> </span><span class="si">{nodeX}</span><span class="s2"> </span><span class="si">{nodeY}</span><span class="s2"> </span><span class="si">{nodeWidth}</span><span class="s2"> </span><span class="si">{nodeHeight}</span><span class="se">\n</span><span class="s2">stop&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">graphScale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">graphWidth</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">graphHeight</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">nodeName</span><span class="o">=</span><span class="s2">&quot;transform1&quot;</span><span class="p">,</span> <span class="n">nodeX</span><span class="o">=</span><span class="n">nodePos_graphviz</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">nodeY</span><span class="o">=</span><span class="n">nodePos_graphviz</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span> <span class="n">nodeWidth</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">nodeHeight</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+
+<span class="n">cmds</span><span class="o">.</span><span class="n">nodeEditor</span><span class="p">(</span><span class="n">nodeEditor</span><span class="o">.</span><span class="n">objectName</span><span class="p">(),</span> <span class="n">e</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dotFormat</span><span class="o">=</span><span class="n">graph</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtGui/QTransform.html#PySide2.QtGui.QTransform" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtGui.QTransform</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.GRAPHICS_SCENE_TO_NODE_EDITOR_TRANSFORM">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">GRAPHICS_SCENE_TO_NODE_EDITOR_TRANSFORM</code><em class="property"> = PySide2.QtGui.QTransform(1.428571, 0.000000, 0.000000, 0.000000, -1.428571, 0.000000, 0.000000, 0.000000, 1.000000)</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.GRAPHICS_SCENE_TO_NODE_EDITOR_TRANSFORM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsScene.html#PySide2.QtWidgets.QGraphicsScene" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsScene</span></code></a> coordinates into the Node Editor’s coordinate space.</p>
+<p>Coordinates in this space are used to save the positions of nodes in the Node Editor via <code class="docutils literal notranslate"><span class="pre">nodeGraphEditorInfo</span></code> nodes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The transformation inverts the vertical axis. The <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QGraphicsScene.html#PySide2.QtWidgets.QGraphicsScene" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsScene</span></code></a> adopts y-down coordinates whilst the Node Editor adopts standard y-up coordinates.</p>
+</div>
+<p class="rubric">Example</p>
+<p>The following example demonstrates how to determine these contant scaling factors.
+It requires a bookmark to be created in the Node Editor so we can read the <code class="docutils literal notranslate"><span class="pre">viewRectLow</span></code> or <code class="docutils literal notranslate"><span class="pre">viewRectHigh</span></code> attributes of the <code class="docutils literal notranslate"><span class="pre">nodeGraphEditorBookmarkInfo</span></code> node.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nodeEditor</span> <span class="o">=</span> <span class="n">getPrimaryNodeEditor</span><span class="p">()</span>
+<span class="n">graphicsView</span> <span class="o">=</span> <span class="n">getCurrentNodeEditorGraphicsViewFromEditor</span><span class="p">(</span><span class="n">nodeEditor</span><span class="p">)</span>
+<span class="n">viewport</span> <span class="o">=</span> <span class="n">graphicsView</span><span class="o">.</span><span class="n">viewport</span><span class="p">()</span>
+
+<span class="c1"># Use the viewport size since there is a 2px border between it and the graphics view</span>
+<span class="n">viewportSize</span> <span class="o">=</span> <span class="n">viewport</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+<span class="c1"># Use the QGraphicsView to map viewport coordinates to QGraphicsScene coordinates</span>
+<span class="n">sceneBottomLeftPos</span> <span class="o">=</span> <span class="n">graphicsView</span><span class="o">.</span><span class="n">mapToScene</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">viewportSize</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
+
+<span class="c1"># Use the `viewXL` and `viewYL` attributes from the `nodeGraphEditorBookmarkInfo` node</span>
+<span class="n">sceneToNodeEditorScaleX</span> <span class="o">=</span> <span class="n">viewXL</span> <span class="o">/</span> <span class="n">sceneBottomLeftPos</span><span class="o">.</span><span class="n">x</span><span class="p">()</span>
+<span class="n">sceneToNodeEditorScaleY</span> <span class="o">=</span> <span class="n">viewYL</span> <span class="o">/</span> <span class="n">sceneBottomLeftPos</span><span class="o">.</span><span class="n">y</span><span class="p">()</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtGui/QTransform.html#PySide2.QtGui.QTransform" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtGui.QTransform</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.coreUI.maya.nodeEditor_utils.NODE_EDITOR_TO_GRAPHVIZ_TRANSFORM">
+<code class="descclassname">msTools.coreUI.maya.nodeEditor_utils.</code><code class="descname">NODE_EDITOR_TO_GRAPHVIZ_TRANSFORM</code><em class="property"> = PySide2.QtGui.QTransform(0.700000, 0.000000, 0.000000, 0.000000, 0.700000, 0.000000, 0.000000, 0.000000, 1.000000)</em><a class="headerlink" href="#msTools.coreUI.maya.nodeEditor_utils.NODE_EDITOR_TO_GRAPHVIZ_TRANSFORM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms Node Editor coordinates into a Graphviz coordinate space.</p>
+<p>Coordinates in this space can be used to position nodes within the Node Editor by passing a minimal graph description to the <code class="docutils literal notranslate"><span class="pre">dotFormat</span></code> argument of the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/nodeEditor.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.nodeEditor()</span></code></a> command.
+The graph description must be provided in the <a class="reference external" href="https://graphviz.org/doc/info/output.html#d:plain">plain</a> format of the DOT language.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Both the input and output coordinate spaces adopt standard y-up coordinates.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtGui/QTransform.html#PySide2.QtGui.QTransform" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtGui.QTransform</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.coreUI.maya.widget_utils.html" class="btn btn-neutral float-right" title="widget_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.coreUI.maya.inspect_utils.html" class="btn btn-neutral float-left" title="inspect_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

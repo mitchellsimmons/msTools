@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>inspect_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="nodeEditor_utils" href="msTools.coreUI.maya.nodeEditor_utils.html" />
+    <link rel="prev" title="exceptions" href="msTools.coreUI.maya.exceptions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">inspect_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.coreUI.maya.inspect_utils">Description</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>inspect_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.coreUI.maya.inspect_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="inspect-utils">
+<h1>inspect_utils<a class="headerlink" href="#inspect-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.inspect_utils.getFullName" title="msTools.coreUI.maya.inspect_utils.getFullName"><code class="xref py py-func docutils literal notranslate"><span class="pre">getFullName()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.inspect_utils.getMainWindow" title="msTools.coreUI.maya.inspect_utils.getMainWindow"><code class="xref py py-func docutils literal notranslate"><span class="pre">getMainWindow()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.inspect_utils.getPanelUnderCursor" title="msTools.coreUI.maya.inspect_utils.getPanelUnderCursor"><code class="xref py py-func docutils literal notranslate"><span class="pre">getPanelUnderCursor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.inspect_utils.getWidget" title="msTools.coreUI.maya.inspect_utils.getWidget"><code class="xref py py-func docutils literal notranslate"><span class="pre">getWidget()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.coreUI.maya.inspect_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.coreUI.maya.inspect_utils" title="Permalink to this headline">¶</a></h2>
+<p>Inspect UI elements for the current interactive Maya session.</p>
+<hr class="docutils" />
+<dl class="function">
+<dt id="msTools.coreUI.maya.inspect_utils.getFullName">
+<code class="descclassname">msTools.coreUI.maya.inspect_utils.</code><code class="descname">getFullName</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.inspect_utils.getFullName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the full hierarchical name of a <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> object.</p>
+<p>This is the name which uniquely identifies the element within Maya and can be passed to Maya’s UI commands.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a>) – A <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> – The full hierarchical name of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.inspect_utils.getMainWindow">
+<code class="descclassname">msTools.coreUI.maya.inspect_utils.</code><code class="descname">getMainWindow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.inspect_utils.getMainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> widget for the main Maya window.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If the main Maya window could not be identified.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QMainWindow.html#PySide2.QtWidgets.QMainWindow" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMainWindow</span></code></a> – Widget for the main Maya window.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.inspect_utils.getPanelUnderCursor">
+<code class="descclassname">msTools.coreUI.maya.inspect_utils.</code><code class="descname">getPanelUnderCursor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.inspect_utils.getPanelUnderCursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> widget for the Maya panel under the current cursor position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If there is no Maya panel under the current cursor position.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a> – Widget for the Maya panel under the current cursor position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.inspect_utils.getWidget">
+<code class="descclassname">msTools.coreUI.maya.inspect_utils.</code><code class="descname">getWidget</code><span class="sig-paren">(</span><em>widgetName</em>, <em>widgetClass=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.inspect_utils.getWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> widget identified by name. Implicitly cast to the most suitable class or explicitly cast to a given class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>widgetName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – Name of the widget such as <code class="docutils literal notranslate"><span class="pre">'myButton'</span></code> or a hierarchical path to the widget such as <code class="docutils literal notranslate"><span class="pre">'myWindow|myButton'</span></code>.
+If the name corresponds to an element created using Maya commands, the names of any child layouts (placeholder widgets) must be included within the hierarchy.</li>
+<li><strong>widgetClass</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#type" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>, optional) – A (non-strict) subclass of <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a> used as the explicit casting type for the underlying <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> widget.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - implicitly cast to the most suitable class, guaranteed to be a (non-strict) subclass of <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html#msTools.coreUI.maya.exceptions.MayaUILookupError" title="msTools.coreUI.maya.exceptions.MayaUILookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.coreUI.maya.exceptions.MayaUILookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">widgetName</span></code> does not correspond to an existing <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> widget.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a> – Widget corresponding to <code class="docutils literal notranslate"><span class="pre">widgetName</span></code>, with type given by <code class="docutils literal notranslate"><span class="pre">widgetClass</span></code> or determined implicitly if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.coreUI.maya.nodeEditor_utils.html" class="btn btn-neutral float-right" title="nodeEditor_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.coreUI.maya.exceptions.html" class="btn btn-neutral float-left" title="exceptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

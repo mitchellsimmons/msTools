@@ -1,0 +1,901 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>dg_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="exceptions" href="msTools.core.maya.exceptions.html" />
+    <link rel="prev" title="decorator_utils" href="msTools.core.maya.decorator_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">dg_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.maya.dg_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>dg_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.maya.dg_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dg-utils">
+<h1>dg_utils<a class="headerlink" href="#dg-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.cacheComponent" title="msTools.core.maya.dg_utils.cacheComponent"><code class="xref py py-func docutils literal notranslate"><span class="pre">cacheComponent()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.cacheNode" title="msTools.core.maya.dg_utils.cacheNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">cacheNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.cachePlug" title="msTools.core.maya.dg_utils.cachePlug"><code class="xref py py-func docutils literal notranslate"><span class="pre">cachePlug()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.createNode" title="msTools.core.maya.dg_utils.createNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">createNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.deleteNode" title="msTools.core.maya.dg_utils.deleteNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">deleteNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.disconnectDependencies" title="msTools.core.maya.dg_utils.disconnectDependencies"><code class="xref py py-func docutils literal notranslate"><span class="pre">disconnectDependencies()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.getCachedComponent" title="msTools.core.maya.dg_utils.getCachedComponent"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCachedComponent()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.getCachedNode" title="msTools.core.maya.dg_utils.getCachedNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCachedNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.getCachedPlug" title="msTools.core.maya.dg_utils.getCachedPlug"><code class="xref py py-func docutils literal notranslate"><span class="pre">getCachedPlug()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.iterDependenciesByEdge" title="msTools.core.maya.dg_utils.iterDependenciesByEdge"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterDependenciesByEdge()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.iterDependenciesByNode" title="msTools.core.maya.dg_utils.iterDependenciesByNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterDependenciesByNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.iterDependenciesByPlug" title="msTools.core.maya.dg_utils.iterDependenciesByPlug"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterDependenciesByPlug()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.iterNodes" title="msTools.core.maya.dg_utils.iterNodes"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterNodes()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.iterSelectedNodes" title="msTools.core.maya.dg_utils.iterSelectedNodes"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterSelectedNodes()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.lockNode" title="msTools.core.maya.dg_utils.lockNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">lockNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.renameNode" title="msTools.core.maya.dg_utils.renameNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">renameNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.setCachedComponent" title="msTools.core.maya.dg_utils.setCachedComponent"><code class="xref py py-func docutils literal notranslate"><span class="pre">setCachedComponent()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.dg_utils.unlockNode" title="msTools.core.maya.dg_utils.unlockNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">unlockNode()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.maya.dg_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.maya.dg_utils" title="Permalink to this headline">¶</a></h2>
+<p>Maya dependency graph operations including dependency node modifications and iteration of the graph.
+For operations specific to plugs and attributes see <a class="reference internal" href="msTools.core.maya.plug_utils.html#module-msTools.core.maya.plug_utils" title="msTools.core.maya.plug_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msTools.core.maya.plug_utils</span></code></a> or <a class="reference internal" href="msTools.core.maya.attribute_utils.html#module-msTools.core.maya.attribute_utils" title="msTools.core.maya.attribute_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">msTools.core.maya.attribute_utils</span></code></a>.</p>
+<hr class="docutils" />
+<div class="section" id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>A dependency is formed when data flows between two connected plugs via a directed edge in the graph.
+Dependency paths define the flow of data in the dependency graph.
+They are a product of the internal <code class="docutils literal notranslate"><span class="pre">attributeAffects</span></code> relationships of nodes and the edges which connect plugs in the graph.</div></blockquote>
+<hr class="docutils" />
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.cacheComponent">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">cacheComponent</code><span class="sig-paren">(</span><em>sourceComponent</em>, <em>destNode</em>, <em>shortName=None</em>, <em>longName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.cacheComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cache shape node components on a destination node.</p>
+<p>A connection will be made from the static <code class="docutils literal notranslate"><span class="pre">'message'</span></code> attribute of the souce node to a typed attribute on the destination node.
+The typed attribute will hold the component data from the source node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sourceComponent</strong> ((<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>)) – <p>A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> representing component data to cache on <code class="docutils literal notranslate"><span class="pre">destNode</span></code>.</p>
+<ol class="arabic">
+<li>Path encapsulation of a shape node.</li>
+<li>Wrapper holding <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a82b17f4078f71ebb2472ca1b4b7ff084" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kComponent</span></code></a> type date corresponding to components on the shape node.</li>
+</ol>
+</li>
+<li><strong>destNode</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dependency node on which to cache the <code class="docutils literal notranslate"><span class="pre">sourceComponent</span></code> data.</li>
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the new typed attribute used to cache the component data. If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">longName</span></code> will be used.
+If the <code class="docutils literal notranslate"><span class="pre">longName</span></code> is also <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the short name of the <code class="docutils literal notranslate"><span class="pre">sourceNode</span></code> will be suffixed by <code class="docutils literal notranslate"><span class="pre">'__components'</span></code>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the new typed attribute used to cache the component data. If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> will be used.
+If the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> is also <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the short name of the <code class="docutils literal notranslate"><span class="pre">sourceNode</span></code> will be suffixed by <code class="docutils literal notranslate"><span class="pre">'__components'</span></code>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If the first element of <code class="docutils literal notranslate"><span class="pre">sourceComponent</span></code> does not reference a shape node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If the second element of <code class="docutils literal notranslate"><span class="pre">sourceComponent</span></code> does not reference component data.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">destNode</span></code> does not reference a dependency node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">destNode</span></code> already has an attribute with the same <code class="docutils literal notranslate"><span class="pre">shortName</span></code> or <code class="docutils literal notranslate"><span class="pre">longName</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.cacheNode">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">cacheNode</code><span class="sig-paren">(</span><em>sourceNode</em>, <em>destNode</em>, <em>shortName=None</em>, <em>longName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.cacheNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cache a dependency node on another dependency node via a message type attribute.</p>
+<p>A connection will be made from the static <code class="docutils literal notranslate"><span class="pre">'message'</span></code> attribute of the souce node to a message type attribute on the destination node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sourceNode</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dependency node to cache on <code class="docutils literal notranslate"><span class="pre">destNode</span></code>.</li>
+<li><strong>destNode</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dependency node on which to cache the <code class="docutils literal notranslate"><span class="pre">sourceNode</span></code>.</li>
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the new message type attribute used to cache the <code class="docutils literal notranslate"><span class="pre">sourceNode</span></code>.
+If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">longName</span></code> will be used. If the <code class="docutils literal notranslate"><span class="pre">longName</span></code> is also <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">sourceNode</span></code> short name will be used.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the new message type attribute used to cache the <code class="docutils literal notranslate"><span class="pre">sourceNode</span></code>.
+If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> will be used. If the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> is also <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">sourceNode</span></code> short name will be used.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">sourceNode</span></code> or <code class="docutils literal notranslate"><span class="pre">destNode</span></code> does not reference a dependency node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">destNode</span></code> already has an attribute with the same <code class="docutils literal notranslate"><span class="pre">shortName</span></code> or <code class="docutils literal notranslate"><span class="pre">longName</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.cachePlug">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">cachePlug</code><span class="sig-paren">(</span><em>sourcePlug</em>, <em>destNode</em>, <em>shortName=None</em>, <em>longName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.cachePlug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cache a dependency node plug on a dependency node.</p>
+<p>A connection will be made from the source plug to a message type attribute on the destination node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sourcePlug</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a>) – Encapsulation of a dependency node plug to cache on <code class="docutils literal notranslate"><span class="pre">destNode</span></code>.</li>
+<li><strong>destNode</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dependency node on which to cache the <code class="docutils literal notranslate"><span class="pre">sourcePlug</span></code>.</li>
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the new message type attribute used to cache the <code class="docutils literal notranslate"><span class="pre">sourcePlug</span></code>. If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">longName</span></code> will be used.
+If the <code class="docutils literal notranslate"><span class="pre">longName</span></code> is also <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference internal" href="msTools.core.maya.name_utils.html#msTools.core.maya.name_utils.getPlugStorableName" title="msTools.core.maya.name_utils.getPlugStorableName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">msTools.core.maya.name_utils.getPlugStorableName()</span></code></a> will be used to determine a name for the <code class="docutils literal notranslate"><span class="pre">sourcePlug</span></code>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the new message type attribute used to cache the <code class="docutils literal notranslate"><span class="pre">sourcePlug</span></code>. If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> will be used.
+If the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> is also <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference internal" href="msTools.core.maya.name_utils.html#msTools.core.maya.name_utils.getPlugStorableName" title="msTools.core.maya.name_utils.getPlugStorableName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">msTools.core.maya.name_utils.getPlugStorableName()</span></code></a> will be used to determine a name for the <code class="docutils literal notranslate"><span class="pre">sourcePlug</span></code>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">destNode</span></code> does not reference a dependency node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">destNode</span></code> already has an attribute with the same <code class="docutils literal notranslate"><span class="pre">shortName</span></code> or <code class="docutils literal notranslate"><span class="pre">longName</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.createNode">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">createNode</code><span class="sig-paren">(</span><em>nodeType</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.createNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use <a class="reference internal" href="msTools.core.maya.dag_utils.html#msTools.core.maya.dag_utils.createNode" title="msTools.core.maya.dag_utils.createNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">msTools.core.maya.dag_utils.createNode()</span></code></a> to create a DAG node.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>nodeType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – Name of the node type identifier used to create a node.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">nodeType</span></code> is an invalid node type identifier.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper for the new dependency node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.deleteNode">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">deleteNode</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.deleteNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use <a class="reference internal" href="msTools.core.maya.dag_utils.html#msTools.core.maya.dag_utils.deleteNode" title="msTools.core.maya.dag_utils.deleteNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">msTools.core.maya.dag_utils.deleteNode()</span></code></a> to delete a DAG node.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dependency node.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.disconnectDependencies">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">disconnectDependencies</code><span class="sig-paren">(</span><em>root</em>, <em>upstream=False</em>, <em>downstream=False</em>, <em>walk=False</em>, <em>filterTypes=None</em>, <em>forceLocked=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.disconnectDependencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect pairs of source and destination plugs for the dependencies of a plug or node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Plug object or wrapper of a dependency node from which to traverse dependencies.</li>
+<li><strong>upstream</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to disconnect upstream dependencies of <code class="docutils literal notranslate"><span class="pre">root</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>downstream</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to disconnect downstream dependencies of <code class="docutils literal notranslate"><span class="pre">root</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>walk</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to traverse entire dependency paths. If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>, only direct dependencies are traversed.
+If <code class="docutils literal notranslate"><span class="pre">root</span></code> is a node, each connected plug on <code class="docutils literal notranslate"><span class="pre">root</span></code> acts as the root of a path. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>filterTypes</strong> (iterable [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], optional) – Filter dependencies based on their <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> node compatibility with type constants from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a>.
+Exclusions can be given as negated type constants making it is possible to exclude specific inheriting types such as <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aca1e204a1581fafb7c439d66c4ff5adf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMesh</span></code></a>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - no type filtering will occur.</li>
+<li><strong>forceLocked</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to force disconnect a dependency that is connected via a locked destination plug. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">root</span></code> is an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> but does not reference a dependency node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If any of the dependencies are connected via a locked destination plug and <code class="docutils literal notranslate"><span class="pre">forceLocked</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove direct connections to any constraints downstream of `root`</span>
+<span class="n">disconnectDependencies</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">downstream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">filterTypes</span><span class="o">=</span><span class="p">(</span><span class="n">OpenMaya</span><span class="o">.</span><span class="n">MFn</span><span class="o">.</span><span class="n">kConstraint</span><span class="p">,))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.getCachedComponent">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">getCachedComponent</code><span class="sig-paren">(</span><em>plug</em>, <em>instanceNumber=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.getCachedComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve cached component data from a dependency node plug. Designed for use with <a class="reference internal" href="#msTools.core.maya.dg_utils.cacheComponent" title="msTools.core.maya.dg_utils.cacheComponent"><code class="xref py py-func docutils literal notranslate"><span class="pre">cacheComponent()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>plug</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a>) – Encapsulation of a dependency node plug which holds <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kComponentList</span></code></a> type data.
+The plug should be connected to an input shape node which has components corresponding to the data.</li>
+<li><strong>instanceNumber</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Instance number to be used by the path encapsulation of the cached node. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">plug</span></code> does not reference a typed attribute which holds <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kComponentList</span></code></a> type data.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">plug</span></code> is not connected to an input shape node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If there is no instance of the cached shape node with corresponding <code class="docutils literal notranslate"><span class="pre">instanceNumber</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> containing the cached component data.<ol class="arabic simple">
+<li>Path encapsulation of the cached shape node with <code class="docutils literal notranslate"><span class="pre">instanceNumber</span></code>.</li>
+<li>Wrapper of the cached <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a82b17f4078f71ebb2472ca1b4b7ff084" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kComponent</span></code></a> type data.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.getCachedNode">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">getCachedNode</code><span class="sig-paren">(</span><em>plug</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.getCachedNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a cached dependency node from a dependency node plug. Designed for use with <a class="reference internal" href="#msTools.core.maya.dg_utils.cacheNode" title="msTools.core.maya.dg_utils.cacheNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">cacheNode()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>plug</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a>) – Encapsulation of a dependency node plug which references a message type attribute and is a destination.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">plug</span></code> does not reference a message type attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">plug</span></code> does not have an input connection.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper of the dependency node connected as the input of <code class="docutils literal notranslate"><span class="pre">plug</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.getCachedPlug">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">getCachedPlug</code><span class="sig-paren">(</span><em>plug</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.getCachedPlug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a cached dependency node plug from a dependency node plug. Designed for use with <a class="reference internal" href="#msTools.core.maya.dg_utils.cachePlug" title="msTools.core.maya.dg_utils.cachePlug"><code class="xref py py-func docutils literal notranslate"><span class="pre">cachePlug()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>plug</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a>) – Encapsulation of a dependency node plug which references a message type attribute and is a destination.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">plug</span></code> does not reference a message type attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">plug</span></code> does not have an input connection.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a> – Encapsulation of a dependency node plug connected as the input of <code class="docutils literal notranslate"><span class="pre">plug</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.iterDependenciesByEdge">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">iterDependenciesByEdge</code><span class="sig-paren">(</span><em>root</em>, <em>directionType=0</em>, <em>traversalType=0</em>, <em>walk=True</em>, <em>pruneMessage=False</em>, <em>filterTypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.iterDependenciesByEdge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield dependencies of a plug or node as edges represented by a pair of connected source and destination plugs.</p>
+<p>Each pair will correspond to a connection from a source plug to a destination plug regardless of the <code class="docutils literal notranslate"><span class="pre">directionType</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">root</span></code> is a node, each connected plug on <code class="docutils literal notranslate"><span class="pre">root</span></code> will be traversed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Cyclic dependency paths may terminate back on <code class="docutils literal notranslate"><span class="pre">root</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Plug object or wrapper of a dependency node from which to traverse dependencies.</li>
+<li><strong>directionType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – The direction of traversal for dependencies of <code class="docutils literal notranslate"><span class="pre">root</span></code>.
+Valid values are either <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a42f08e1fe30b16be8a30d71f96c96dca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDownstream</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a5ace58c0aa56bb3b6eea833aa7e46959" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kUpstream</span></code></a>.
+Values correspond to either downstream or upstream dependency traversal of <code class="docutils literal notranslate"><span class="pre">root</span></code>. Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a42f08e1fe30b16be8a30d71f96c96dca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDownstream</span></code></a>.</li>
+<li><strong>traversalType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – The type of dependency traversal.
+Valid values are either <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#afe9c8523ad946ce628860f89f93baa89" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kBreadthFirst</span></code></a>.
+If <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#afe9c8523ad946ce628860f89f93baa89" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kBreadthFirst</span></code></a>, exhaust an entire level of dependencies before proceeding to the next level using breadth first traversal.
+If <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a>, exhaust an entire dependency path before proceeding to the next path using depth first traversal.
+Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a>.</li>
+<li><strong>walk</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to traverse entire dependency paths. If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>, only direct dependencies are traversed.
+If <code class="docutils literal notranslate"><span class="pre">root</span></code> is a node, each connected plug on <code class="docutils literal notranslate"><span class="pre">root</span></code> acts as the root of a path. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>pruneMessage</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to prune traversal when a connection originates from a message type attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>filterTypes</strong> (iterable [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], optional) – Filter plug dependencies based on their <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> node compatibility with type constants from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a>.
+Exclusions can be given as negated type constants making it is possible to exclude specific inheriting types such as <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aca1e204a1581fafb7c439d66c4ff5adf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMesh</span></code></a>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - no type filtering will occur.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">root</span></code> is an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> but does not reference a dependency node.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first">(<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a>) – A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> of connected plugs.</p>
+<ol class="arabic simple">
+<li>A source plug connection for a dependency of <code class="docutils literal notranslate"><span class="pre">root</span></code>.</li>
+<li>A corresponding destination plug connection for a dependency of <code class="docutils literal notranslate"><span class="pre">root</span></code>.</li>
+</ol>
+<p class="last">Together each pair represents a connected edge in the graph.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.iterDependenciesByNode">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">iterDependenciesByNode</code><span class="sig-paren">(</span><em>root</em>, <em>directionType=0</em>, <em>traversalType=0</em>, <em>walk=True</em>, <em>pruneMessage=False</em>, <em>filterTypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.iterDependenciesByNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield the node dependencies of a plug or node.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">root</span></code> is a node, each connected plug on <code class="docutils literal notranslate"><span class="pre">root</span></code> will be traversed. A node is yielded if it has not been visited.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Cyclic dependency paths may terminate back on <code class="docutils literal notranslate"><span class="pre">root</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Plug object or wrapper of a dependency node from which to traverse dependencies.</li>
+<li><strong>directionType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – The direction of traversal for dependencies of <code class="docutils literal notranslate"><span class="pre">root</span></code>.
+Valid values are either <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a42f08e1fe30b16be8a30d71f96c96dca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDownstream</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a5ace58c0aa56bb3b6eea833aa7e46959" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kUpstream</span></code></a>.
+Values correspond to either downstream or upstream dependency traversal of <code class="docutils literal notranslate"><span class="pre">root</span></code>. Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a42f08e1fe30b16be8a30d71f96c96dca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDownstream</span></code></a>.</li>
+<li><strong>traversalType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – The type of dependency traversal.
+Valid values are either <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#afe9c8523ad946ce628860f89f93baa89" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kBreadthFirst</span></code></a>.
+If <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#afe9c8523ad946ce628860f89f93baa89" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kBreadthFirst</span></code></a>, exhaust an entire level of dependencies before proceeding to the next level using breadth first traversal.
+If <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a>, exhaust an entire dependency path before proceeding to the next path using depth first traversal.
+Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a>.</li>
+<li><strong>walk</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to traverse entire dependency paths. If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>, only direct dependencies are traversed.
+If <code class="docutils literal notranslate"><span class="pre">root</span></code> is a node, each connected plug on <code class="docutils literal notranslate"><span class="pre">root</span></code> acts as the root of a path. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>pruneMessage</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to prune traversal when a connection originates from a message type attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>filterTypes</strong> (iterable [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], optional) – Filter node dependencies based on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> compatibility with type constants from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a>.
+Exclusions can be given as negated type constants making it is possible to exclude specific inheriting types such as <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aca1e204a1581fafb7c439d66c4ff5adf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMesh</span></code></a>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - no type filtering will occur.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">root</span></code> is an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> but does not reference a dependency node.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers for the node dependencies of <code class="docutils literal notranslate"><span class="pre">root</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.iterDependenciesByPlug">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">iterDependenciesByPlug</code><span class="sig-paren">(</span><em>root</em>, <em>directionType=0</em>, <em>traversalType=0</em>, <em>walk=True</em>, <em>pruneMessage=False</em>, <em>filterTypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.iterDependenciesByPlug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield the plug dependencies of a plug or node.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">directionType</span></code> is <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a42f08e1fe30b16be8a30d71f96c96dca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDownstream</span></code></a>, dependencies will correspond to destination plug connections.
+If the <code class="docutils literal notranslate"><span class="pre">directionType</span></code> is <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a5ace58c0aa56bb3b6eea833aa7e46959" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kUpstream</span></code></a>, dependencies will correspond to source plug connections.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">root</span></code> is a node, each connected plug on <code class="docutils literal notranslate"><span class="pre">root</span></code> will be traversed. A plug is yielded if it has not been visited.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Cyclic dependency paths may terminate back on <code class="docutils literal notranslate"><span class="pre">root</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Plug object or wrapper of a dependency node from which to traverse dependencies.</li>
+<li><strong>directionType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – The direction of traversal for dependencies of <code class="docutils literal notranslate"><span class="pre">root</span></code>.
+Valid values are either <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a42f08e1fe30b16be8a30d71f96c96dca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDownstream</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a5ace58c0aa56bb3b6eea833aa7e46959" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kUpstream</span></code></a>.
+Values correspond to either downstream or upstream dependency traversal of <code class="docutils literal notranslate"><span class="pre">root</span></code>. Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#a42f08e1fe30b16be8a30d71f96c96dca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDownstream</span></code></a>.</li>
+<li><strong>traversalType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – The type of dependency traversal.
+Valid values are either <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#afe9c8523ad946ce628860f89f93baa89" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kBreadthFirst</span></code></a>.
+If <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#afe9c8523ad946ce628860f89f93baa89" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kBreadthFirst</span></code></a>, exhaust an entire level of dependencies before proceeding to the next level using breadth first traversal.
+If <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a>, exhaust an entire dependency path before proceeding to the next path using depth first traversal.
+Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_it_dependency_graph_html#ab1ce49df67f451fa97ccc30924066386" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MItDependencyGraph.kDepthFirst</span></code></a>.</li>
+<li><strong>walk</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to traverse entire dependency paths. If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>, only direct dependencies are traversed.
+If <code class="docutils literal notranslate"><span class="pre">root</span></code> is a node, each connected plug on <code class="docutils literal notranslate"><span class="pre">root</span></code> acts as the root of a path. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>pruneMessage</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to prune traversal when a connection originates from a message type attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>filterTypes</strong> (iterable [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], optional) – Filter plug dependencies based on their <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> node compatibility with type constants from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a>.
+Exclusions can be given as negated type constants making it is possible to exclude specific inheriting types such as <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aca1e204a1581fafb7c439d66c4ff5adf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMesh</span></code></a>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - no type filtering will occur.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">root</span></code> is an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> but does not reference a dependency node.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a> – Plugs for each plug dependency of <code class="docutils literal notranslate"><span class="pre">root</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.iterNodes">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">iterNodes</code><span class="sig-paren">(</span><em>filterTypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.iterNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield dependency nodes in the scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filterTypes</strong> (iterable [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], optional) – Filter nodes based on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> compatibility with type constants from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a>.
+Exclusions can be given as negated type constants making it is possible to exclude specific inheriting types such as <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aca1e204a1581fafb7c439d66c4ff5adf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMesh</span></code></a>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - no type filtering will occur.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of dependency nodes in the scene.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.iterSelectedNodes">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">iterSelectedNodes</code><span class="sig-paren">(</span><em>filterTypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.iterSelectedNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield dependency nodes in the active selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filterTypes</strong> (iterable [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], optional) – Filter selected nodes based on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> compatibility with type constants from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a>.
+Exclusions can be given as negated type constants making it is possible to exclude specific inheriting types such as <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aca1e204a1581fafb7c439d66c4ff5adf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMesh</span></code></a>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - no type filtering will occur.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of dependency nodes in the active selection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.lockNode">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">lockNode</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.lockNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lock a node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dependency node.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if the lock state of <code class="docutils literal notranslate"><span class="pre">node</span></code> has changed, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.renameNode">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">renameNode</code><span class="sig-paren">(</span><em>node</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.renameNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rename a node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of an unlocked dependency node.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – New name for <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> is locked.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.setCachedComponent">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">setCachedComponent</code><span class="sig-paren">(</span><em>sourceComponent</em>, <em>destPlug</em>, <em>forceLocked=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.setCachedComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update shape node components which are cached on a dependency node via a plug holding <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kComponentList</span></code></a> data.</p>
+<p>A connection will be made from the static <code class="docutils literal notranslate"><span class="pre">'message'</span></code> attribute of the souce node to an existing typed attribute.
+The existing typed attribute will be updated to hold the component data from the source node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sourceComponent</strong> ((<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>)) – <p>A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> used to update the component data of <code class="docutils literal notranslate"><span class="pre">destPlug</span></code>.</p>
+<ol class="arabic">
+<li>Path encapsulation of a shape node.</li>
+<li>Wrapper holding <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a82b17f4078f71ebb2472ca1b4b7ff084" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kComponent</span></code></a> type date corresponding to components on the shape node.</li>
+</ol>
+</li>
+<li><strong>destPlug</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a>) – Encapsulation of a dependency node plug holding <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kComponentList</span></code></a> data.</li>
+<li><strong>forceLocked</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to force the update if <code class="docutils literal notranslate"><span class="pre">destPlug</span></code> is locked. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If the first element of <code class="docutils literal notranslate"><span class="pre">sourceComponent</span></code> does not reference a shape node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If the second element of <code class="docutils literal notranslate"><span class="pre">sourceComponent</span></code> does not reference component data.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">destPlug</span></code> does not hold <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kComponentList</span></code></a> data.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">destPlug</span></code> is locked and <code class="docutils literal notranslate"><span class="pre">forceLocked</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.dg_utils.unlockNode">
+<code class="descclassname">msTools.core.maya.dg_utils.</code><code class="descname">unlockNode</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.dg_utils.unlockNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlock a node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dependency node.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if the lock state of <code class="docutils literal notranslate"><span class="pre">node</span></code> has changed, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.core.maya.exceptions.html" class="btn btn-neutral float-right" title="exceptions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.core.maya.decorator_utils.html" class="btn btn-neutral float-left" title="decorator_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

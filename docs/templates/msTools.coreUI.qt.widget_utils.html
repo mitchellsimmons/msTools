@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>widget_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="base" href="msTools.metadata.systems.base.html" />
+    <link rel="prev" title="shape_utils" href="msTools.coreUI.qt.shape_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">widget_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.coreUI.qt.widget_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coordinates">Coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>widget_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.coreUI.qt.widget_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="widget-utils">
+<h1>widget_utils<a class="headerlink" href="#widget-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnCurrentScreen" title="msTools.coreUI.qt.widget_utils.centerWidgetOnCurrentScreen"><code class="xref py py-func docutils literal notranslate"><span class="pre">centerWidgetOnCurrentScreen()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnCursor" title="msTools.coreUI.qt.widget_utils.centerWidgetOnCursor"><code class="xref py py-func docutils literal notranslate"><span class="pre">centerWidgetOnCursor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnParentContents" title="msTools.coreUI.qt.widget_utils.centerWidgetOnParentContents"><code class="xref py py-func docutils literal notranslate"><span class="pre">centerWidgetOnParentContents()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnParentFrame" title="msTools.coreUI.qt.widget_utils.centerWidgetOnParentFrame"><code class="xref py py-func docutils literal notranslate"><span class="pre">centerWidgetOnParentFrame()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnPrimaryScreen" title="msTools.coreUI.qt.widget_utils.centerWidgetOnPrimaryScreen"><code class="xref py py-func docutils literal notranslate"><span class="pre">centerWidgetOnPrimaryScreen()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnScreen" title="msTools.coreUI.qt.widget_utils.centerWidgetOnScreen"><code class="xref py py-func docutils literal notranslate"><span class="pre">centerWidgetOnScreen()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnScreenWithCursor" title="msTools.coreUI.qt.widget_utils.centerWidgetOnScreenWithCursor"><code class="xref py py-func docutils literal notranslate"><span class="pre">centerWidgetOnScreenWithCursor()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.retain" title="msTools.coreUI.qt.widget_utils.retain"><code class="xref py py-func docutils literal notranslate"><span class="pre">retain()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.retainAndReturn" title="msTools.coreUI.qt.widget_utils.retainAndReturn"><code class="xref py py-func docutils literal notranslate"><span class="pre">retainAndReturn()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.coreUI.qt.widget_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.coreUI.qt.widget_utils" title="Permalink to this headline">¶</a></h2>
+<p>General purpose utility functions relating to <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> widgets.</p>
+<hr class="docutils" />
+<div class="section" id="windows">
+<span id="id1"></span><h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>A widget that has the <code class="xref py py-attr docutils literal notranslate"><span class="pre">PySide2.QtCore.Qt.Window</span></code> flag set is considered a window.</p>
+<ul class="simple">
+<li>A widget that has no parent will always have this flag set.</li>
+<li>A widget that is constructed with a parent will not have this flag set,
+unless the widget is a special window type such as <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QDialog.html#PySide2.QtWidgets.QDialog" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QDialog</span></code></a> or <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QMainWindow.html#PySide2.QtWidgets.QMainWindow" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMainWindow</span></code></a>.</li>
+<li>This flag will always be unset upon reparenting a widget.</li>
+<li>It is possible to manually set this flag on any widget via <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QWidget.setWindowFlag" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.setWindowFlag()</span></code></a>.</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="coordinates">
+<h3>Coordinates<a class="headerlink" href="#coordinates" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The local coordinates of a window are always defined relative to the primary screen (ie. global coordinates) even if it has a parent.
+The local coordinates of a non-window are always defined relative to its parent.
+This behaviour must be considered when making use of the following methods:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QWidget.x" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.x()</span></code></a></li>
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QWidget.y" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.y()</span></code></a></li>
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QWidget.pos" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.pos()</span></code></a></li>
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#id3" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.move()</span></code></a></li>
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QWidget.geometry" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.geometry()</span></code></a></li>
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QWidget.frameGeometry" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.frameGeometry()</span></code></a></li>
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#id14" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.setGeometry()</span></code></a></li>
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QWidget.mapFromParent" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.mapFromParent()</span></code></a></li>
+<li><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.PySide2.QtWidgets.QWidget.mapToParent" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget.mapToParent()</span></code></a></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="references">
+<span id="id2"></span><h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>When referencing c++ widgets (ie. those not created by the <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> Python bindings), it is necessary to take certain precautions:</p>
+<ul class="simple">
+<li>The reference should be retrieved dynamically when needed (never cache a reference).</li>
+<li>If an ancestor is accessed, its reference must be retained until the descendant reference is no longer needed. See <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.retain" title="msTools.coreUI.qt.widget_utils.retain"><code class="xref py py-func docutils literal notranslate"><span class="pre">retain()</span></code></a>.</li>
+<li>If a utility function requires access to the ancestors of an input, it should consider whether it is invalidating the input within the calling scope.</li>
+</ul>
+<p>When referencing a descendant of a c++ ancestor widget, the lifetime of <strong>any</strong> reference to the descendant becomes dependant upon the lifetime of the ancestor reference.
+It appears that the lifetime of references to descendants are managed through some kind of shared pointer held by the ancestor.</p>
+<dl class="docutils">
+<dt>Example:</dt>
+<dd><p class="first">The following demonstrates the necessity for dynamically retrieving references to c++ widgets between idle states.</p>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="c1"># The lifetime of any `menu` reference is now dependant upon the below `window` reference</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">msTools</span><span class="o">.</span><span class="n">coreUI</span><span class="o">.</span><span class="n">maya</span><span class="o">.</span><span class="n">inspect_utils</span><span class="o">.</span><span class="n">getMainWindow</span><span class="p">()</span>
+    <span class="n">menu</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMenu</span><span class="p">)</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">msTools</span><span class="o">.</span><span class="n">coreUI</span><span class="o">.</span><span class="n">maya</span><span class="o">.</span><span class="n">inspect_utils</span><span class="o">.</span><span class="n">getMainWindow</span><span class="p">()</span>
+<span class="n">menu</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMenu</span><span class="p">)</span> <span class="c1"># &lt;- Cach a reference</span>
+
+<span class="c1"># idle...... (the user invokes `foo`)</span>
+
+<span class="n">menu</span><span class="o">.</span><span class="n">objectName</span><span class="p">()</span> <span class="c1"># &lt;- ERROR, the `foo` references were not retained</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<hr class="docutils" />
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.centerWidgetOnCurrentScreen">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">centerWidgetOnCurrentScreen</code><span class="sig-paren">(</span><em>widget</em>, <em>xOffset=0</em>, <em>yOffset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnCurrentScreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center a widget on its current screen (the screen which contains its center position).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – Widget to center.</li>
+<li><strong>xOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Horizontal offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+<li><strong>yOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Vertical offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.centerWidgetOnCursor">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">centerWidgetOnCursor</code><span class="sig-paren">(</span><em>widget</em>, <em>xOffset=0</em>, <em>yOffset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnCursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center a widget on the cursor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – Widget to center.</li>
+<li><strong>xOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Horizontal offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+<li><strong>yOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Vertical offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.centerWidgetOnParentContents">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">centerWidgetOnParentContents</code><span class="sig-paren">(</span><em>widget</em>, <em>xOffset=0</em>, <em>yOffset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnParentContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center a widget on the contents of its parent (this excludes the window frame of the parent).</p>
+<p>If the widget does not have a parent, it will be centered on its current screen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – Widget to center.</li>
+<li><strong>xOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Horizontal offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+<li><strong>yOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Vertical offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.centerWidgetOnParentFrame">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">centerWidgetOnParentFrame</code><span class="sig-paren">(</span><em>widget</em>, <em>xOffset=0</em>, <em>yOffset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnParentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center a widget on its parent (this includes the window frame of the parent).</p>
+<p>If the widget does not have a parent, it will be centered on its current screen (the screen which contains its center position).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – Widget to center.</li>
+<li><strong>xOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Horizontal offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+<li><strong>yOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Vertical offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.centerWidgetOnPrimaryScreen">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">centerWidgetOnPrimaryScreen</code><span class="sig-paren">(</span><em>widget</em>, <em>xOffset=0</em>, <em>yOffset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnPrimaryScreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center a widget on the primary (or default) screen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – Widget to center.</li>
+<li><strong>xOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Horizontal offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+<li><strong>yOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Vertical offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.centerWidgetOnScreen">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">centerWidgetOnScreen</code><span class="sig-paren">(</span><em>widget</em>, <em>screen</em>, <em>xOffset=0</em>, <em>yOffset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnScreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center a widget on a given screen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – Widget to center.</li>
+<li><strong>screen</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtGui.QScreen</span></code>) – <p>Screen represented by either:</p>
+<ul>
+<li>A screen number if the available Qt bindings reference a version &lt; Qt5.</li>
+<li>A screen object if the available Qt bindings reference a version &gt;= Qt5.</li>
+</ul>
+</li>
+<li><strong>xOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Horizontal offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+<li><strong>yOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Vertical offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the available Qt bindings reference a version &lt; Qt5 and <code class="docutils literal notranslate"><span class="pre">screen</span></code> is not an <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the available Qt bindings reference a version &gt;= Qt5 and <code class="docutils literal notranslate"><span class="pre">screen</span></code> is not a <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtGui.QScreen</span></code> object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.centerWidgetOnScreenWithCursor">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">centerWidgetOnScreenWithCursor</code><span class="sig-paren">(</span><em>widget</em>, <em>xOffset=0</em>, <em>yOffset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.centerWidgetOnScreenWithCursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center a widget on the screen which contains the cursor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – Widget to center.</li>
+<li><strong>xOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Horizontal offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+<li><strong>yOffset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Vertical offset from the center. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.retain">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">retain</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.retain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retain a reference to a <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> widget within a global registry.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is sometimes necessary to retain a reference to an ancestral widget to ensure the descendant reference is not invalidated.
+See <a class="reference internal" href="#references"><span class="std std-ref">References</span></a> and the below example.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – Widget to retain.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">msTools</span><span class="o">.</span><span class="n">coreUI</span><span class="o">.</span><span class="n">maya</span><span class="o">.</span><span class="n">inspect_utils</span><span class="o">.</span><span class="n">getMainWindow</span><span class="p">()</span>
+    <span class="n">widget</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">findChildren</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMenu</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># &lt;- Descendant widget created via c++</span>
+    <span class="n">accessParent</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+    <span class="n">widget</span><span class="o">.</span><span class="n">objectName</span><span class="p">()</span> <span class="c1"># &lt;- ERROR (`widget` reference is invalidated)</span>
+
+<span class="k">def</span> <span class="nf">accessParent</span><span class="p">(</span><span class="n">widget</span><span class="p">):</span>
+    <span class="n">widget</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span> <span class="c1"># &lt;- We have not taken ownership of the parent</span>
+
+<span class="n">foo</span><span class="p">()</span>
+
+<span class="c1"># ---------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">msTools</span><span class="o">.</span><span class="n">coreUI</span><span class="o">.</span><span class="n">maya</span><span class="o">.</span><span class="n">inspect_utils</span><span class="o">.</span><span class="n">getMainWindow</span><span class="p">()</span>
+    <span class="n">widget</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">findChildren</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMenu</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># &lt;- Descendant widget created via c++</span>
+    <span class="n">accessParent</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+    <span class="n">widget</span><span class="o">.</span><span class="n">objectName</span><span class="p">()</span> <span class="c1"># &lt;- NO ERROR</span>
+
+<span class="k">def</span> <span class="nf">accessParent</span><span class="p">(</span><span class="n">widget</span><span class="p">):</span>
+    <span class="n">retain</span><span class="p">(</span><span class="n">widget</span><span class="o">.</span><span class="n">parent</span><span class="p">())</span> <span class="c1"># &lt;- We have taken ownership of the parent reference</span>
+
+<span class="n">foo</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.widget_utils.retainAndReturn">
+<code class="descclassname">msTools.coreUI.qt.widget_utils.</code><code class="descname">retainAndReturn</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.widget_utils.retainAndReturn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper of <a class="reference internal" href="#msTools.coreUI.qt.widget_utils.retain" title="msTools.coreUI.qt.widget_utils.retain"><code class="xref py py-func docutils literal notranslate"><span class="pre">retain()</span></code></a> that returns the given widget after retaining a global reference.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.metadata.systems.base.html" class="btn btn-neutral float-right" title="base" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.coreUI.qt.shape_utils.html" class="btn btn-neutral float-left" title="shape_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

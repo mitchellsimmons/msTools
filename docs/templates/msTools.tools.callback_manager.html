@@ -1,0 +1,883 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>callback_manager &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tool_manager" href="msTools.tools.tool_manager.html" />
+    <link rel="prev" title="base" href="msTools.metadata.systems.base.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">callback_manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.tools.callback_manager">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#events">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#registration">Registration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>callback_manager</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.tools.callback_manager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="callback-manager">
+<h1>callback_manager<a class="headerlink" href="#callback-manager" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.tools.callback_manager.DGEvent" title="msTools.tools.callback_manager.DGEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">DGEvent</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>DGEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.TimeChange" title="msTools.tools.callback_manager.DGEvent.TimeChange"><code class="xref py py-attr docutils literal notranslate"><span class="pre">TimeChange</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>DGEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.ForceUpdate" title="msTools.tools.callback_manager.DGEvent.ForceUpdate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ForceUpdate</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>DGEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.NodeAdded" title="msTools.tools.callback_manager.DGEvent.NodeAdded"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeAdded</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>DGEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.NodeRemoved" title="msTools.tools.callback_manager.DGEvent.NodeRemoved"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NodeRemoved</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>DGEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.ConnectionChange" title="msTools.tools.callback_manager.DGEvent.ConnectionChange"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ConnectionChange</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>DGEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.PreConnectionChange" title="msTools.tools.callback_manager.DGEvent.PreConnectionChange"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PreConnectionChange</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.tools.callback_manager.UserEvent" title="msTools.tools.callback_manager.UserEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserEvent</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.ConfirmedOpen" title="msTools.tools.callback_manager.UserEvent.ConfirmedOpen"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ConfirmedOpen</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.CancelledOpen" title="msTools.tools.callback_manager.UserEvent.CancelledOpen"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CancelledOpen</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.ConfirmedImport" title="msTools.tools.callback_manager.UserEvent.ConfirmedImport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ConfirmedImport</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.CancelledImport" title="msTools.tools.callback_manager.UserEvent.CancelledImport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CancelledImport</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.ConfirmedExport" title="msTools.tools.callback_manager.UserEvent.ConfirmedExport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ConfirmedExport</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.CancelledExport" title="msTools.tools.callback_manager.UserEvent.CancelledExport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CancelledExport</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.ConfirmedSave" title="msTools.tools.callback_manager.UserEvent.ConfirmedSave"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ConfirmedSave</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.CancelledSave" title="msTools.tools.callback_manager.UserEvent.CancelledSave"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CancelledSave</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.ConfirmedLoadReference" title="msTools.tools.callback_manager.UserEvent.ConfirmedLoadReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ConfirmedLoadReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>UserEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent.CancelledLoadReference" title="msTools.tools.callback_manager.UserEvent.CancelledLoadReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CancelledLoadReference</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent" title="msTools.tools.callback_manager.SceneEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">SceneEvent</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.SceneUpdate" title="msTools.tools.callback_manager.SceneEvent.SceneUpdate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SceneUpdate</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeNew" title="msTools.tools.callback_manager.SceneEvent.BeforeNew"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeNew</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterNew" title="msTools.tools.callback_manager.SceneEvent.AfterNew"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterNew</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeOpen" title="msTools.tools.callback_manager.SceneEvent.BeforeOpen"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeOpen</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterOpen" title="msTools.tools.callback_manager.SceneEvent.AfterOpen"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterOpen</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeImport" title="msTools.tools.callback_manager.SceneEvent.BeforeImport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeImport</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterImport" title="msTools.tools.callback_manager.SceneEvent.AfterImport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterImport</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeExport" title="msTools.tools.callback_manager.SceneEvent.BeforeExport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeExport</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterExport" title="msTools.tools.callback_manager.SceneEvent.AfterExport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterExport</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeSave" title="msTools.tools.callback_manager.SceneEvent.BeforeSave"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeSave</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterSave" title="msTools.tools.callback_manager.SceneEvent.AfterSave"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterSave</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeLoadReference" title="msTools.tools.callback_manager.SceneEvent.BeforeLoadReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeLoadReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterLoadReference" title="msTools.tools.callback_manager.SceneEvent.AfterLoadReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterLoadReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeUnloadReference" title="msTools.tools.callback_manager.SceneEvent.BeforeUnloadReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeUnloadReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterUnloadReference" title="msTools.tools.callback_manager.SceneEvent.AfterUnloadReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterUnloadReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeImportReference" title="msTools.tools.callback_manager.SceneEvent.BeforeImportReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeImportReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterImportReference" title="msTools.tools.callback_manager.SceneEvent.AfterImportReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterImportReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeExportReference" title="msTools.tools.callback_manager.SceneEvent.BeforeExportReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeExportReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterExportReference" title="msTools.tools.callback_manager.SceneEvent.AfterExportReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterExportReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeCreateReference" title="msTools.tools.callback_manager.SceneEvent.BeforeCreateReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeCreateReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterCreateReference" title="msTools.tools.callback_manager.SceneEvent.AfterCreateReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterCreateReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforeRemoveReference" title="msTools.tools.callback_manager.SceneEvent.BeforeRemoveReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforeRemoveReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterRemoveReference" title="msTools.tools.callback_manager.SceneEvent.AfterRemoveReference"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterRemoveReference</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforePluginLoad" title="msTools.tools.callback_manager.SceneEvent.BeforePluginLoad"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforePluginLoad</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterPluginLoad" title="msTools.tools.callback_manager.SceneEvent.AfterPluginLoad"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterPluginLoad</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.BeforePluginUnload" title="msTools.tools.callback_manager.SceneEvent.BeforePluginUnload"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BeforePluginUnload</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>SceneEvent</cite> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent.AfterPluginUnload" title="msTools.tools.callback_manager.SceneEvent.AfterPluginUnload"><code class="xref py py-attr docutils literal notranslate"><span class="pre">AfterPluginUnload</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.callback_manager.isCallableRegistered" title="msTools.tools.callback_manager.isCallableRegistered"><code class="xref py py-func docutils literal notranslate"><span class="pre">isCallableRegistered()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.callback_manager.registerCallable" title="msTools.tools.callback_manager.registerCallable"><code class="xref py py-func docutils literal notranslate"><span class="pre">registerCallable()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.callback_manager.deregisterCallable" title="msTools.tools.callback_manager.deregisterCallable"><code class="xref py py-func docutils literal notranslate"><span class="pre">deregisterCallable()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.callback_manager.deregisterCallableByIndex" title="msTools.tools.callback_manager.deregisterCallableByIndex"><code class="xref py py-func docutils literal notranslate"><span class="pre">deregisterCallableByIndex()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.tools.callback_manager.reset" title="msTools.tools.callback_manager.reset"><code class="xref py py-func docutils literal notranslate"><span class="pre">reset()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.tools.callback_manager">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.tools.callback_manager" title="Permalink to this headline">¶</a></h2>
+<p>Register callables to Maya message events. Registered callables are invoked when the corresponding message is processed.</p>
+<hr class="docutils" />
+<div class="section" id="events">
+<h3>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The following <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> subclasses provide enumerations which map directly to a Maya message event for a specific <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_message_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMessage</span></code></a> subclass:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent" title="msTools.tools.callback_manager.SceneEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">SceneEvent</span></code></a> ⟶ <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_scene_message_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSceneMessage</span></code></a></li>
+<li><a class="reference internal" href="#msTools.tools.callback_manager.DGEvent" title="msTools.tools.callback_manager.DGEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">DGEvent</span></code></a> ⟶ <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_message_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDGMessage</span></code></a></li>
+</ul>
+<p>The <a class="reference internal" href="#msTools.tools.callback_manager.UserEvent" title="msTools.tools.callback_manager.UserEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserEvent</span></code></a> enumerations provide custom Maya events:</p>
+<ul class="simple">
+<li>Processing of these events is predicated upon user input (ie. the user is prompted to confirm or cancel an operation).</li>
+<li><a class="reference internal" href="#msTools.tools.callback_manager.UserEvent" title="msTools.tools.callback_manager.UserEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserEvent</span></code></a> enumerations such as <code class="xref py py-attr docutils literal notranslate"><span class="pre">UserEvent.ConfirmSave</span></code> are provided as an alternative to <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent" title="msTools.tools.callback_manager.SceneEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">SceneEvent</span></code></a> enumerations when a student version of Maya is being used.</li>
+<li>Student versions of Maya prompt the user for input, however the events corresponding to the <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent" title="msTools.tools.callback_manager.SceneEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">SceneEvent</span></code></a> enumerations are processed regardless of whether the user cancels the operation.</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="registration">
+<h3>Registration<a class="headerlink" href="#registration" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Callbacks for each event are installed as needed (ie. upon registering the initial callable for a specific event).
+Callbacks for each event are removed when there are no longer any callables registered to an event.</p>
+<p>A callable can only be registered once per event, whereby the conditions for registration are are predicated upon object equivalence.
+A special case is made for <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial" title="(in Python v2.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">functools.partial</span></code></a> objects which must pass an additional test.
+Each <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial" title="(in Python v2.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">functools.partial</span></code></a> object must have unique <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial.func" title="(in Python v2.7)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">func</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial.args" title="(in Python v2.7)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">args</span></code></a> and <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial.keywords" title="(in Python v2.7)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keywords</span></code></a> member values.</p>
+<p>The interface for this module is designed to be simple.
+Therefore callback initializers which take additional parameters will be passed default values. See <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_message_html#ac433d7eca57eecc791bad7bc171e26d8" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MDGMessage.addNodeAddedCallback()</span></code></a> as an example.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Reloading this module will result in any registered callbacks being removed and any registered callables being cleared.
+Data is registered by Enum type, meaning registry keys (ie. class ids) will be invalidated upon reloading.</p>
+</div>
+</div></blockquote>
+<hr class="docutils" />
+<dl class="class">
+<dt id="msTools.tools.callback_manager.Event">
+<em class="property">class </em><code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">Event</code><a class="headerlink" href="#msTools.tools.callback_manager.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msTools.vendor.enum.Enum</span></code></p>
+<p>Baseclass used to construct Maya event enumerations.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Class is designed to be inherited.</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="msTools.tools.callback_manager.UserEvent">
+<em class="property">class </em><code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">UserEvent</code><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">msTools.tools.callback_manager.Event</span></code></a></p>
+<p>Derived <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumerations designed for student versions of Maya. Events correspond to Maya messages which produce a dialog prompt.</p>
+<p>Registered callables are executed for the corresponding <code class="docutils literal notranslate"><span class="pre">After...</span></code> <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent" title="msTools.tools.callback_manager.SceneEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">SceneEvent</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is no <code class="docutils literal notranslate"><span class="pre">CreateReference</span></code> event as cancelling still creates a reference, therefore you may as well use the <a class="reference internal" href="#msTools.tools.callback_manager.SceneEvent" title="msTools.tools.callback_manager.SceneEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">SceneEvent</span></code></a>.</p>
+</div>
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.ConfirmedOpen">
+<code class="descname">ConfirmedOpen</code><em class="property"> = &lt;UserEvent.ConfirmedOpen: 1&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.ConfirmedOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.CancelledOpen">
+<code class="descname">CancelledOpen</code><em class="property"> = &lt;UserEvent.CancelledOpen: 2&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.CancelledOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.ConfirmedImport">
+<code class="descname">ConfirmedImport</code><em class="property"> = &lt;UserEvent.ConfirmedImport: 3&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.ConfirmedImport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.CancelledImport">
+<code class="descname">CancelledImport</code><em class="property"> = &lt;UserEvent.CancelledImport: 4&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.CancelledImport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.ConfirmedExport">
+<code class="descname">ConfirmedExport</code><em class="property"> = &lt;UserEvent.ConfirmedExport: 5&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.ConfirmedExport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.CancelledExport">
+<code class="descname">CancelledExport</code><em class="property"> = &lt;UserEvent.CancelledExport: 6&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.CancelledExport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.ConfirmedSave">
+<code class="descname">ConfirmedSave</code><em class="property"> = &lt;UserEvent.ConfirmedSave: 7&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.ConfirmedSave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.CancelledSave">
+<code class="descname">CancelledSave</code><em class="property"> = &lt;UserEvent.CancelledSave: 8&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.CancelledSave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.ConfirmedLoadReference">
+<code class="descname">ConfirmedLoadReference</code><em class="property"> = &lt;UserEvent.ConfirmedLoadReference: 9&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.ConfirmedLoadReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.UserEvent.CancelledLoadReference">
+<code class="descname">CancelledLoadReference</code><em class="property"> = &lt;UserEvent.CancelledLoadReference: 10&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.UserEvent.CancelledLoadReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="msTools.tools.callback_manager.SceneEvent">
+<em class="property">class </em><code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">SceneEvent</code><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">msTools.tools.callback_manager.Event</span></code></a></p>
+<p>Derived <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumerations corresponding to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_scene_message_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSceneMessage</span></code></a> events</p>
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.SceneUpdate">
+<code class="descname">SceneUpdate</code><em class="property"> = &lt;SceneEvent.SceneUpdate: 1&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.SceneUpdate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeNew">
+<code class="descname">BeforeNew</code><em class="property"> = &lt;SceneEvent.BeforeNew: 2&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterNew">
+<code class="descname">AfterNew</code><em class="property"> = &lt;SceneEvent.AfterNew: 3&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeOpen">
+<code class="descname">BeforeOpen</code><em class="property"> = &lt;SceneEvent.BeforeOpen: 4&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterOpen">
+<code class="descname">AfterOpen</code><em class="property"> = &lt;SceneEvent.AfterOpen: 5&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeImport">
+<code class="descname">BeforeImport</code><em class="property"> = &lt;SceneEvent.BeforeImport: 6&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeImport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterImport">
+<code class="descname">AfterImport</code><em class="property"> = &lt;SceneEvent.AfterImport: 7&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterImport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeExport">
+<code class="descname">BeforeExport</code><em class="property"> = &lt;SceneEvent.BeforeExport: 8&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeExport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterExport">
+<code class="descname">AfterExport</code><em class="property"> = &lt;SceneEvent.AfterExport: 9&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterExport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeSave">
+<code class="descname">BeforeSave</code><em class="property"> = &lt;SceneEvent.BeforeSave: 10&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeSave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterSave">
+<code class="descname">AfterSave</code><em class="property"> = &lt;SceneEvent.AfterSave: 11&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterSave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeLoadReference">
+<code class="descname">BeforeLoadReference</code><em class="property"> = &lt;SceneEvent.BeforeLoadReference: 12&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeLoadReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterLoadReference">
+<code class="descname">AfterLoadReference</code><em class="property"> = &lt;SceneEvent.AfterLoadReference: 13&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterLoadReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeUnloadReference">
+<code class="descname">BeforeUnloadReference</code><em class="property"> = &lt;SceneEvent.BeforeUnloadReference: 14&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeUnloadReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterUnloadReference">
+<code class="descname">AfterUnloadReference</code><em class="property"> = &lt;SceneEvent.AfterUnloadReference: 15&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterUnloadReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeImportReference">
+<code class="descname">BeforeImportReference</code><em class="property"> = &lt;SceneEvent.BeforeImportReference: 16&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeImportReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterImportReference">
+<code class="descname">AfterImportReference</code><em class="property"> = &lt;SceneEvent.AfterImportReference: 17&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterImportReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeExportReference">
+<code class="descname">BeforeExportReference</code><em class="property"> = &lt;SceneEvent.BeforeExportReference: 18&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeExportReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterExportReference">
+<code class="descname">AfterExportReference</code><em class="property"> = &lt;SceneEvent.AfterExportReference: 19&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterExportReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeCreateReference">
+<code class="descname">BeforeCreateReference</code><em class="property"> = &lt;SceneEvent.BeforeCreateReference: 20&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeCreateReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterCreateReference">
+<code class="descname">AfterCreateReference</code><em class="property"> = &lt;SceneEvent.AfterCreateReference: 21&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterCreateReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforeRemoveReference">
+<code class="descname">BeforeRemoveReference</code><em class="property"> = &lt;SceneEvent.BeforeRemoveReference: 22&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforeRemoveReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterRemoveReference">
+<code class="descname">AfterRemoveReference</code><em class="property"> = &lt;SceneEvent.AfterRemoveReference: 23&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterRemoveReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforePluginLoad">
+<code class="descname">BeforePluginLoad</code><em class="property"> = &lt;SceneEvent.BeforePluginLoad: 24&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforePluginLoad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterPluginLoad">
+<code class="descname">AfterPluginLoad</code><em class="property"> = &lt;SceneEvent.AfterPluginLoad: 25&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterPluginLoad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.BeforePluginUnload">
+<code class="descname">BeforePluginUnload</code><em class="property"> = &lt;SceneEvent.BeforePluginUnload: 26&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.BeforePluginUnload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.SceneEvent.AfterPluginUnload">
+<code class="descname">AfterPluginUnload</code><em class="property"> = &lt;SceneEvent.AfterPluginUnload: 27&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.SceneEvent.AfterPluginUnload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="msTools.tools.callback_manager.DGEvent">
+<em class="property">class </em><code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">DGEvent</code><a class="headerlink" href="#msTools.tools.callback_manager.DGEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">msTools.tools.callback_manager.Event</span></code></a></p>
+<p>Derived <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumerations corresponding to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_message_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDGMessage</span></code></a> events.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This tool is designed to provide a generic interface for registering callbacks, therefore some functionality is removed from the user.</p>
+<ul class="last simple">
+<li>For example, the events <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.NodeAdded" title="msTools.tools.callback_manager.DGEvent.NodeAdded"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DGEvent.NodeAdded</span></code></a> and <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.NodeRemoved" title="msTools.tools.callback_manager.DGEvent.NodeRemoved"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DGEvent.NodeRemoved</span></code></a> correspond to messages for <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_message_html#ac433d7eca57eecc791bad7bc171e26d8" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MDGMessage.addNodeAddedCallback()</span></code></a> and <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_message_html#a93f07bb0fa682318f5a5279659b02c02" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MDGMessage.addNodeRemovedCallback()</span></code></a>.</li>
+<li>Callbacks for these events will be registered with <code class="docutils literal notranslate"><span class="pre">nodeType='dependNode'</span></code>.</li>
+</ul>
+</div>
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.DGEvent.TimeChange">
+<code class="descname">TimeChange</code><em class="property"> = &lt;DGEvent.TimeChange: 1&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.DGEvent.TimeChange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.DGEvent.ForceUpdate">
+<code class="descname">ForceUpdate</code><em class="property"> = &lt;DGEvent.ForceUpdate: 2&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.DGEvent.ForceUpdate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.DGEvent.NodeAdded">
+<code class="descname">NodeAdded</code><em class="property"> = &lt;DGEvent.NodeAdded: 3&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.DGEvent.NodeAdded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.DGEvent.NodeRemoved">
+<code class="descname">NodeRemoved</code><em class="property"> = &lt;DGEvent.NodeRemoved: 4&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.DGEvent.NodeRemoved" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.DGEvent.ConnectionChange">
+<code class="descname">ConnectionChange</code><em class="property"> = &lt;DGEvent.ConnectionChange: 5&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.DGEvent.ConnectionChange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.tools.callback_manager.DGEvent.PreConnectionChange">
+<code class="descname">PreConnectionChange</code><em class="property"> = &lt;DGEvent.PreConnectionChange: 6&gt;</em><a class="headerlink" href="#msTools.tools.callback_manager.DGEvent.PreConnectionChange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.callback_manager.isCallableRegistered">
+<code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">isCallableRegistered</code><span class="sig-paren">(</span><em>event</em>, <em>callable_</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.callback_manager.isCallableRegistered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify a callable object is registered to a derived <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumeration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>event</strong> (T &lt;= <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – An enumeration of type <code class="docutils literal notranslate"><span class="pre">T</span></code> with upper bound <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>. Corresponds to a Maya message event.</li>
+<li><strong>callable_</strong> (<em>callable</em><em>[</em><em>..</em><em>, </em><em>any</em><em>]</em>) – A callable object. Can be a <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial" title="(in Python v2.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">functools.partial</span></code></a> object.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – True if the callable is registered to the event, False otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.callback_manager.registerCallable">
+<code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">registerCallable</code><span class="sig-paren">(</span><em>event</em>, <em>callable_</em>, <em>receivesCallbackArgs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.callback_manager.registerCallable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callable object to a derived <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumeration corresponding to a Maya message event.</p>
+<p>If this is the first callable to be registered for the <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumeration, a callback associated with that event will be installed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If the callable is a <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial" title="(in Python v2.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">functools.partial</span></code></a> object and <code class="docutils literal notranslate"><span class="pre">receivesCallbackArgs=True</span></code>, it is the caller’s responsibility to ensure:</p>
+<ol class="last arabic simple">
+<li>The <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial.func" title="(in Python v2.7)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functools.partial.func</span></code></a> callable can receive the <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial.args" title="(in Python v2.7)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">args</span></code></a> and <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial.keywords" title="(in Python v2.7)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keywords</span></code></a>.</li>
+<li>The <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial.func" title="(in Python v2.7)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functools.partial.func</span></code></a> callable can receive the callback arguments.</li>
+</ol>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event</strong> (T &lt;= <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – An enumeration of type <code class="docutils literal notranslate"><span class="pre">T</span></code> with upper bound <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>. Corresponds to a Maya message event.</li>
+<li><strong>callable_</strong> (<em>callable</em><em>[</em><em>..</em><em>, </em><em>any</em><em>]</em>) – A callable object. Can be a <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial" title="(in Python v2.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">functools.partial</span></code></a> object.</li>
+<li><strong>receivesCallbackArgs</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether the callable will receive any callback arguments if they exist. Defaults to False.
+For example, a callable registered to the <a class="reference internal" href="#msTools.tools.callback_manager.DGEvent.NodeAdded" title="msTools.tools.callback_manager.DGEvent.NodeAdded"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DGEvent.NodeAdded</span></code></a> event can receive the node <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>
+passed to the callback corresponding to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_message_html#ac433d7eca57eecc791bad7bc171e26d8" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MDGMessage.addNodeAddedCallback()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.callback_manager.deregisterCallable">
+<code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">deregisterCallable</code><span class="sig-paren">(</span><em>event</em>, <em>callable_</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.callback_manager.deregisterCallable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregisters a callable object from a derived <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumeration corresponding to a Maya message event.</p>
+<p>If this was the only callable registered to the derived <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumeration, the callback associated with that event will be removed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event</strong> (T &lt;= <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – An enumeration of type <code class="docutils literal notranslate"><span class="pre">T</span></code> with upper bound <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>. Corresponds to a Maya message event.</li>
+<li><strong>callable_</strong> (<em>callable</em><em>[</em><em>..</em><em>, </em><em>any</em><em>]</em>) – A callable object. Can be a <a class="reference external" href="https://docs.python.org/2.7/library/functools.html#functools.partial" title="(in Python v2.7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">functools.partial</span></code></a> object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.callback_manager.deregisterCallableByIndex">
+<code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">deregisterCallableByIndex</code><span class="sig-paren">(</span><em>event</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.callback_manager.deregisterCallableByIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregisters a callable object from a Maya event based on its indexed position in the internal registry.</p>
+<p><strong>This may be useful if all references to the callable were lost.</strong></p>
+<p>If this was the only callable registered to the derived <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> enumeration, the callback associated with that event will be removed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event</strong> (T &lt;= <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – An enumeration of type <code class="docutils literal notranslate"><span class="pre">T</span></code> with upper bound <a class="reference internal" href="#msTools.tools.callback_manager.Event" title="msTools.tools.callback_manager.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>. Corresponds to a Maya message event.</li>
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The index of the callable to remove. Corresponds to the order the callable was registered.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.tools.callback_manager.reset">
+<code class="descclassname">msTools.tools.callback_manager.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.tools.callback_manager.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes any registered callbacks and clears any registered callables.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.tools.tool_manager.html" class="btn btn-neutral float-right" title="tool_manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.metadata.systems.base.html" class="btn btn-neutral float-left" title="base" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

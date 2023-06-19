@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>widget_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="animation_utils" href="msTools.coreUI.qt.animation_utils.html" />
+    <link rel="prev" title="nodeEditor_utils" href="msTools.coreUI.maya.nodeEditor_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">widget_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.coreUI.maya.widget_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#terminology">Terminology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>widget_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.coreUI.maya.widget_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="widget-utils">
+<h1>widget_utils<a class="headerlink" href="#widget-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.close" title="msTools.coreUI.maya.widget_utils.close"><code class="xref py py-func docutils literal notranslate"><span class="pre">close()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.delete" title="msTools.coreUI.maya.widget_utils.delete"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.dock" title="msTools.coreUI.maya.widget_utils.dock"><code class="xref py py-func docutils literal notranslate"><span class="pre">dock()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.float_" title="msTools.coreUI.maya.widget_utils.float_"><code class="xref py py-func docutils literal notranslate"><span class="pre">float_()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.hide" title="msTools.coreUI.maya.widget_utils.hide"><code class="xref py py-func docutils literal notranslate"><span class="pre">hide()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.isDocked" title="msTools.coreUI.maya.widget_utils.isDocked"><code class="xref py py-func docutils literal notranslate"><span class="pre">isDocked()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.isFloating" title="msTools.coreUI.maya.widget_utils.isFloating"><code class="xref py py-func docutils literal notranslate"><span class="pre">isFloating()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.raise_" title="msTools.coreUI.maya.widget_utils.raise_"><code class="xref py py-func docutils literal notranslate"><span class="pre">raise_()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.show" title="msTools.coreUI.maya.widget_utils.show"><code class="xref py py-func docutils literal notranslate"><span class="pre">show()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.undock" title="msTools.coreUI.maya.widget_utils.undock"><code class="xref py py-func docutils literal notranslate"><span class="pre">undock()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.coreUI.maya.widget_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.coreUI.maya.widget_utils" title="Permalink to this headline">¶</a></h2>
+<p>Utility functions relating to Maya widgets.</p>
+<hr class="docutils" />
+<div class="section" id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The following terminology is adopted by this module and other modules within this package.</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Term</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><cite>Window</cite></td>
+<td>A widget which which has the <code class="xref py py-attr docutils literal notranslate"><span class="pre">PySide2.QtCore.Qt.Window</span></code> flag set.</td>
+</tr>
+<tr class="row-odd"><td><cite>Docked Widget</cite></td>
+<td>A widget which which is parented to a <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<hr class="docutils" />
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.close">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">close</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close a widget or its <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> if it is docked.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undocked widget will be deleted if it has the <code class="xref py py-attr docutils literal notranslate"><span class="pre">PySide2.QtCore.Qt.WA_DeleteOnClose</span></code> attribute set.
+A docked widget will be deleted if the retain state of its <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> is disabled.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to close.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.delete">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">delete</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a widget and close its <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> if it is docked.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function differs to <a class="reference internal" href="#msTools.coreUI.maya.widget_utils.close" title="msTools.coreUI.maya.widget_utils.close"><code class="xref py py-func docutils literal notranslate"><span class="pre">close()</span></code></a> in that it ensures the widget will always be deleted.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to close.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.dock">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">dock</code><span class="sig-paren">(</span><em>widget</em>, <em>dockName=None</em>, <em>retain=None</em>, <em>uiScript=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.dock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dock a widget to a <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a>.</p>
+<p>If the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> already exists it will be restored (ie. expanded if collapsed, restored if minimized, shown if hidden).
+Otherwise a new <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> will be created.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">dockName</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the widget will be assigned a <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.PySide2.QtCore.QObject.objectName" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject.objectName()</span></code></a> if it does not already have one.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to dock.</li>
+<li><strong>dockName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – Name of an existing <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> or name for the new <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - use the <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.PySide2.QtCore.QObject.objectName" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject.objectName()</span></code></a> of <code class="docutils literal notranslate"><span class="pre">widget</span></code> to determine a name for the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a>.</li>
+<li><strong>retain</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> will be hidden instead of deleted when it is closed.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - retain behaviour is based on the <code class="xref py py-attr docutils literal notranslate"><span class="pre">PySide2.QtCore.Qt.WA_DeleteOnClose</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">widget</span></code>.</li>
+<li><strong>uiScript</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Script to use when creating the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a>.
+Responsible for docking a new instance of the widget. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> - no script.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.float_">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">float_</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.float_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a widget as a window or float its <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> if it is docked.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to float.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.hide">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">hide</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide an undocked widget or the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> of a docked widget.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to hide.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.isDocked">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">isDocked</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.isDocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether a widget is docked.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to query.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">widget</span></code> is docked to a <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.isFloating">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">isFloating</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.isFloating" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether a widget is floating.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to query.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">widget</span></code> is a window or is docked to a <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> which is floating, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.raise_">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">raise_</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.raise_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise a widget to the top of its parent widget’s stack or raise its <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> if it is docked.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to raise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.show">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">show</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a widget or its <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a>.</p>
+<ul class="simple">
+<li>If the widget is unparented, it will be parented to the Maya main window as a standalone window.</li>
+<li>If the widget is undocked but parented, it will be restored if minimized, raised if covered and shown if hidden.</li>
+<li>If the widget is docked, the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> will be restored.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to show.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.maya.widget_utils.undock">
+<code class="descclassname">msTools.coreUI.maya.widget_utils.</code><code class="descname">undock</code><span class="sig-paren">(</span><em>widget</em>, <em>closeWorkspaceControl=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.maya.widget_utils.undock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undock a widget from its <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> and parent it to the Maya main window as a standalone window.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (T &lt;= <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtWidgets/QWidget.html#PySide2.QtWidgets.QWidget" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></a>) – The widget to undock.</li>
+<li><strong>closeWorkspaceControl</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether the <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.workspaceControl()</span></code></a> should be closed. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.coreUI.qt.animation_utils.html" class="btn btn-neutral float-right" title="animation_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.coreUI.maya.nodeEditor_utils.html" class="btn btn-neutral float-left" title="nodeEditor_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

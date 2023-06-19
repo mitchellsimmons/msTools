@@ -1,0 +1,610 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>structures &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="exceptions" href="msTools.coreUI.maya.exceptions.html" />
+    <link rel="prev" title="path_utils" href="msTools.core.py.path_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.py.structures">Description</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>structures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.py.structures.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="structures">
+<h1>structures<a class="headerlink" href="#structures" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.core.py.structures.EqualitySet" title="msTools.core.py.structures.EqualitySet"><code class="xref py py-class docutils literal notranslate"><span class="pre">EqualitySet</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>abstractproperty</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__contains__" title="msTools.core.py.structures.EqualitySet.__contains__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__contains__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__eq__" title="msTools.core.py.structures.EqualitySet.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__init__" title="msTools.core.py.structures.EqualitySet.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__iter__" title="msTools.core.py.structures.EqualitySet.__iter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__iter__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__len__" title="msTools.core.py.structures.EqualitySet.__len__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__len__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__ne__" title="msTools.core.py.structures.EqualitySet.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__ne__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__repr__" title="msTools.core.py.structures.EqualitySet.__repr__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__repr__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__setattr__" title="msTools.core.py.structures.EqualitySet.__setattr__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__setattr__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.add" title="msTools.core.py.structures.EqualitySet.add"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.clear" title="msTools.core.py.structures.EqualitySet.clear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.discard" title="msTools.core.py.structures.EqualitySet.discard"><code class="xref py py-meth docutils literal notranslate"><span class="pre">discard()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.pop" title="msTools.core.py.structures.EqualitySet.pop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pop()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.remove" title="msTools.core.py.structures.EqualitySet.remove"><code class="xref py py-meth docutils literal notranslate"><span class="pre">remove()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.update" title="msTools.core.py.structures.EqualitySet.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.py.structures">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.py.structures" title="Permalink to this headline">¶</a></h2>
+<p>Developer module containing custom data structures.</p>
+<hr class="docutils" />
+<dl class="class">
+<dt id="msTools.core.py.structures.EqualitySet">
+<em class="property">class </em><code class="descclassname">msTools.core.py.structures.</code><code class="descname">EqualitySet</code><span class="sig-paren">(</span><em>iterable=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Abstract baseclass for compiling an ordered set of non-equivalent data, designed specifically for non-hashable types.</p>
+<p>Provides a templated interface to each subclass based on the abstract <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a> property.
+This property must be overridden in order to specify the type of accepted input data.</p>
+<p>Designed to mimic a <a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#set" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a> whilst internally data is compiled through equality testing instead of a hash table.
+Expect operations to run in O(n) time compared to their <a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#set" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a> counterparts which are likely to run in O(1) time.</p>
+<dl class="attribute">
+<dt id="msTools.core.py.structures.EqualitySet.DATA_TYPE">
+<code class="descname">DATA_TYPE</code><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Template property which defines the accepted data type for the interface.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Abstract property - must be overriden by each subclass.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Access:</th><td class="field-body">R</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.__contains__">
+<code class="descname">__contains__</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.__contains__" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">x.__contains__(y)</span></code> &lt;==&gt; <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">in</span> <span class="pre">x</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<em>any</em>) – Any object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the data type of <code class="docutils literal notranslate"><span class="pre">obj</span></code> does not match the abstract <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">obj</span></code> is contained by this set, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">x.__eq__(y)</span></code> &lt;==&gt; <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<em>any</em>) – Any object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">other</span></code> has an equivalent type, return whether its contents are equivalent.
+Otherwise swap the operands and return the result, unless the operands have already been swapped in which case the result is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>iterable=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>iterable</strong> (iterable [<a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>], optional) – Initialize the set with <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a> objects.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.__iter__">
+<code class="descname">__iter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">x.__iter__()</span></code> &lt;==&gt; <code class="docutils literal notranslate"><span class="pre">iter(x)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a> – Object contained within the set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.__len__">
+<code class="descname">__len__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">x.__len__()</span></code> &lt;==&gt; <code class="docutils literal notranslate"><span class="pre">len(x)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> – The number of <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a> objects contained within the set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.__ne__">
+<code class="descname">__ne__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">x.__ne__(y)</span></code> &lt;==&gt; <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<em>any</em>) – Any object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – The negation of <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.__eq__" title="msTools.core.py.structures.EqualitySet.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">x.__repr__()</span></code> &lt;==&gt; <code class="docutils literal notranslate"><span class="pre">repr(x)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> – A string representation of the set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.__setattr__">
+<code class="descname">__setattr__</code><span class="sig-paren">(</span><em>attr</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.__setattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">x.__setattr__(attr,</span> <span class="pre">value)</span></code> &lt;==&gt; <code class="docutils literal notranslate"><span class="pre">setattr(x,</span> <span class="pre">attr,</span> <span class="pre">value)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>attr</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – Name of an attribute binding.</li>
+<li><strong>value</strong> (<em>any</em>) – Value to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.AttributeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code></a> – If attempting to set the abstract <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an object to the set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>) – Object of the abstract template type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the data type of <code class="docutils literal notranslate"><span class="pre">obj</span></code> does not match the abstract <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">obj</span></code> was added to the set, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> if an equivalent object exists in the set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all elements from the set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.discard">
+<code class="descname">discard</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.discard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an equivalent object from the set if one exists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>) – Object of the abstract template type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the data type of <code class="docutils literal notranslate"><span class="pre">obj</span></code> does not match the abstract <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if an object equivalent to <code class="docutils literal notranslate"><span class="pre">obj</span></code> was removed from the set, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.pop">
+<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove and return the last element from the set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.IndexError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code></a> – If the set is empty.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a> – The last element in the set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an equivalent object from the set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>obj</strong> (<a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>) – Object of the abstract template type.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If an object equivalent to <code class="docutils literal notranslate"><span class="pre">obj</span></code> does not exist in the set.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the data type of <code class="docutils literal notranslate"><span class="pre">obj</span></code> does not match the abstract <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.structures.EqualitySet.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.structures.EqualitySet.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add objects to the set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>iterable</strong> (iterable [<a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>]) – Objects of the abstract template type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the data type of any of the objects in <code class="docutils literal notranslate"><span class="pre">iterable</span></code> does not match the abstract <a class="reference internal" href="#msTools.core.py.structures.EqualitySet.DATA_TYPE" title="msTools.core.py.structures.EqualitySet.DATA_TYPE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DATA_TYPE</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if all objects from <code class="docutils literal notranslate"><span class="pre">iterable</span></code> were added to the set,
+otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> if an equivalent object exists in the set for any of the objects in <code class="docutils literal notranslate"><span class="pre">iterable</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.coreUI.maya.exceptions.html" class="btn btn-neutral float-right" title="exceptions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.core.py.path_utils.html" class="btn btn-neutral float-left" title="path_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

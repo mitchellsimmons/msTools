@@ -1,0 +1,1059 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>shader_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="uuid_utils" href="msTools.core.maya.uuid_utils.html" />
+    <link rel="prev" title="reference_utils" href="msTools.core.maya.reference_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">shader_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.maya.shader_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#shading-groups">Shading Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shaders">Shaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#textures">Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation">Creation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>shader_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.maya.shader_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shader-utils">
+<h1>shader_utils<a class="headerlink" href="#shader-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.addMembersToShadingGroup" title="msTools.core.maya.shader_utils.addMembersToShadingGroup"><code class="xref py py-func docutils literal notranslate"><span class="pre">addMembersToShadingGroup()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.createShader" title="msTools.core.maya.shader_utils.createShader"><code class="xref py py-func docutils literal notranslate"><span class="pre">createShader()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.deleteUnusedShadingNodes" title="msTools.core.maya.shader_utils.deleteUnusedShadingNodes"><code class="xref py py-func docutils literal notranslate"><span class="pre">deleteUnusedShadingNodes()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.getDefaultShadingGroup" title="msTools.core.maya.shader_utils.getDefaultShadingGroup"><code class="xref py py-func docutils literal notranslate"><span class="pre">getDefaultShadingGroup()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.getDefaultSurfaceShader" title="msTools.core.maya.shader_utils.getDefaultSurfaceShader"><code class="xref py py-func docutils literal notranslate"><span class="pre">getDefaultSurfaceShader()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.getMembersFromShadingGroup" title="msTools.core.maya.shader_utils.getMembersFromShadingGroup"><code class="xref py py-func docutils literal notranslate"><span class="pre">getMembersFromShadingGroup()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.getShaderNodeTypes" title="msTools.core.maya.shader_utils.getShaderNodeTypes"><code class="xref py py-func docutils literal notranslate"><span class="pre">getShaderNodeTypes()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.getTextureNodeTypes" title="msTools.core.maya.shader_utils.getTextureNodeTypes"><code class="xref py py-func docutils literal notranslate"><span class="pre">getTextureNodeTypes()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.hasMembers" title="msTools.core.maya.shader_utils.hasMembers"><code class="xref py py-func docutils literal notranslate"><span class="pre">hasMembers()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.isComponentMember" title="msTools.core.maya.shader_utils.isComponentMember"><code class="xref py py-func docutils literal notranslate"><span class="pre">isComponentMember()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.isSurfaceMember" title="msTools.core.maya.shader_utils.isSurfaceMember"><code class="xref py py-func docutils literal notranslate"><span class="pre">isSurfaceMember()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterShaders" title="msTools.core.maya.shader_utils.iterShaders"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterShaders()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterShadersFromGeometry" title="msTools.core.maya.shader_utils.iterShadersFromGeometry"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterShadersFromGeometry()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterShadersFromShadingGroup" title="msTools.core.maya.shader_utils.iterShadersFromShadingGroup"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterShadersFromShadingGroup()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterShadingGroups" title="msTools.core.maya.shader_utils.iterShadingGroups"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterShadingGroups()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterShadingGroupsFromGeometry" title="msTools.core.maya.shader_utils.iterShadingGroupsFromGeometry"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterShadingGroupsFromGeometry()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterTextures" title="msTools.core.maya.shader_utils.iterTextures"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterTextures()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterTexturesFromGeometry" title="msTools.core.maya.shader_utils.iterTexturesFromGeometry"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterTexturesFromGeometry()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterTexturesFromShader" title="msTools.core.maya.shader_utils.iterTexturesFromShader"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterTexturesFromShader()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.iterTexturesFromShadingGroup" title="msTools.core.maya.shader_utils.iterTexturesFromShadingGroup"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterTexturesFromShadingGroup()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.removeMembersFromAllShadingGroups" title="msTools.core.maya.shader_utils.removeMembersFromAllShadingGroups"><code class="xref py py-func docutils literal notranslate"><span class="pre">removeMembersFromAllShadingGroups()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.shader_utils.removeMembersFromShadingGroup" title="msTools.core.maya.shader_utils.removeMembersFromShadingGroup"><code class="xref py py-func docutils literal notranslate"><span class="pre">removeMembersFromShadingGroup()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.maya.shader_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.maya.shader_utils" title="Permalink to this headline">¶</a></h2>
+<p>Operate on registered shading nodes in Maya.</p>
+<hr class="docutils" />
+<div class="section" id="shading-groups">
+<h3>Shading Groups<a class="headerlink" href="#shading-groups" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Are nodes with a type identifier of <code class="docutils literal notranslate"><span class="pre">'shadingEngine'</span></code>.
+They provide an interface for applying connected <cite>shaders</cite> to connected surface geometry <cite>members</cite> using the following setup:</p>
+<div class="line-block">
+<div class="line">shaders ⟶ shading group</div>
+<div class="line">members ⟶ shading group</div>
+</div>
+<p>They are a type of set node sometimes referred to as renderable sets which use the same setup as object sets:</p>
+<p>member ⟶ set ⟶ partition</p>
+<ul class="simple">
+<li>Partitions define a collection of mutually exclusive sets.</li>
+<li>Members (instances/components) of one set cannot connect to another set in the same partition.</li>
+</ul>
+<p>Any surface geometry that requires shading in the viewport or a render engine must be connected to a shading group as a member.
+Members can be applied as either surface instances or a selection of components for a surface instance.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="shaders">
+<h3>Shaders<a class="headerlink" href="#shaders" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Provide shading data for shading group members. They are commonly referred to as <cite>materials</cite>.</p>
+<p>There are three categories of shaders which interface with shading groups as follows:</p>
+<ol class="arabic simple">
+<li><cite>Surface Shaders</cite> - Connect to the <code class="docutils literal notranslate"><span class="pre">'surfaceShader'</span></code> plug of a shading group.</li>
+<li><cite>Volume Shaders</cite> - Connect to the <code class="docutils literal notranslate"><span class="pre">'volumeShader'</span></code> plug of a shading group.</li>
+<li><cite>Displacement Shaders</cite> - Connect to the <code class="docutils literal notranslate"><span class="pre">'displacementShader'</span></code> plug of a shading group.</li>
+</ol>
+<p>Third party rendering packages usually provide custom materials which interface with shading groups in a similiar way.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="textures">
+<h3>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Provide texture data for shaders.</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="creation">
+<h3>Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Shading nodes should not be created using <a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/createNode.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.createNode()</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_modifier_html#acdf94aee3683507af1c347f300f1ee65" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MDGModifier.createNode()</span></code></a>.
+Maya provides commands which ensure shading nodes are <cite>registered</cite> upon creation:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/sets.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.sets()</span></code></a>: Allows for creation of shading groups.
+Ensures each shading group is registered with the default <code class="docutils literal notranslate"><span class="pre">'renderPartition'</span></code> and <code class="docutils literal notranslate"><span class="pre">'lightLinker1'</span></code> nodes.</li>
+<li><a class="reference external" href="http://help.autodesk.com/cloudhelp/2020/ENU/Maya-Tech-Docs/CommandsPython/shadingNode.html" title="(in Maya Python Commands v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmds.shadingNode()</span></code></a>: Allows for creation of shaders and textures.
+Ensures each shader is registered with the <code class="docutils literal notranslate"><span class="pre">'defaultShaderList1'</span></code> node.
+Ensures each texture is registered with the <code class="docutils literal notranslate"><span class="pre">'defaultTextureList1'</span></code> node.</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.addMembersToShadingGroup">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">addMembersToShadingGroup</code><span class="sig-paren">(</span><em>memberSelection</em>, <em>shadingGroup</em>, <em>force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.addMembersToShadingGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add surface node components and instances to a shading group.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If any of the <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> components or instances are already assigned to a shading group, <code class="docutils literal notranslate"><span class="pre">force</span></code> must be <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.
+The components of each <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> element will be removed from their current shading group and assigned to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>memberSelection</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList</span></code></a>) – Selection containing surface node components and instances to add to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.
+Each element must be retrievable via <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html#aecb5c4652fd56341df7d1b116ff91d26" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList.getDagPath()</span></code></a>.</li>
+<li><strong>shadingGroup</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shading group node.</li>
+<li><strong>force</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to force the member assignment of <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> elements to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.
+If an element is already a member of a shading group it is necessary to set this <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> does not reference a shading group node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> contains elements which do not reference a surface node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> contains an element which is already a member of a shading group and <code class="docutils literal notranslate"><span class="pre">force</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.createShader">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">createShader</code><span class="sig-paren">(</span><em>shaderType='lambert'</em>, <em>memberSelection=None</em>, <em>force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.createShader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new shader and shading group network. Assign surface node components and instances as members.</p>
+<p>Provides the ability to create shader networks which are built using the same behaviour as the <cite>Create Render Node interface</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shaderType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Shader node type identifier. Defaults to <code class="docutils literal notranslate"><span class="pre">'lambert'</span></code>.</li>
+<li><strong>memberSelection</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList</span></code></a>) – Selection containing surface node components and instances to add to the new shading group.
+Each element must be retrievable via <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html#aecb5c4652fd56341df7d1b116ff91d26" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList.getDagPath()</span></code></a>.</li>
+<li><strong>force</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to force the member assignment of <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> elements to the new shading group.
+If an element is already a member of a shading group it is necessary to set this <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shaderType</span></code> is not a valid shader node type identifier.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> contains elements which do not reference a surface node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> contains an element which is already a member of a shading group and <code class="docutils literal notranslate"><span class="pre">force</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>(<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>.</p>
+<ol class="arabic simple">
+<li>Wrapper of the new shader node.</li>
+<li>Wrapper of the new shading group node.</li>
+</ol>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.deleteUnusedShadingNodes">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">deleteUnusedShadingNodes</code><span class="sig-paren">(</span><em>shadingGroups=False</em>, <em>shaders=False</em>, <em>textures=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.deleteUnusedShadingNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete unused non-default shading nodes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An unused shading node is defined as any registered shading node which is not currently influencing the shading of geometry.
+For example an unused shading group is one which has no members.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>shadingGroups</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to delete unused shading group nodes. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>shaders</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to delete unused shader nodes. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>textures</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to delete unused texture and placement nodes. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.getDefaultShadingGroup">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">getDefaultShadingGroup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.getDefaultShadingGroup" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Default shading group.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.getDefaultSurfaceShader">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">getDefaultSurfaceShader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.getDefaultSurfaceShader" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Default shader.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.getMembersFromShadingGroup">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">getMembersFromShadingGroup</code><span class="sig-paren">(</span><em>shadingGroup</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.getMembersFromShadingGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return members of a shading group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>shadingGroup</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shading group node.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> does not reference a shading group node.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList</span></code></a>, (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, …)) – A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>.<ol class="arabic simple">
+<li>Contains the members of <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> of <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> values for each member in the <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList</span></code></a>.<ul>
+<li>A <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> value indicates the member is an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>.</li>
+<li>A <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> value indicates the member is an (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) component tuple.</li>
+</ul>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.getShaderNodeTypes">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">getShaderNodeTypes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.getShaderNodeTypes" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#func-list" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>] – Shader node type identifiers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.getTextureNodeTypes">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">getTextureNodeTypes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.getTextureNodeTypes" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#func-list" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>] – Texture node type identifiers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.hasMembers">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">hasMembers</code><span class="sig-paren">(</span><em>shadingGroup</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.hasMembers" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>shadingGroup</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shading group node.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> does not reference a shading group node.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> has members.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.isComponentMember">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">isComponentMember</code><span class="sig-paren">(</span><em>component</em>, <em>shadingGroup</em>, <em>allowSubset=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.isComponentMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a component selection is a member or sub-member of a shading group.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method only checks the component members of <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.
+Use <a class="reference internal" href="#msTools.core.maya.shader_utils.isSurfaceMember" title="msTools.core.maya.shader_utils.isSurfaceMember"><code class="xref py py-func docutils literal notranslate"><span class="pre">isSurfaceMember()</span></code></a> to complete a broader check of whether a surface node is connected to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> via any of its member.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>component</strong> ((<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>)) – <p>A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> representing component data.</p>
+<ol class="arabic">
+<li>Path encapsulation of a surface node.</li>
+<li>Wrapper of a component object holding data of type <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a82b17f4078f71ebb2472ca1b4b7ff084" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kComponent</span></code></a>.</li>
+</ol>
+</li>
+<li><strong>shadingGroup</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shading group node.</li>
+<li><strong>allowSubset</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether <code class="docutils literal notranslate"><span class="pre">component</span></code> should be considered a member if its elements represent a subset of a member assigned to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> does not reference a shading group node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">component</span></code> does not provide surface node component data.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if one of the following conditions is met:</p>
+<ol class="arabic simple">
+<li><code class="docutils literal notranslate"><span class="pre">component</span></code> represents a subset of component elements for a member assigned to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">allowSubset</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">component</span></code> represents the exact component elements of a member assigned to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.</li>
+</ol>
+<p>Otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.isSurfaceMember">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">isSurfaceMember</code><span class="sig-paren">(</span><em>surfacePath</em>, <em>shadingGroup</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.isSurfaceMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a path to a surface node is connected to a shading group via any of its members.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method checks all connections from <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> regardless of whether <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> is connected via a component list.
+Use <a class="reference internal" href="#msTools.core.maya.shader_utils.isComponentMember" title="msTools.core.maya.shader_utils.isComponentMember"><code class="xref py py-func docutils literal notranslate"><span class="pre">isComponentMember()</span></code></a> to check if specific components are assigned to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>surfacePath</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>) – Path encapsulation of a surface node.</li>
+<li><strong>shadingGroup</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shading group node.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> does not reference a surface node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> does not reference a shading group node.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> is connected to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> via any of its members, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterShaders">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterShaders</code><span class="sig-paren">(</span><em>default=True</em>, <em>user=True</em>, <em>used=True</em>, <em>unused=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterShaders" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield shader nodes from the scene.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Only registered shaders will be generated. A registered shader is one which is connected to <code class="docutils literal notranslate"><span class="pre">'defaultShaderList1'</span></code>.</p>
+<p>At least one parameter must be <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> from each pair of filter options:</p>
+<ul class="last simple">
+<li>Filter shaders based on creation: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>.</li>
+<li>Filter shaders based on usage: <code class="docutils literal notranslate"><span class="pre">used</span></code>, <code class="docutils literal notranslate"><span class="pre">unused</span></code>.</li>
+</ul>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>default</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include default shaders (ie. <code class="docutils literal notranslate"><span class="pre">'lambert1'</span></code>, <code class="docutils literal notranslate"><span class="pre">'particleCloud1'</span></code>). Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>user</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include user created shaders. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>used</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include shaders which are currently being used to shade geometry.
+Meaning any shader which is connected upstream of a shading group that has members. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>unused</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include shaders which are not currently being used to shade geometry.
+Meaning any shader which is not connected to a shading group or is connected to one which has no members. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If there is not at least one <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> parameter for each pair of filter options.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of shader nodes for the given parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterShadersFromGeometry">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterShadersFromGeometry</code><span class="sig-paren">(</span><em>surfacePath</em>, <em>default=True</em>, <em>user=True</em>, <em>allInstances=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterShadersFromGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield shaders influencing the shading of a surface node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Only registered shaders will be generated. A registered shader is one which is connected to <code class="docutils literal notranslate"><span class="pre">'defaultShaderList1'</span></code>.</p>
+<p>At least one parameter must be <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> from the following pair of filter options:</p>
+<ul class="last simple">
+<li>Filter shaders based on creation: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>.</li>
+</ul>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>surfacePath</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>) – Path to a surface node.</li>
+<li><strong>default</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include default shaders influencing the shading of <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> (eg. <code class="docutils literal notranslate"><span class="pre">'lambert1'</span></code>, <code class="docutils literal notranslate"><span class="pre">'particleCloud1'</span></code>). Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>user</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include user created shaders influencing the shading of <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>allInstances</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to search all instances of the node referenced by <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> for shaders influencing their shading.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If there is not at least one <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> parameter for the pair of filter options.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> does not reference a surface node.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of shader nodes influencing the shading of <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> for the given parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterShadersFromShadingGroup">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterShadersFromShadingGroup</code><span class="sig-paren">(</span><em>shadingGroup</em>, <em>default=True</em>, <em>user=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterShadersFromShadingGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield shaders connected to a shading group node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Only registered shaders will be generated. A registered shader is one which is connected to <code class="docutils literal notranslate"><span class="pre">'defaultShaderList1'</span></code>.</p>
+<p>At least one parameter must be <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> from the following pair of filter options:</p>
+<ul class="last simple">
+<li>Filter shaders based on creation: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>.</li>
+</ul>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shadingGroup</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shading group node.</li>
+<li><strong>default</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include default shaders connected to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> (eg. <code class="docutils literal notranslate"><span class="pre">'lambert1'</span></code>, <code class="docutils literal notranslate"><span class="pre">'particleCloud1'</span></code>). Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>user</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include user created shaders connected to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If there is not at least one <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> parameter for the pair of filter options.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> does not reference a shading group node.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of shader nodes connected to <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> for the given parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterShadingGroups">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterShadingGroups</code><span class="sig-paren">(</span><em>default=True</em>, <em>user=True</em>, <em>used=True</em>, <em>unused=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterShadingGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield shading group nodes from the scene.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>At least one parameter must be <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> from each pair of filter options:</p>
+<ul class="last simple">
+<li>Filter shading groups based on creation: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>.</li>
+<li>Filter shading groups based on usage: <code class="docutils literal notranslate"><span class="pre">used</span></code>, <code class="docutils literal notranslate"><span class="pre">unused</span></code>.</li>
+</ul>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>default</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include default shading groups (ie. <code class="docutils literal notranslate"><span class="pre">'initialShadingGroup'</span></code>, <code class="docutils literal notranslate"><span class="pre">'initialParticleSE'</span></code>). Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>user</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include user created shading groups. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>used</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include shading groups which have members. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>unused</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include shading groups which do not have members. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If there is not at least one <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> parameter for each pair of filter options.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of shading group nodes for the given parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterShadingGroupsFromGeometry">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterShadingGroupsFromGeometry</code><span class="sig-paren">(</span><em>surfacePath</em>, <em>default=True</em>, <em>user=True</em>, <em>allInstances=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterShadingGroupsFromGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield shading groups connected to a surface node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>At least one parameter must be <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> from the following pair of filter options:</p>
+<ul class="last simple">
+<li>Filter shading groups based on creation: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>.</li>
+</ul>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>surfacePath</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>) – Path to a surface node.</li>
+<li><strong>default</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include default shading groups connected to <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> (eg. <code class="docutils literal notranslate"><span class="pre">'initialShadingGroup'</span></code>, <code class="docutils literal notranslate"><span class="pre">'initialParticleSE'</span></code>).
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>user</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include user created shading groups connected to <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>allInstances</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to search all instances of the node referenced by <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> for connected shading groups.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If there is not at least one <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> parameter for the pair of filter options.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> does not reference a surface node.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of shading group nodes connected to <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> for the given parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterTextures">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterTextures</code><span class="sig-paren">(</span><em>used=True</em>, <em>unused=True</em>, <em>includePlacementNodes=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterTextures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield texture nodes and there connected placement nodes from the scene.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Only registered textures and there connected placement nodes will be generated. A registered texture is one which is connected to <code class="docutils literal notranslate"><span class="pre">'defaultTextureList1'</span></code>.</p>
+<p>At least one parameter must be <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> from the following pair of filter options:</p>
+<ul class="last simple">
+<li>Filter textures based on usage: <code class="docutils literal notranslate"><span class="pre">used</span></code>, <code class="docutils literal notranslate"><span class="pre">unused</span></code>.</li>
+</ul>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>used</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include textures which are currently being used to shade geometry.
+Meaning any texture which is connected upstream of a shading group that has members. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>unused</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to include textures which are not currently being used to shade geometry.
+Meaning any texture which is not connected upstream of a shading group or is connected upstream of one which has no members. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>includePlacementNodes</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to also generate placement nodes (eg. <code class="docutils literal notranslate"><span class="pre">place2dTexture</span></code>) that are connected to resulting textures.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If there is not at least one <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> parameter for each pair of filter options.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of texture nodes and their connected placement nodes for the given parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterTexturesFromGeometry">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterTexturesFromGeometry</code><span class="sig-paren">(</span><em>surfacePath</em>, <em>allInstances=False</em>, <em>includePlacementNodes=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterTexturesFromGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield textures connected upstream of a surface node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only registered textures and there connected placement nodes will be generated. A registered texture is one which is connected to <code class="docutils literal notranslate"><span class="pre">'defaultTextureList1'</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>surfacePath</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_dag_path_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDagPath</span></code></a>) – Path to a surface node.</li>
+<li><strong>allInstances</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to search all instances of the node referenced by <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> for textures influencing their shading.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>includePlacementNodes</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to also generate placement nodes (eg. <code class="docutils literal notranslate"><span class="pre">place2dTexture</span></code>) that are connected to resulting textures.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> does not reference a surface node.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of texture nodes influencing the shading of <code class="docutils literal notranslate"><span class="pre">surfacePath</span></code> and their connected placement nodes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterTexturesFromShader">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterTexturesFromShader</code><span class="sig-paren">(</span><em>shader</em>, <em>includePlacementNodes=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterTexturesFromShader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield textures connected to a shader node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only registered textures and there connected placement nodes will be generated. A registered texture is one which is connected to <code class="docutils literal notranslate"><span class="pre">'defaultTextureList1'</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shader</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shader node.</li>
+<li><strong>includePlacementNodes</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to also generate placement nodes (eg. <code class="docutils literal notranslate"><span class="pre">place2dTexture</span></code>) that are connected to resulting textures.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shader</span></code> does not reference a dependency node.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of texture nodes connected to <code class="docutils literal notranslate"><span class="pre">shader</span></code> and their connected placement nodes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.iterTexturesFromShadingGroup">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">iterTexturesFromShadingGroup</code><span class="sig-paren">(</span><em>shadingGroup</em>, <em>includePlacementNodes=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.iterTexturesFromShadingGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield textures connected upstream of a shading group node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only registered textures and there connected placement nodes will be generated. A registered texture is one which is connected to <code class="docutils literal notranslate"><span class="pre">'defaultTextureList1'</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shadingGroup</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shading group node.</li>
+<li><strong>includePlacementNodes</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to also generate placement nodes (eg. <code class="docutils literal notranslate"><span class="pre">place2dTexture</span></code>) that are connected to resulting textures.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> does not reference a shading group node.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of texture nodes connected upstream of <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> and their connected placement nodes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.removeMembersFromAllShadingGroups">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">removeMembersFromAllShadingGroups</code><span class="sig-paren">(</span><em>memberSelection</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.removeMembersFromAllShadingGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove surface node components and instances from all connected shading groups.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If a <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> element represents the components of a surface node instance, any intersecting components of any shading group member will be removed.
+If a <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> element represents a surface node instance, any shading group member of that instance will also be removed.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>memberSelection</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList</span></code></a>) – Selection containing surface node components and instances to remove from any connected shading groups.
+Each element must be retrievable via <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html#aecb5c4652fd56341df7d1b116ff91d26" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList.getDagPath()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> contains elements which do not reference a surface node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.shader_utils.removeMembersFromShadingGroup">
+<code class="descclassname">msTools.core.maya.shader_utils.</code><code class="descname">removeMembersFromShadingGroup</code><span class="sig-paren">(</span><em>memberSelection</em>, <em>shadingGroup</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.shader_utils.removeMembersFromShadingGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove surface node components and instances from a shading group.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If a <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> element represents the components of a surface node instance, any intersecting components of any <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> member will be removed.
+If a <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> element represents a surface node instance, any <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> member of that instance will also be removed.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>memberSelection</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList</span></code></a>) – Selection containing surface node components and instances to remove from <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code>.
+Each element must be retrievable via <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_selection_list_html#aecb5c4652fd56341df7d1b116ff91d26" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MSelectionList.getDagPath()</span></code></a>.</li>
+<li><strong>shadingGroup</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a shading group node.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">shadingGroup</span></code> does not reference a shading group node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">memberSelection</span></code> contains elements which do not reference a surface node.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.core.maya.uuid_utils.html" class="btn btn-neutral float-right" title="uuid_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.core.maya.reference_utils.html" class="btn btn-neutral float-left" title="reference_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

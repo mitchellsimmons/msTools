@@ -1,0 +1,537 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>event_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="graphicsItem_utils" href="msTools.coreUI.qt.graphicsItem_utils.html" />
+    <link rel="prev" title="context_utils" href="msTools.coreUI.qt.context_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">event_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.coreUI.qt.event_utils">Description</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>event_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.coreUI.qt.event_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="event-utils">
+<h1>event_utils<a class="headerlink" href="#event-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.coreUI.qt.event_utils.EventPriority" title="msTools.coreUI.qt.event_utils.EventPriority"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventPriority</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.EventPriority.IDLE" title="msTools.coreUI.qt.event_utils.EventPriority.IDLE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">IDLE</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.EventPriority.LOW" title="msTools.coreUI.qt.event_utils.EventPriority.LOW"><code class="xref py py-attr docutils literal notranslate"><span class="pre">LOW</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.EventPriority.NORMAL" title="msTools.coreUI.qt.event_utils.EventPriority.NORMAL"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NORMAL</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.EventPriority.IMPORTANT" title="msTools.coreUI.qt.event_utils.EventPriority.IMPORTANT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">IMPORTANT</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.EventPriority.VERY_IMPORTANT" title="msTools.coreUI.qt.event_utils.EventPriority.VERY_IMPORTANT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">VERY_IMPORTANT</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>int</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.EventPriority.CRITICAL" title="msTools.coreUI.qt.event_utils.EventPriority.CRITICAL"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CRITICAL</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.coreUI.qt.event_utils.SignalEventFilter" title="msTools.coreUI.qt.event_utils.SignalEventFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignalEventFilter</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-attribute-data first last"><cite>Signal</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.SignalEventFilter.eventTriggered" title="msTools.coreUI.qt.event_utils.SignalEventFilter.eventTriggered"><code class="xref py py-attr docutils literal notranslate"><span class="pre">eventTriggered</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-attribute-data first last"><cite>property</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.SignalEventFilter.eventType" title="msTools.coreUI.qt.event_utils.SignalEventFilter.eventType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">eventType</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.coreUI.qt.event_utils.postAsEvent" title="msTools.coreUI.qt.event_utils.postAsEvent"><code class="xref py py-func docutils literal notranslate"><span class="pre">postAsEvent()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.coreUI.qt.event_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.coreUI.qt.event_utils" title="Permalink to this headline">¶</a></h2>
+<p>Utility functions relating to <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> events.</p>
+<hr class="docutils" />
+<dl class="class">
+<dt id="msTools.coreUI.qt.event_utils.EventPriority">
+<em class="property">class </em><code class="descclassname">msTools.coreUI.qt.event_utils.</code><code class="descname">EventPriority</code><a class="headerlink" href="#msTools.coreUI.qt.event_utils.EventPriority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A namespace for custom <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> event priority constants.</p>
+<dl class="attribute">
+<dt id="msTools.coreUI.qt.event_utils.EventPriority.IDLE">
+<code class="descname">IDLE</code><em class="property"> = -2</em><a class="headerlink" href="#msTools.coreUI.qt.event_utils.EventPriority.IDLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Less important than status events. Executes after idle events have processed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Access:</th><td class="field-body">R</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.qt.event_utils.EventPriority.LOW">
+<code class="descname">LOW</code><em class="property"> = -1</em><a class="headerlink" href="#msTools.coreUI.qt.event_utils.EventPriority.LOW" title="Permalink to this definition">¶</a></dt>
+<dd><p>A status event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Access:</th><td class="field-body">R</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.qt.event_utils.EventPriority.NORMAL">
+<code class="descname">NORMAL</code><em class="property"> = 0</em><a class="headerlink" href="#msTools.coreUI.qt.event_utils.EventPriority.NORMAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>A normal event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Access:</th><td class="field-body">R</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.qt.event_utils.EventPriority.IMPORTANT">
+<code class="descname">IMPORTANT</code><em class="property"> = 1</em><a class="headerlink" href="#msTools.coreUI.qt.event_utils.EventPriority.IMPORTANT" title="Permalink to this definition">¶</a></dt>
+<dd><p>An important event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Access:</th><td class="field-body">R</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.qt.event_utils.EventPriority.VERY_IMPORTANT">
+<code class="descname">VERY_IMPORTANT</code><em class="property"> = 2</em><a class="headerlink" href="#msTools.coreUI.qt.event_utils.EventPriority.VERY_IMPORTANT" title="Permalink to this definition">¶</a></dt>
+<dd><p>A more important event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Access:</th><td class="field-body">R</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.qt.event_utils.EventPriority.CRITICAL">
+<code class="descname">CRITICAL</code><em class="property"> = 200</em><a class="headerlink" href="#msTools.coreUI.qt.event_utils.EventPriority.CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>A critical event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Access:</th><td class="field-body">R</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.coreUI.qt.event_utils.postAsEvent">
+<code class="descclassname">msTools.coreUI.qt.event_utils.</code><code class="descname">postAsEvent</code><span class="sig-paren">(</span><em>callable_</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.event_utils.postAsEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post a callable on the <a class="reference external" href="https://doc.qt.io/qtforpython-5/api.html">Qt</a> event queue via <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QCoreApplication.html#PySide2.QtCore.PySide2.QtCore.QCoreApplication.postEvent" title="(in PySide v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PySide2.QtCore.QCoreApplication.postEvent()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>callable_</strong> (<em>callable</em><em> [</em><em>[</em><em>*args</em><em>, </em><em>**kwargs</em><em>]</em><em>, </em><em>any</em><em>]</em>) – The callable to post. Must be compatible with <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>.</li>
+<li><strong>*args</strong> – Sequence of positional arguments for <code class="docutils literal notranslate"><span class="pre">callable_</span></code>.</li>
+<li><strong>**kwargs</strong> – Keyword arguments for <code class="docutils literal notranslate"><span class="pre">callable_</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Other Parameters:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first last"><strong>priority</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – The priority used to post <code class="docutils literal notranslate"><span class="pre">callable_</span></code> on the event queue. Defaults to <a class="reference internal" href="#msTools.coreUI.qt.event_utils.EventPriority.NORMAL" title="msTools.coreUI.qt.event_utils.EventPriority.NORMAL"><code class="xref py py-attr docutils literal notranslate"><span class="pre">EventPriority.NORMAL</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Executes `foo` after idle events have processed</span>
+<span class="n">postAsEvent</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="n">EventPriority</span><span class="o">.</span><span class="n">IDLE</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="msTools.coreUI.qt.event_utils.SignalEventFilter">
+<em class="property">class </em><code class="descclassname">msTools.coreUI.qt.event_utils.</code><code class="descname">SignalEventFilter</code><span class="sig-paren">(</span><em>eventType</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.event_utils.SignalEventFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a></p>
+<p>An event filter that will listen for a specific <a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QEvent.html#PySide2.QtCore.PySide2.QtCore.QEvent.Type" title="(in PySide v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PySide2.QtCore.QEvent.Type</span></code></a>, emitting a signal when it occurs.</p>
+<dl class="attribute">
+<dt id="msTools.coreUI.qt.event_utils.SignalEventFilter.eventTriggered">
+<code class="descname">eventTriggered</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#msTools.coreUI.qt.event_utils.SignalEventFilter.eventTriggered" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="msTools.coreUI.qt.event_utils.SignalEventFilter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>eventType</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.coreUI.qt.event_utils.SignalEventFilter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the event filter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>eventType</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QEvent.html#PySide2.QtCore.PySide2.QtCore.QEvent.Type" title="(in PySide v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PySide2.QtCore.QEvent.Type</span></code></a>) – The event type to listen for.</li>
+<li><strong>parent</strong> (<a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#PySide2.QtCore.QObject" title="(in PySide v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></a>, optional) – Parent object for the event filter. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msTools.coreUI.qt.event_utils.SignalEventFilter.eventType">
+<code class="descname">eventType</code><a class="headerlink" href="#msTools.coreUI.qt.event_utils.SignalEventFilter.eventType" title="Permalink to this definition">¶</a></dt>
+<dd><p>The event type to listen for.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Access:</th><td class="field-body">RW</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://doc.qt.io/qtforpython-5/PySide2/QtCore/QEvent.html#PySide2.QtCore.PySide2.QtCore.QEvent.Type" title="(in PySide v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">PySide2.QtCore.QEvent.Type</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.coreUI.qt.graphicsItem_utils.html" class="btn btn-neutral float-right" title="graphicsItem_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.coreUI.qt.context_utils.html" class="btn btn-neutral float-left" title="context_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

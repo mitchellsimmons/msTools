@@ -1,0 +1,1440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>math_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="name_utils" href="msTools.core.maya.name_utils.html" />
+    <link rel="prev" title="inspect_utils" href="msTools.core.maya.inspect_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">math_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.maya.math_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vectors">Vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#points">Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cartesian-coordinates">Cartesian Coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#homogenous-coordinates">Homogenous Coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#matrices">Matrices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maya">Maya</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>math_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.maya.math_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="math-utils">
+<h1>math_utils<a class="headerlink" href="#math-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.core.maya.math_utils.InvalidVectorError" title="msTools.core.maya.math_utils.InvalidVectorError"><code class="xref py py-class docutils literal notranslate"><span class="pre">InvalidVectorError</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+</tbody>
+</table>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.core.maya.math_utils.InvalidPointError" title="msTools.core.maya.math_utils.InvalidPointError"><code class="xref py py-class docutils literal notranslate"><span class="pre">InvalidPointError</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.angleBetween" title="msTools.core.maya.math_utils.angleBetween"><code class="xref py py-func docutils literal notranslate"><span class="pre">angleBetween()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.areClose" title="msTools.core.maya.math_utils.areClose"><code class="xref py py-func docutils literal notranslate"><span class="pre">areClose()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.areCloseCoordinates" title="msTools.core.maya.math_utils.areCloseCoordinates"><code class="xref py py-func docutils literal notranslate"><span class="pre">areCloseCoordinates()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.areClosePoints" title="msTools.core.maya.math_utils.areClosePoints"><code class="xref py py-func docutils literal notranslate"><span class="pre">areClosePoints()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.areCloseVectors" title="msTools.core.maya.math_utils.areCloseVectors"><code class="xref py py-func docutils literal notranslate"><span class="pre">areCloseVectors()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.averagePoint" title="msTools.core.maya.math_utils.averagePoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">averagePoint()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.averageVector" title="msTools.core.maya.math_utils.averageVector"><code class="xref py py-func docutils literal notranslate"><span class="pre">averageVector()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.axisAngleBetween" title="msTools.core.maya.math_utils.axisAngleBetween"><code class="xref py py-func docutils literal notranslate"><span class="pre">axisAngleBetween()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.centerPoint" title="msTools.core.maya.math_utils.centerPoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">centerPoint()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.closestPointOnLine" title="msTools.core.maya.math_utils.closestPointOnLine"><code class="xref py py-func docutils literal notranslate"><span class="pre">closestPointOnLine()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.composeMatrix" title="msTools.core.maya.math_utils.composeMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">composeMatrix()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.crossProduct" title="msTools.core.maya.math_utils.crossProduct"><code class="xref py py-func docutils literal notranslate"><span class="pre">crossProduct()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.decomposeMatrix" title="msTools.core.maya.math_utils.decomposeMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">decomposeMatrix()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.distanceBetween" title="msTools.core.maya.math_utils.distanceBetween"><code class="xref py py-func docutils literal notranslate"><span class="pre">distanceBetween()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.dotProduct" title="msTools.core.maya.math_utils.dotProduct"><code class="xref py py-func docutils literal notranslate"><span class="pre">dotProduct()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.eulerBetween" title="msTools.core.maya.math_utils.eulerBetween"><code class="xref py py-func docutils literal notranslate"><span class="pre">eulerBetween()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.extractEulerRotation" title="msTools.core.maya.math_utils.extractEulerRotation"><code class="xref py py-func docutils literal notranslate"><span class="pre">extractEulerRotation()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.extractQuaternionRotation" title="msTools.core.maya.math_utils.extractQuaternionRotation"><code class="xref py py-func docutils literal notranslate"><span class="pre">extractQuaternionRotation()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.extractRotationMatrix" title="msTools.core.maya.math_utils.extractRotationMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">extractRotationMatrix()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.extractScale" title="msTools.core.maya.math_utils.extractScale"><code class="xref py py-func docutils literal notranslate"><span class="pre">extractScale()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.extractScaleMatrix" title="msTools.core.maya.math_utils.extractScaleMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">extractScaleMatrix()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.extractTranslation" title="msTools.core.maya.math_utils.extractTranslation"><code class="xref py py-func docutils literal notranslate"><span class="pre">extractTranslation()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.extractTranslationMatrix" title="msTools.core.maya.math_utils.extractTranslationMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">extractTranslationMatrix()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.isInfinitePoint" title="msTools.core.maya.math_utils.isInfinitePoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">isInfinitePoint()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.isInfiniteVector" title="msTools.core.maya.math_utils.isInfiniteVector"><code class="xref py py-func docutils literal notranslate"><span class="pre">isInfiniteVector()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.isInfiniteVectorOrPoint" title="msTools.core.maya.math_utils.isInfiniteVectorOrPoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">isInfiniteVectorOrPoint()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.isValid" title="msTools.core.maya.math_utils.isValid"><code class="xref py py-func docutils literal notranslate"><span class="pre">isValid()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.isValidPoint" title="msTools.core.maya.math_utils.isValidPoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">isValidPoint()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.isValidVector" title="msTools.core.maya.math_utils.isValidVector"><code class="xref py py-func docutils literal notranslate"><span class="pre">isValidVector()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.isValidVectorOrPoint" title="msTools.core.maya.math_utils.isValidVectorOrPoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">isValidVectorOrPoint()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.mirrorMatrix" title="msTools.core.maya.math_utils.mirrorMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">mirrorMatrix()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.mirrorPoint" title="msTools.core.maya.math_utils.mirrorPoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">mirrorPoint()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.quaternionBetween" title="msTools.core.maya.math_utils.quaternionBetween"><code class="xref py py-func docutils literal notranslate"><span class="pre">quaternionBetween()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.splitMatrix" title="msTools.core.maya.math_utils.splitMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">splitMatrix()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.math_utils.vectorProjection" title="msTools.core.maya.math_utils.vectorProjection"><code class="xref py py-func docutils literal notranslate"><span class="pre">vectorProjection()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.maya.math_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.maya.math_utils" title="Permalink to this headline">¶</a></h2>
+<p>Math operations for common calculations required in Maya.</p>
+<hr class="docutils" />
+<div class="section" id="vectors">
+<h3>Vectors<a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Describe a magnitude and direction within some coordinate space.
+They have no inherent position.</div></blockquote>
+</div>
+<div class="section" id="points">
+<h3>Points<a class="headerlink" href="#points" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Describe a position within some coordinate space.
+The position is relative to a fixed origin.
+They can be described relative to each other using vectors.</p>
+<p>A simple analogy is time.
+Values such as <code class="docutils literal notranslate"><span class="pre">3:00</span></code> and <code class="docutils literal notranslate"><span class="pre">5:00</span></code> can be considered coordinates.
+Durations such as <code class="docutils literal notranslate"><span class="pre">+2</span> <span class="pre">hours</span></code> can be considered vectors between time coordinates.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="cartesian-coordinates">
+<h3>Cartesian Coordinates<a class="headerlink" href="#cartesian-coordinates" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Represent coordinates in n-dimensional Euclidean space using n numbers.
+For example a 3-dimensional point is defined using <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code> coordinates.
+It is impossible to express a point at infinity whilst maintaining directionality.</div></blockquote>
+</div>
+<div class="section" id="homogenous-coordinates">
+<h3>Homogenous Coordinates<a class="headerlink" href="#homogenous-coordinates" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Graphics softwares such as Maya require a uniform way to represent points at infinity (ie. direction vectors) as well as finite Euclidean points.
+It is possible to do so using a projective space which is an extension of Euclidean space.
+Points in projective space can be represented using homogeneous coordinates.
+These coordinates allow multiple transforms such as translation, rotation, scaling and projection to be efficiently encoded within a single matrix.</p>
+<ul class="simple">
+<li>They represent n-dimensional coordinates with n+1 numbers.</li>
+<li>For example a 3-dimensional point is defined using <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code> coordinates.</li>
+<li>This coordinate can be converted to a Cartesian form using <code class="docutils literal notranslate"><span class="pre">[x/w,</span> <span class="pre">y/w,</span> <span class="pre">z/w]</span></code>.</li>
+<li>A point at infinity (ie. direction vector) is expressed using <code class="docutils literal notranslate"><span class="pre">w=0</span></code>.</li>
+<li>They are scale invariant meaning the following points are equal: <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>, <code class="docutils literal notranslate"><span class="pre">[A*x,A*y,A*z,A*w]</span></code>.</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="matrices">
+<h3>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Matrices can be used to encode multiple transformations within a single entity.
+Maya uses 4x4 matrices to represent transformations within 3-dimensional space.</p>
+<ul class="simple">
+<li>Translations are encoded within the fourth row using <code class="docutils literal notranslate"><span class="pre">w=1</span></code>.</li>
+<li>Rotations are encoded within the first three rows using an orthonormal basis of direction vectors, each with <code class="docutils literal notranslate"><span class="pre">w=0</span></code>.</li>
+<li>Scaling is encoded down the diagonal from top-left to bottom-right.</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="maya">
+<h3>Maya<a class="headerlink" href="#maya" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The Maya API makes a distinction between vectors and points via its <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> and <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> classes.</p>
+<ul class="simple">
+<li>An <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> is a displacement in 3-dimensional Euclidean space.</li>
+<li>An <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> is a point in the 3-dimensional projective space represented by homogeneous coordinates.</li>
+<li>Subtracting one <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> from another will return an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> representing the displacement between points.</li>
+<li>Multiplying an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> <code class="docutils literal notranslate"><span class="pre">[x,y,z,0]</span></code> by a matrix will return a new <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> relative to the rotation and scale encoded by the matrix.
+The result is a transformed direction vector. The <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code> coordinates may require normalization if scaling was present.</li>
+<li>Multiplying an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> <code class="docutils literal notranslate"><span class="pre">[x,y,z,1]</span></code> by a matrix will return a new <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> relative to the translation, rotation and scale encoded by the matrix.</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>The homogeneous coordinate <code class="docutils literal notranslate"><span class="pre">[0,0,0,0]</span></code> is undefined in projective space. There is no line to project.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="2">
+<li>Maya does not enforce strict conventions between vectors and points.
+For example an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> will be treated as a Cartesian coordinate when used to instantiate an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a>.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="3">
+<li>As an optimisation, the following interface does not account for shear transforms encoded within transformation matrices.
+Alternative implementations which handle shearing can be found in the source code of this module.</li>
+</ol>
+</div>
+<div class="admonition note" id="note-4">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="4">
+<li>Certain information is lost within the encoding of a transformation matrix.
+The following assumptions are applied by this interface and the <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_index_html">OpenMaya</a> API when attempting to extract rotation and scaling data from a transformation matrix.<ul>
+<li>Negative scaling in any single axis will be extracted as negative scaling in the z-axis.</li>
+<li>Negative scaling in any two axes will be extracted as a rotation around the third axis.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<ol class="last arabic simple">
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html#a4733678e954a009aaa116c9a6f92c85a" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MPoint.cartesianize()</span></code></a> fails for infinite points on the projected cartesian planes.
+For example the point <code class="docutils literal notranslate"><span class="pre">[0,1,0,0]</span></code> represents a point at infinity in the y-basis direction.
+Maya will ‘cartesianize’ this point as <code class="docutils literal notranslate"><span class="pre">[nan,inf,nan,1]</span></code> instead of the expected result <code class="docutils literal notranslate"><span class="pre">[inf,inf,inf,1]</span></code>.
+Operations such as <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html#aaec47e0021791492e46a39b9b66eecd8" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MPoint.distanceTo()</span></code></a> which rely on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html#a4733678e954a009aaa116c9a6f92c85a" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MPoint.cartesianize()</span></code></a> will also fail.
+The following interface does not handle this edge case.</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<ol class="last arabic simple" start="2">
+<li>Certain <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_index_html">OpenMaya</a> classes define special instances via the class attributes listed below.
+These attributes provide a reference to a single instantiation. This behaviour is dangerous since the instance is mutable.
+Changes made to these instances will affect all current and future references to the attribute and should therefore be avoided.<ul>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a9e965bd2c6c8c07cf8cc2c417e053d18" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kOneVector</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#adf7fb7339e2e59a4f9f0a8499798455c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kXaxisVector</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a7ca731db294913718b8c4ce22bdb957f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kXnegAxisVector</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a5627e0519e5f9269a9249b57f629639a" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kYaxisVector</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a12c11e40aa9d47e328c1012234d3b28b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kYnegAxisVector</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#aa48b806679f90a4f7d032213d1cce302" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kZaxisVector</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#ad903e2cda846b4d8222fb9e883359ddd" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kZnegAxisVector</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#ac11c4a661798b70f776ab27c2d5582de" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kZeroVector</span></code></a>.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html#aa71ccb09682c535b02b76bb2b36e0763" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MPoint.kOrigin</span></code></a>.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html#a15b798dae0e4f83666e6737bfacf39cc" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MMatrix.kIdentity</span></code></a>.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_quaternion_html#a478f948aae6e76b432492afbefb17f13" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MQuaternion.kIdentity</span></code></a>.</li>
+</ul>
+</li>
+</ol>
+</div>
+<hr class="docutils" />
+<dl class="exception">
+<dt id="msTools.core.maya.math_utils.InvalidPointError">
+<em class="property">exception </em><code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">InvalidPointError</code><a class="headerlink" href="#msTools.core.maya.math_utils.InvalidPointError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.Exception" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></a></p>
+<p>Exception to raise when:</p>
+<ul class="simple">
+<li>Attempting to operate on or return the indeterminate homogeneous coordinate <code class="docutils literal notranslate"><span class="pre">[0,0,0,0]</span></code>.</li>
+<li>Attempting to operate on or return a homogeneous coordinate composed of <code class="docutils literal notranslate"><span class="pre">float('nan')</span></code> values.</li>
+</ul>
+</dd></dl>
+
+<dl class="exception">
+<dt id="msTools.core.maya.math_utils.InvalidVectorError">
+<em class="property">exception </em><code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">InvalidVectorError</code><a class="headerlink" href="#msTools.core.maya.math_utils.InvalidVectorError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.Exception" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></a></p>
+<p>Exception to raise when:</p>
+<ul class="simple">
+<li>Attempting to operate on or return a vector composed of <code class="docutils literal notranslate"><span class="pre">float('nan')</span></code> values.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.angleBetween">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">angleBetween</code><span class="sig-paren">(</span><em>vector1</em>, <em>vector2</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.angleBetween" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the unsigned angle between two vectors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vector1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>vector2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> – The angle between <code class="docutils literal notranslate"><span class="pre">point1</span></code> and <code class="docutils literal notranslate"><span class="pre">point2</span></code> in radians.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.areClose">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">areClose</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>rTolerance=2.220446049250313e-16</em>, <em>aTolerance=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.areClose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if two values are approximately equal as determined by the given absolute and relative tolerances.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<em>numeric</em>) – First value.</li>
+<li><strong>b</strong> (<em>numeric</em>) – Second value.</li>
+<li><strong>rTolerance</strong> (<em>numeric</em><em>, </em><em>optional</em>) – Relative tolerance, scaled to account for very large inputs.
+The scaling factor is given by <code class="docutils literal notranslate"><span class="pre">max(max(a,</span> <span class="pre">b),</span> <span class="pre">1)</span></code>. Defaults to the machine <code class="docutils literal notranslate"><span class="pre">epsilon</span></code> on <a class="reference external" href="https://docs.python.org/2.7/library/sys.html#sys.float_info" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.float_info</span></code></a>.</li>
+<li><strong>aTolerance</strong> (<em>numeric</em><em>, </em><em>optional</em>) – Absolute tolerance. Defaults to <code class="docutils literal notranslate"><span class="pre">0.0</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">rTolerance</span></code> or <code class="docutils literal notranslate"><span class="pre">aTolerance</span></code> are negative.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">abs(a</span> <span class="pre">-</span> <span class="pre">b)</span></code> is less than the maximum tolerance, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.
+The maximum tolerance is either the <code class="docutils literal notranslate"><span class="pre">aTolerance</span></code> or the scaled <code class="docutils literal notranslate"><span class="pre">rTolerance</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checks if `abs(a - b)` is less than an absolute tolerance</span>
+<span class="c1"># Returns `False` because `abs(a - b) &gt; aTolerance`</span>
+<span class="n">areClose</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">,</span> <span class="n">rTolerance</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">aTolerance</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="c1"># Checks if `abs(a - b)` is less than a relative tolerance.</span>
+<span class="c1"># Returns `True` because `abs(a - b) &lt; (rTolerance * max(a, b))`</span>
+<span class="n">areClose</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">,</span> <span class="n">rTolerance</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">aTolerance</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.areCloseCoordinates">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">areCloseCoordinates</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.areCloseCoordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if two coordinates are approximately equal as determined by the default Maya tolerance <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a757a155e55e931d997f0fe9702f94378" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kTolerance</span></code></a>.</p>
+<p>The Maya tolerance is scaled to account for very large inputs.
+The scaling factor is given by <code class="docutils literal notranslate"><span class="pre">max(max(a,</span> <span class="pre">b),</span> <span class="pre">1)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<em>numeric</em>) – First coordinate.</li>
+<li><strong>b</strong> (<em>numeric</em>) – Second coordinate.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">abs(a</span> <span class="pre">-</span> <span class="pre">b)</span></code> is less than the scaled Maya tolerance, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checks if `abs(a - b)` is less than the scaled Maya tolerance.</span>
+<span class="c1"># Returns `True` because `abs(a - b) &lt; OpenMaya.MVector.kTolerance * max(a, b)`</span>
+<span class="n">areCloseCoordinates</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10.0000000001</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.areClosePoints">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">areClosePoints</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.areClosePoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if two points are approximately equal as determined by the default Maya tolerance <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a757a155e55e931d997f0fe9702f94378" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kTolerance</span></code></a>.</p>
+<p>The Maya tolerance is scaled to account for very large inputs.
+The scaling factor is given by <code class="docutils literal notranslate"><span class="pre">max(max(a[i],</span> <span class="pre">b[i]),</span> <span class="pre">1)</span></code> for each coordinate <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – First position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</li>
+<li><strong>b</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Second position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">abs(a[i]</span> <span class="pre">-</span> <span class="pre">b[i])</span></code> is less than the scaled Maya tolerance for each coordinate <code class="docutils literal notranslate"><span class="pre">i</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checks if `abs(a[i] - b[i])` is less than the scaled Maya tolerance for each coordinate `i`</span>
+<span class="c1"># Returns `True` because `abs(a[i] - b[i]) &lt; OpenMaya.MVector.kTolerance * max(a[i], b[i])` for each coordinate `i`</span>
+<span class="n">areClosePoints</span><span class="p">([</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10000.0</span><span class="p">,</span> <span class="mf">10000000.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">10.0000000001</span><span class="p">,</span> <span class="mf">10000.0000001</span><span class="p">,</span> <span class="mf">10000000.0001</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.areCloseVectors">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">areCloseVectors</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.areCloseVectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if two vectors are approximately equal as determined by the default Maya tolerance <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a757a155e55e931d997f0fe9702f94378" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kTolerance</span></code></a>.</p>
+<p>The Maya tolerance is scaled to account for very large inputs.
+The scaling factor is given by <code class="docutils literal notranslate"><span class="pre">max(max(a[i],</span> <span class="pre">b[i]),</span> <span class="pre">1)</span></code> for each coordinate <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – First vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>b</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Second vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <code class="docutils literal notranslate"><span class="pre">abs(a[i]</span> <span class="pre">-</span> <span class="pre">b[i])</span></code> is less than the scaled Maya tolerance for each coordinate <code class="docutils literal notranslate"><span class="pre">i</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checks if `abs(a[i] - b[i])` is less than the scaled Maya tolerance for each coordinate `i`</span>
+<span class="c1"># Returns `True` because `abs(a[i] - b[i]) &lt; OpenMaya.MVector.kTolerance * max(a[i], b[i])` for each coordinate `i`</span>
+<span class="n">areCloseVectors</span><span class="p">([</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10000.0</span><span class="p">,</span> <span class="mf">10000000.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">10.0000000001</span><span class="p">,</span> <span class="mf">10000.0000001</span><span class="p">,</span> <span class="mf">10000000.0001</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.averagePoint">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">averagePoint</code><span class="sig-paren">(</span><em>point1</em>, <em>point2</em>, <em>weight=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.averagePoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the weighted average of two positions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</li>
+<li><strong>point2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</li>
+<li><strong>weight</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, optional) – Weight the result towards <code class="docutils literal notranslate"><span class="pre">point1</span></code> or <code class="docutils literal notranslate"><span class="pre">point2</span></code>. Valid values are in the interval <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>.
+Small values bias <code class="docutils literal notranslate"><span class="pre">point1</span></code>. Large values bias <code class="docutils literal notranslate"><span class="pre">point2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0.5</span></code> - no bias.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">weight</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0.0</span></code> or  greater than <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> – The weighted average of <code class="docutils literal notranslate"><span class="pre">point1</span></code> and <code class="docutils literal notranslate"><span class="pre">point2</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.averageVector">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">averageVector</code><span class="sig-paren">(</span><em>vector1</em>, <em>vector2</em>, <em>weight=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.averageVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the weighted average of two vectors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vector1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>vector2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>weight</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, optional) – Weight the result towards <code class="docutils literal notranslate"><span class="pre">vector1</span></code> or <code class="docutils literal notranslate"><span class="pre">vector2</span></code>. Valid values are in the interval <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>.
+Small values bias <code class="docutils literal notranslate"><span class="pre">vector1</span></code>. Large values bias <code class="docutils literal notranslate"><span class="pre">vector2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0.5</span></code> - no bias.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">weight</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0.0</span></code> or  greater than <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> – The weighted average of <code class="docutils literal notranslate"><span class="pre">vector1</span></code> and <code class="docutils literal notranslate"><span class="pre">vector2</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.axisAngleBetween">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">axisAngleBetween</code><span class="sig-paren">(</span><em>vector1</em>, <em>vector2</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.axisAngleBetween" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the rotation that will take one vector to another in (axis, angle) form.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>vector1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>vector2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) – A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>.<ol class="arabic simple">
+<li>The axis of rotation.</li>
+<li>The angle of rotation in radians.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.centerPoint">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">centerPoint</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.centerPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the centroid of a set of points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>points</strong> (<em>iterable</em><em> [</em><em>iterable</em><em> [</em><em>numeric</em><em>]</em><em>]</em>) – Array of positions in 3-dimensional projective space each represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">points</span></code> is empty.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> – The centroid for the set of <code class="docutils literal notranslate"><span class="pre">points</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.closestPointOnLine">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">closestPointOnLine</code><span class="sig-paren">(</span><em>pointOnLine1</em>, <em>pointOnLine2</em>, <em>referencePoint</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.closestPointOnLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given two points that describe a line, find the projected point on that line which is closest to a given reference point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pointOnLine1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.
+Used to define a line in combination with <code class="docutils literal notranslate"><span class="pre">pointOnLine2</span></code>.</li>
+<li><strong>pointOnLine2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.
+Must be different to <code class="docutils literal notranslate"><span class="pre">pointOnLine1</span></code>.</li>
+<li><strong>referencePoint</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.
+Used as the reference point from which to find closest point on the line defined by <code class="docutils literal notranslate"><span class="pre">pointOnLine1</span></code> and <code class="docutils literal notranslate"><span class="pre">pointOnLine2</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> – The point on the line defined by <code class="docutils literal notranslate"><span class="pre">pointOnLine1</span></code> and <code class="docutils literal notranslate"><span class="pre">pointOnLine2</span></code> which is closest to the <code class="docutils literal notranslate"><span class="pre">referencePoint</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.composeMatrix">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">composeMatrix</code><span class="sig-paren">(</span><em>translation</em>, <em>rotation</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.composeMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compose a transformation matrix from the given transforms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>translation</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Translation in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>rotation</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_euler_rotation_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MEulerRotation</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_quaternion_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MQuaternion</span></code></a>) – Rotation in 3-dimensional Euclidean space.</li>
+<li><strong>scale</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Scaling in 3-dimensional Euclidean space for which elements correspond to the Cartesian axes <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> – Transformation matrix composed of [<code class="docutils literal notranslate"><span class="pre">scale</span></code>] x [<code class="docutils literal notranslate"><span class="pre">rotation</span></code>] x [<code class="docutils literal notranslate"><span class="pre">translation</span></code>].</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.crossProduct">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">crossProduct</code><span class="sig-paren">(</span><em>vector1</em>, <em>vector2</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.crossProduct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the cross product of two vectors.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This operation is non-commutative.
+This operation is anticommutative</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vector1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>vector2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> – The cross product of <code class="docutils literal notranslate"><span class="pre">vector1</span></code> with <code class="docutils literal notranslate"><span class="pre">vector2</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.decomposeMatrix">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">decomposeMatrix</code><span class="sig-paren">(</span><em>matrix</em>, <em>rotationOrder=0</em>, <em>rotationAsQuarternion=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.decomposeMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decompose a transformation matrix into its constituent transforms.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Transforms will be extracted in <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html#adcf1dba26aeb417e59c4718fb0b05ff3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MSpace.kTransform</span></code></a> space,
+therefore <code class="docutils literal notranslate"><span class="pre">matrix</span></code> should represent a standard encoding of [scale] x [rotation] x [translation].</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</li>
+<li><strong>rotationOrder</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – Type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_euler_rotation_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MEulerRotation</span></code></a>.
+Used to extract the rotation from <code class="docutils literal notranslate"><span class="pre">matrix</span></code> if <code class="docutils literal notranslate"><span class="pre">rotationAsQuarternion</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.
+Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_euler_rotation_html#a6e71b00d51c29a230e7ccc90bd61f06e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MEulerRotation.kXYZ</span></code></a>.</li>
+<li><strong>rotationAsQuarternion</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to extract rotation transforms as a quaternion instead of an euler rotation.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_euler_rotation_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MEulerRotation</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_quaternion_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MQuaternion</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a>) – A three-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>.<ol class="arabic simple">
+<li>Translation extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</li>
+<li>Rotation extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code> in quaternion form if <code class="docutils literal notranslate"><span class="pre">rotationAsQuarternion</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>, otherwise in euler form.</li>
+<li>Scale extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.distanceBetween">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">distanceBetween</code><span class="sig-paren">(</span><em>point1</em>, <em>point2</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.distanceBetween" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the distance between two points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</li>
+<li><strong>point2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> – The distance between <code class="docutils literal notranslate"><span class="pre">point1</span></code> and <code class="docutils literal notranslate"><span class="pre">point2</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.dotProduct">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">dotProduct</code><span class="sig-paren">(</span><em>vector1</em>, <em>vector2</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.dotProduct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dot product of two vectors, also known as the inner product or scalar product.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This operation is commutative.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vector1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>vector2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> – The dot product of <code class="docutils literal notranslate"><span class="pre">vector1</span></code> with <code class="docutils literal notranslate"><span class="pre">vector2</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.eulerBetween">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">eulerBetween</code><span class="sig-paren">(</span><em>vector1</em>, <em>vector2</em>, <em>rotationOrder=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.eulerBetween" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the rotation that will take one vector to another in euler form.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vector1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>vector2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>rotationOrder</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – Type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_euler_rotation_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MEulerRotation</span></code></a> used to set the rotation order.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_euler_rotation_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MEulerRotation</span></code></a> – The euler rotation that takes <code class="docutils literal notranslate"><span class="pre">vector1</span></code> to <code class="docutils literal notranslate"><span class="pre">vector2</span></code> with rotation order set to <code class="docutils literal notranslate"><span class="pre">rotationOrder</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.extractEulerRotation">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">extractEulerRotation</code><span class="sig-paren">(</span><em>matrix</em>, <em>rotationOrder=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.extractEulerRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the rotation transforms from a transformation matrix in euler form.</p>
+<p>This will include any encoded rotation, jointOrient, rotationOrientation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See <a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html#note-4"><span class="std std-ref">note-4</span></a> regarding assumptions pertinent to the extraction.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</li>
+<li><strong>rotationOrder</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – Type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_euler_rotation_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MEulerRotation</span></code></a> used to extract the rotation from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.
+This should be the same order that was used to encode the rotations.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_euler_rotation_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MEulerRotation</span></code></a> – Euler rotation extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.extractQuaternionRotation">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">extractQuaternionRotation</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.extractQuaternionRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the rotation transforms from a transformation matrix in quaternion form.</p>
+<p>This will include any encoded rotation, jointOrient, rotationOrientation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See <a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html#note-4"><span class="std std-ref">note-4</span></a> regarding assumptions pertinent to the extraction.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_quaternion_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MQuaternion</span></code></a> – Quaternion rotation extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.extractRotationMatrix">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">extractRotationMatrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.extractRotationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract a matrix representing just the rotation transforms of a transformation matrix.</p>
+<p>This will include any encoded rotation, jointOrient, rotationOrientation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See <a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html#note-4"><span class="std std-ref">note-4</span></a> regarding assumptions pertinent to the extraction.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> – Rotation matrix extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.extractScale">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">extractScale</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.extractScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the scale transforms from a transformation matrix.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See <a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html#note-4"><span class="std std-ref">note-4</span></a> regarding assumptions pertinent to the extraction.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> – Scale extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>, for which elements correspond to the 3-dimensional Cartesian axes <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.extractScaleMatrix">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">extractScaleMatrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.extractScaleMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract a matrix representing just the scale transforms of a transformation matrix.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See <a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html#note-4"><span class="std std-ref">note-4</span></a> regarding assumptions pertinent to the extraction.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> – Scale matrix extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.extractTranslation">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">extractTranslation</code><span class="sig-paren">(</span><em>matrix</em>, <em>space=1</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.extractTranslation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the translation transforms from a transformation matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</li>
+<li><strong>space</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – <p>Type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSpace</span></code></a> representing the space in which to extract the translation.
+Valid values are:</p>
+<ul>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html#adcf1dba26aeb417e59c4718fb0b05ff3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MSpace.kTransform</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html#a31fb689b5e8de5673326be39f0013338" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MSpace.kPostTransform</span></code></a>: Depicts a space in which translation is unaffected by other transforms.
+Useful when <code class="docutils literal notranslate"><span class="pre">matrix</span></code> represents a standard encoding of [scale] x [rotation] x [translation].</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html#a54fcc49bb380fc6ee368a7114f90193c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MSpace.kPreTransform</span></code></a>: Depicts a space in which translation is affected by other transforms.
+Useful when <code class="docutils literal notranslate"><span class="pre">matrix</span></code> represents a non-standard encoding of [translation] x [scale] x [rotation].</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">space</span></code> is not one of the accepted type constants.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> – Translation extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.extractTranslationMatrix">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">extractTranslationMatrix</code><span class="sig-paren">(</span><em>matrix</em>, <em>space=1</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.extractTranslationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract a matrix representing just the translation transforms of a transformation matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</li>
+<li><strong>space</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – <p>Type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MSpace</span></code></a> representing the space in which to extract the translation.
+Valid values are:</p>
+<ul>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html#adcf1dba26aeb417e59c4718fb0b05ff3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MSpace.kTransform</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html#a31fb689b5e8de5673326be39f0013338" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MSpace.kPostTransform</span></code></a>: Depicts a space in which translation is unaffected by other transforms.
+Useful when <code class="docutils literal notranslate"><span class="pre">matrix</span></code> represents a standard encoding of [scale] x [rotation] x [translation].</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html#a54fcc49bb380fc6ee368a7114f90193c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MSpace.kPreTransform</span></code></a>: Depicts a space in which translation is affected by other transforms.
+Useful when <code class="docutils literal notranslate"><span class="pre">matrix</span></code> represents a non-standard encoding of [translation] x [scale] x [rotation].</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">space</span></code> is not one of the accepted type constants.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> – Translation matrix extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.isInfinitePoint">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">isInfinitePoint</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.isInfinitePoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a point resides at infinity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if any of the <code class="docutils literal notranslate"><span class="pre">point</span></code> coordinates evaluate to <code class="docutils literal notranslate"><span class="pre">float('inf')</span></code> or the coordinate <code class="docutils literal notranslate"><span class="pre">w=0</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.isInfiniteVector">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">isInfiniteVector</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.isInfiniteVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a vector has infinite magnitude.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if any of the <code class="docutils literal notranslate"><span class="pre">vector</span></code> coordinates evaluate to <code class="docutils literal notranslate"><span class="pre">float('inf')</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.isInfiniteVectorOrPoint">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">isInfiniteVectorOrPoint</code><span class="sig-paren">(</span><em>coordinates</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.isInfiniteVectorOrPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a vector has infinite magnitude or a point is at infinity.</p>
+<p>Composition of <a class="reference internal" href="#msTools.core.maya.math_utils.isInfiniteVector" title="msTools.core.maya.math_utils.isInfiniteVector"><code class="xref py py-func docutils literal notranslate"><span class="pre">isInfiniteVector()</span></code></a> and <a class="reference internal" href="#msTools.core.maya.math_utils.isInfinitePoint" title="msTools.core.maya.math_utils.isInfinitePoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">isInfinitePoint()</span></code></a>, used for generic input types.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>coordinates</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code> or a position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if any of the <code class="docutils literal notranslate"><span class="pre">coordinates</span></code> evaluate to <code class="docutils literal notranslate"><span class="pre">float('inf')</span></code> or the coordinate <code class="docutils literal notranslate"><span class="pre">w=0</span></code> if <code class="docutils literal notranslate"><span class="pre">coordinates</span></code> are homogeneous, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.isValid">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">isValid</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.isValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a value is valid.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<em>numeric</em>) – Numeric value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> if <code class="docutils literal notranslate"><span class="pre">value</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">float('nan')</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.isValidPoint">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">isValidPoint</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.isValidPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a point is numerically valid.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> if any of the <code class="docutils literal notranslate"><span class="pre">point</span></code> coordinates evaluate to <code class="docutils literal notranslate"><span class="pre">float('nan')</span></code> or <code class="docutils literal notranslate"><span class="pre">point</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">[0,0,0,0]</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.isValidVector">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">isValidVector</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.isValidVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a vector is numerically valid.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> if any of the <code class="docutils literal notranslate"><span class="pre">vector</span></code> coordinates evaluate to <code class="docutils literal notranslate"><span class="pre">float('nan')</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.isValidVectorOrPoint">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">isValidVectorOrPoint</code><span class="sig-paren">(</span><em>coordinates</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.isValidVectorOrPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a vector or point is numerically valid.</p>
+<p>Composition of <a class="reference internal" href="#msTools.core.maya.math_utils.isValidVector" title="msTools.core.maya.math_utils.isValidVector"><code class="xref py py-func docutils literal notranslate"><span class="pre">isValidVector()</span></code></a> and <a class="reference internal" href="#msTools.core.maya.math_utils.isValidPoint" title="msTools.core.maya.math_utils.isValidPoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">isValidPoint()</span></code></a>, used for generic input types.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>coordinates</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code> or a position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> – <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a> if any of the <code class="docutils literal notranslate"><span class="pre">coordinates</span></code> evaluate to <code class="docutils literal notranslate"><span class="pre">float('nan')</span></code> or the set of <code class="docutils literal notranslate"><span class="pre">coordinates</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">[0,0,0,0]</span></code>, otherwise <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.mirrorMatrix">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">mirrorMatrix</code><span class="sig-paren">(</span><em>matrix</em>, <em>axis=0</em>, <em>rotation=True</em>, <em>translation=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.mirrorMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a transformation matrix composed of transforms which have been mirrored through a plane.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</li>
+<li><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – <p>Type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> representing the plane to mirror transforms of <code class="docutils literal notranslate"><span class="pre">matrix</span></code> through. Valid values are:</p>
+<ul>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a744c765089d86dc2247f730c7a28ba49" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kXaxis</span></code></a>: Mirror in the YZ plane.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#ac6e3b2213c5b534e1029d65d3254d314" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kYaxis</span></code></a>: Mirror in the XZ plane.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#aafeeb739da9fc675f56f9bf8fcdd3d5a" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kZaxis</span></code></a>: Mirror in the XY plane.</li>
+</ul>
+<p>Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a744c765089d86dc2247f730c7a28ba49" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kXaxis</span></code></a>.</p>
+</li>
+<li><strong>rotation</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to mirror the rotation transforms of <code class="docutils literal notranslate"><span class="pre">matrix</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+<li><strong>translation</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to mirror the translation transforms of <code class="docutils literal notranslate"><span class="pre">matrix</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> – Transformation matrix corresponding to <code class="docutils literal notranslate"><span class="pre">matrix</span></code>, mirrored according to the <code class="docutils literal notranslate"><span class="pre">translation</span></code> and <code class="docutils literal notranslate"><span class="pre">rotation</span></code> arguments.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.mirrorPoint">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">mirrorPoint</code><span class="sig-paren">(</span><em>point</em>, <em>axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.mirrorPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a point mirrored through a plane represented by an axis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Position in 3-dimensional projective space represented by homogeneous coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z,w]</span></code>.</li>
+<li><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – <p>Type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> representing the plane to mirror <code class="docutils literal notranslate"><span class="pre">point</span></code> through. Valid values are:</p>
+<ul>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a744c765089d86dc2247f730c7a28ba49" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kXaxis</span></code></a>: Mirror in the YZ plane.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#ac6e3b2213c5b534e1029d65d3254d314" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kYaxis</span></code></a>: Mirror in the XZ plane.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#aafeeb739da9fc675f56f9bf8fcdd3d5a" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kZaxis</span></code></a>: Mirror in the XY plane.</li>
+</ul>
+<p>Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html#a744c765089d86dc2247f730c7a28ba49" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MVector.kXaxis</span></code></a>.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> – Mirrored point.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.quaternionBetween">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">quaternionBetween</code><span class="sig-paren">(</span><em>vector1</em>, <em>vector2</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.quaternionBetween" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the rotation that will take one vector to another in quaternion form.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vector1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+<li><strong>vector2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_quaternion_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MQuaternion</span></code></a> – The quaternion rotation that takes <code class="docutils literal notranslate"><span class="pre">vector1</span></code> to <code class="docutils literal notranslate"><span class="pre">vector2</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.splitMatrix">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">splitMatrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.splitMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract matrices representing the individual transforms of a transformation matrix.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Transforms will be extracted in <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_space_html#adcf1dba26aeb417e59c4718fb0b05ff3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MSpace.kTransform</span></code></a> space,
+therefore <code class="docutils literal notranslate"><span class="pre">matrix</span></code> should represent a standard encoding of [scale] x [rotation] x [translation].</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>) – Transformation matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a>) – A three-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>.<ol class="arabic simple">
+<li>Translation matrix extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</li>
+<li>Rotation matrix extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</li>
+<li>Scale matrix extracted from <code class="docutils literal notranslate"><span class="pre">matrix</span></code>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.math_utils.vectorProjection">
+<code class="descclassname">msTools.core.maya.math_utils.</code><code class="descname">vectorProjection</code><span class="sig-paren">(</span><em>vector1</em>, <em>vector2</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.math_utils.vectorProjection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given two vectors, find the projection of the first on the second.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vector1</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.
+Used as the vector to project onto <code class="docutils literal notranslate"><span class="pre">vector2</span></code>.</li>
+<li><strong>vector2</strong> (<em>iterable</em><em> [</em><em>numeric</em><em>]</em>) – Vector in 3-dimensional Euclidean space represented by Cartesian coordinates <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code>.
+Used as the target vector. Must be a non-zero vector.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">vector2</span></code> is within the default Maya tolerance of the zero vector <code class="docutils literal notranslate"><span class="pre">[0,0,0]</span></code>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> – The vector projection of <code class="docutils literal notranslate"><span class="pre">vector1</span></code> on <code class="docutils literal notranslate"><span class="pre">vector2</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.core.maya.name_utils.html" class="btn btn-neutral float-right" title="name_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.core.maya.inspect_utils.html" class="btn btn-neutral float-left" title="inspect_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

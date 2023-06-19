@@ -1,0 +1,1013 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>attribute_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="callback_utils" href="msTools.core.maya.callback_utils.html" />
+    <link rel="prev" title="Welcome to msTools’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">attribute_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.maya.attribute_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creation">Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#types">Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifying">Modifying</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>attribute_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.maya.attribute_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="attribute-utils">
+<h1>attribute_utils<a class="headerlink" href="#attribute-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.addToCompound" title="msTools.core.maya.attribute_utils.addToCompound"><code class="xref py py-func docutils literal notranslate"><span class="pre">addToCompound()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.addToNode" title="msTools.core.maya.attribute_utils.addToNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">addToNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.createCompoundAttribute" title="msTools.core.maya.attribute_utils.createCompoundAttribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">createCompoundAttribute()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.createEnumAttribute" title="msTools.core.maya.attribute_utils.createEnumAttribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">createEnumAttribute()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.createMatrixAttribute" title="msTools.core.maya.attribute_utils.createMatrixAttribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">createMatrixAttribute()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.createMessageAttribute" title="msTools.core.maya.attribute_utils.createMessageAttribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">createMessageAttribute()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.createNumericAttribute" title="msTools.core.maya.attribute_utils.createNumericAttribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">createNumericAttribute()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.createTypedAttribute" title="msTools.core.maya.attribute_utils.createTypedAttribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">createTypedAttribute()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.createUnitAttribute" title="msTools.core.maya.attribute_utils.createUnitAttribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">createUnitAttribute()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.iterChildren" title="msTools.core.maya.attribute_utils.iterChildren"><code class="xref py py-func docutils literal notranslate"><span class="pre">iterChildren()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.removeFromNode" title="msTools.core.maya.attribute_utils.removeFromNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">removeFromNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.removeFromNodeByName" title="msTools.core.maya.attribute_utils.removeFromNodeByName"><code class="xref py py-func docutils literal notranslate"><span class="pre">removeFromNodeByName()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.renameOnNode" title="msTools.core.maya.attribute_utils.renameOnNode"><code class="xref py py-func docutils literal notranslate"><span class="pre">renameOnNode()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.renameOnNodeByName" title="msTools.core.maya.attribute_utils.renameOnNodeByName"><code class="xref py py-func docutils literal notranslate"><span class="pre">renameOnNodeByName()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.setProperties" title="msTools.core.maya.attribute_utils.setProperties"><code class="xref py py-func docutils literal notranslate"><span class="pre">setProperties()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.attribute_utils.validateNames" title="msTools.core.maya.attribute_utils.validateNames"><code class="xref py py-func docutils literal notranslate"><span class="pre">validateNames()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.maya.attribute_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.maya.attribute_utils" title="Permalink to this headline">¶</a></h2>
+<p>Create, modify and access attributes in Maya.</p>
+<hr class="docutils" />
+<div class="section" id="creation">
+<h3>Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Attributes act like templates in defining certain default values for plugs including the data type, name and initial value.
+Attributes are generally declared as static <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> wrappers inside the class definition of a node but can also be created dynamically.</p>
+<ul class="simple">
+<li>A static attribute can act as the template for a plug on multiple dependency nodes.</li>
+<li>A dynamic attribute can act as the template for a plug on a single dependency node.</li>
+</ul>
+<p id="properties">By default, attributes are:</p>
+<ul class="simple">
+<li>Readable.</li>
+<li>Writable.</li>
+<li>Connectable.</li>
+<li>Storable.</li>
+<li>Cached.</li>
+<li>Not arrays.</li>
+<li>Have indices that matter.</li>
+<li>Do not use an array builder.</li>
+<li>Not keyable.</li>
+<li>Not hidden.</li>
+<li>Not used as colors.</li>
+<li>Not indeterminant.</li>
+<li>Set to disconnect behavior kNothing.</li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="types">
+<h3>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Each attribute type has a corresponding Function Set that subclasses <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a>.
+Each attribute type is capable of accepting certain data types.
+Complex data types can be manipulated through a subclass of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnData</span></code></a>.</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="modifying">
+<span id="id1"></span><h3>Modifying<a class="headerlink" href="#modifying" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>The properties of an attribute can be modified via the <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> Function Set.
+If an attribute was statically defined, modifying its properties can affect a plug on multiple nodes.
+If an attribute was dynamically defined, modifying its properties can affect a plug on a single node.
+Plug specific modifications can be made through an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a> encapsulation.</div></blockquote>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Compound attributes do not create a unique namespace for child attributes. Any child attribute of a compound must have a unique name from all other attributes on a given node.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="2">
+<li>Attributes which are descendant to a compound array will produce placeholder indices for ancestral elements when used to instantiate an <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPlug</span></code></a>.</li>
+</ol>
+</div>
+<div class="admonition note" id="note-3">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="3">
+<li>It is possible to set both <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute.keyable</span></code></a> and <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute.channelBox</span></code></a> properties <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> for an attribute.
+However once instantiated as a plug this causes an invalid state in which <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html#af4e44dff7d0f271c5384a76518b30f11" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MPlug.isKeyable</span></code></a> and <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_plug_html#a1f43aa27a9996b99f0f2938776fd98ef" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MPlug.isChannelBox</span></code></a> are both <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.
+When setting these properties manually, Maya tries to prevent this from occuring as it produces a visual bug whereby any associated UI control appears non-keyable.</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple" start="4">
+<li>An attribute can be renamed via <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_modifier_html#a0f8a183bee6ec1e7c8452fc15e926bd1" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MDGModifier.renameAttribute()</span></code></a> even if the corresponding dependency node plug is locked.
+This behaviour is inconsistent with Maya commands.</li>
+</ol>
+</div>
+<div class="admonition warning" id="warning-1">
+<p class="first admonition-title">Warning</p>
+<ol class="last arabic simple">
+<li>An error is not produced when trying to delete an attribute that corresponds to a locked array plug.
+Subsequently Maya will crash if that locked array plug is connected or has at least one connected element plug.</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<ol class="last arabic simple" start="2">
+<li>An attribute can be renamed via <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_d_g_modifier_html#a0f8a183bee6ec1e7c8452fc15e926bd1" title="(in Maya Python API v2.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OpenMaya.MDGModifier.renameAttribute()</span></code></a> even if the new short or long name already exists on the node.
+This will result in undefined behaviour.</li>
+</ol>
+</div>
+<hr class="docutils" />
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.addToCompound">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">addToCompound</code><span class="sig-paren">(</span><em>compoundAttribute</em>, <em>attribute</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.addToCompound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a dynamic attribute to a dynamic compound attribute.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Dynamic attributes should be married to a single dependency node.
+Callers are responsible for ensuring <code class="docutils literal notranslate"><span class="pre">attribute</span></code> and <code class="docutils literal notranslate"><span class="pre">compoundAttribute</span></code> have not already been added to a dependency node.
+Failing to do so may produce undefined behaviour.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This operation is not undoable.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compoundAttribute</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dynamic compound attribute.</li>
+<li><strong>attribute</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dynamic attribute.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">compoundAttribute</span></code> does not reference a compound attribute.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attr</span></code> does not reference an attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">compoundAttribute</span></code> already has a child attribute with the same short name or long name as <code class="docutils literal notranslate"><span class="pre">attribute</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.addToNode">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">addToNode</code><span class="sig-paren">(</span><em>node</em>, <em>attribute</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.addToNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a dynamic attribute to a dependency node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Dynamic attributes should be married to a single dependency node.
+Callers are responsible for ensuring <code class="docutils literal notranslate"><span class="pre">attribute</span></code> has not already been added to a dependency node.
+Failing to do so may produce undefined behaviour.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of an unlocked dependency node.</li>
+<li><strong>attribute</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dynamic attribute. The short and long names must not clash with an existing attribute on <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> does not reference an attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> already has an attribute with the same short name or long name as <code class="docutils literal notranslate"><span class="pre">attribute</span></code>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> is locked.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.createCompoundAttribute">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">createCompoundAttribute</code><span class="sig-paren">(</span><em>shortName=None</em>, <em>longName=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.createCompoundAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dynamic compound attribute, useful for storing a related set of data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the attribute. <code class="docutils literal notranslate"><span class="pre">longName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the attribute. <code class="docutils literal notranslate"><span class="pre">shortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>**kwargs</strong> – Keyword arguments where each argument corresponds to a writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> such as
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keyable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">channelBox</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#ac62847e8f885c4f2c032b3ba08080a68" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hidden</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5cef49750d639de2ea255df869ce05b3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">storable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a30b6bf689842a1bad6564c7f4c7648ca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">readable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a1a726a957560b6c387b1d441f25a789b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">writable</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#aca27048c0bd4dcbad86993630ccf592f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">connectable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a824cfeeaeaa3b7f2dd4332ada992e1db" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">array</span></code></a>.
+See default values <a class="reference internal" href="#properties"><span class="std std-ref">above</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">shortName</span></code> and <code class="docutils literal notranslate"><span class="pre">longName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper of the attribute object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.createEnumAttribute">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">createEnumAttribute</code><span class="sig-paren">(</span><em>fields</em>, <em>shortName=None</em>, <em>longName=None</em>, <em>default=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.createEnumAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dynamic enum attribute based on a mapping of field names to integer values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>fields</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [ <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> ]) – Mapping of field names to unique values.</li>
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the attribute. <code class="docutils literal notranslate"><span class="pre">longName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the attribute. <code class="docutils literal notranslate"><span class="pre">shortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>default</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Default field, must correspond to a key in the <code class="docutils literal notranslate"><span class="pre">fields</span></code> mapping.
+If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, the field with the smallest value will be used. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>**kwargs</strong> – Keyword arguments where each argument corresponds to a writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> such as
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keyable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">channelBox</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#ac62847e8f885c4f2c032b3ba08080a68" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hidden</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5cef49750d639de2ea255df869ce05b3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">storable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a30b6bf689842a1bad6564c7f4c7648ca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">readable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a1a726a957560b6c387b1d441f25a789b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">writable</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#aca27048c0bd4dcbad86993630ccf592f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">connectable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a824cfeeaeaa3b7f2dd4332ada992e1db" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">array</span></code></a>.
+See default values <a class="reference internal" href="#properties"><span class="std std-ref">above</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">shortName</span></code> and <code class="docutils literal notranslate"><span class="pre">longName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If the <code class="docutils literal notranslate"><span class="pre">fields</span></code> mapping is empty or the set of values contained within the <code class="docutils literal notranslate"><span class="pre">fields</span></code> mapping is not unique.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.KeyError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> – If the <code class="docutils literal notranslate"><span class="pre">default</span></code> field does not exist within the <code class="docutils literal notranslate"><span class="pre">fields</span></code> mapping.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper of the attribute object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.createMatrixAttribute">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">createMatrixAttribute</code><span class="sig-paren">(</span><em>shortName=None</em>, <em>longName=None</em>, <em>dataType=1</em>, <em>matrix=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.createMatrixAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dynamic matrix attribute based on a data type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_matrix_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnMatrixAttribute</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the attribute. <code class="docutils literal notranslate"><span class="pre">longName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the attribute. <code class="docutils literal notranslate"><span class="pre">shortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>dataType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Type constant present on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_matrix_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnMatrixAttribute</span></code></a> representing the default data type.
+Either single precision (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_matrix_attribute_html#a8d6778ac410faa8acce48ce6a3d57fd1" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kFloat</span></code></a>) or double precision (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_matrix_attribute_html#af6fb2181461f0d329f8f424ba80a7848" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kDouble</span></code></a>).
+Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_matrix_attribute_html#af6fb2181461f0d329f8f424ba80a7848" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kDouble</span></code></a>.</li>
+<li><strong>matrix</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_float_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFloatMatrix</span></code></a>, optional) – Default value for the attribute.
+If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>, an identity matrix of the given <code class="docutils literal notranslate"><span class="pre">dataType</span></code> will be used. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>**kwargs</strong> – Keyword arguments where each argument corresponds to a writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> such as
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keyable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">channelBox</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#ac62847e8f885c4f2c032b3ba08080a68" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hidden</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5cef49750d639de2ea255df869ce05b3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">storable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a30b6bf689842a1bad6564c7f4c7648ca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">readable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a1a726a957560b6c387b1d441f25a789b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">writable</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#aca27048c0bd4dcbad86993630ccf592f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">connectable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a824cfeeaeaa3b7f2dd4332ada992e1db" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">array</span></code></a>.
+See default values <a class="reference internal" href="#properties"><span class="std std-ref">above</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">shortName</span></code> and <code class="docutils literal notranslate"><span class="pre">longName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper of the attribute object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.createMessageAttribute">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">createMessageAttribute</code><span class="sig-paren">(</span><em>shortName=None</em>, <em>longName=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.createMessageAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dynamic message attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the attribute. <code class="docutils literal notranslate"><span class="pre">longName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the attribute. <code class="docutils literal notranslate"><span class="pre">shortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>**kwargs</strong> – Keyword arguments where each argument corresponds to a writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> such as
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keyable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">channelBox</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#ac62847e8f885c4f2c032b3ba08080a68" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hidden</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5cef49750d639de2ea255df869ce05b3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">storable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a30b6bf689842a1bad6564c7f4c7648ca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">readable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a1a726a957560b6c387b1d441f25a789b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">writable</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#aca27048c0bd4dcbad86993630ccf592f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">connectable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a824cfeeaeaa3b7f2dd4332ada992e1db" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">array</span></code></a>.
+See default values <a class="reference internal" href="#properties"><span class="std std-ref">above</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">shortName</span></code> and <code class="docutils literal notranslate"><span class="pre">longName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper of the attribute object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.createNumericAttribute">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">createNumericAttribute</code><span class="sig-paren">(</span><em>shortName=None</em>, <em>longName=None</em>, <em>dataType=11</em>, <em>point=False</em>, <em>color=False</em>, <em>value=None</em>, <em>min_=None</em>, <em>max_=None</em>, <em>softMin=None</em>, <em>softMax=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.createNumericAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dynamic numeric attribute based on a data type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnNumericData</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the attribute. <code class="docutils literal notranslate"><span class="pre">longName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the attribute. <code class="docutils literal notranslate"><span class="pre">shortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>dataType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Type constant present on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnNumericData</span></code></a> representing the default data type.
+Valid values are <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a5acb08282492d2ebdb11c2e7680bb48f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kFloat</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a62fbc2f570d785329b917d688749c2a2" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kAddr</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a872cc3973bf91867cb7e2d19f0588f11" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kChar</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a2c0c68dff0bcabaac7551f872a86c4d4" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kByte</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#aede3a0ca736bebac6299871a16839197" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kShort</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a0b898b81e75db81c85ebc59d3b640580" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kInt</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#ab076f1e6e7e051642eba560588f9d521" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kInt64</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a49b92909e3454c9fa22620dd6b8cbb60" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kDouble</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a763fd2a98967019efb3bf3afdb29d30a" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kBoolean</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a02f4672cd8b0b219988522c54bb1c4e3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k2Short</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a1dd26b5b4d6de3044a0ee8a8b622aa06" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k2Int</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a1aaf9ccabecc1e921d1bf713cf0c17c3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k2Float</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a6704e3a661acaacc634887aeefe4e14c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k2Double</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#afe7dce6fb8fb49a5d5818395f23ab400" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k3Short</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#af415c8b7d5354a396245e0ed8105320a" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k3Int</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#adbdfc8efd5b157db945097618adcd51e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k3Float</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a60e78b300837717e8566073c0cf580a5" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k3Double</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#aee3e1d5cccf0070b7daaa363192cedc1" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k4Double</span></code></a>.
+Multi data point types such as <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a1aaf9ccabecc1e921d1bf713cf0c17c3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k2Float</span></code></a> will create a compound attribute of type <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a58f58bcb417a30f72e58808a6abc37f1" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kAttribute2Float</span></code></a>.
+In this case, child attribute names would be suffixed with an index and would be of type <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aa5a0826b1221f8010c3a6da93907c6c3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kNumericAttribute</span></code></a>, storing <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a5acb08282492d2ebdb11c2e7680bb48f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kFloat</span></code></a> data.
+Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a5acb08282492d2ebdb11c2e7680bb48f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kFloat</span></code></a>.</li>
+<li><strong>point</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> will be ignored and an attribute of type <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a8b1ef89110239bd2111c5affb4bdb2bc" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kAttribute3Float</span></code></a> will be created, storing <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#adbdfc8efd5b157db945097618adcd51e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k3Float</span></code></a> data.
+If <code class="docutils literal notranslate"><span class="pre">value</span></code> is given, it must be a three-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>.
+Child attribute names will be suffixed with <code class="docutils literal notranslate"><span class="pre">'X'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Y'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Z'</span></code> respectively and will be of type <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aa5a0826b1221f8010c3a6da93907c6c3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kNumericAttribute</span></code></a>, storing <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a5acb08282492d2ebdb11c2e7680bb48f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kFloat</span></code></a> data. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>color</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> and <code class="docutils literal notranslate"><span class="pre">point</span></code> is <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> will be ignored and an attribute of type <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a8b1ef89110239bd2111c5affb4bdb2bc" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kAttribute3Float</span></code></a> will be created, storing <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#adbdfc8efd5b157db945097618adcd51e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">k3Float</span></code></a> data.
+If <code class="docutils literal notranslate"><span class="pre">value</span></code> is given, it must be a three-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>.
+Child attribute names will be suffixed with <code class="docutils literal notranslate"><span class="pre">'R'</span></code>, <code class="docutils literal notranslate"><span class="pre">'G'</span></code>, <code class="docutils literal notranslate"><span class="pre">'B'</span></code> respectively and will be of type <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aa5a0826b1221f8010c3a6da93907c6c3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kNumericAttribute</span></code></a>, storing <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html#a5acb08282492d2ebdb11c2e7680bb48f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kFloat</span></code></a> data. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+<li><strong>value</strong> (<em>numeric-type</em><em>, </em><em>optional</em>) – Default value for the attribute, must be compatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> constant. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>min_</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Min value for the attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>max_</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Max value for the attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>softMin</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Soft min value for the attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>softMax</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Soft max value for the attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>**kwargs</strong> – Keyword arguments where each argument corresponds to a writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> such as
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keyable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">channelBox</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#ac62847e8f885c4f2c032b3ba08080a68" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hidden</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5cef49750d639de2ea255df869ce05b3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">storable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a30b6bf689842a1bad6564c7f4c7648ca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">readable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a1a726a957560b6c387b1d441f25a789b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">writable</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#aca27048c0bd4dcbad86993630ccf592f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">connectable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a824cfeeaeaa3b7f2dd4332ada992e1db" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">array</span></code></a>.
+See default values <a class="reference internal" href="#properties"><span class="std std-ref">above</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">shortName</span></code> and <code class="docutils literal notranslate"><span class="pre">longName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If a compound attribute type is passed a <code class="docutils literal notranslate"><span class="pre">value</span></code> with an incompatible number of elements.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the <code class="docutils literal notranslate"><span class="pre">value</span></code> type is incompatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper of the attribute object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.createTypedAttribute">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">createTypedAttribute</code><span class="sig-paren">(</span><em>shortName=None</em>, <em>longName=None</em>, <em>dataType=4</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.createTypedAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dynamic typed attribute based on a data type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnData</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the attribute. <code class="docutils literal notranslate"><span class="pre">longName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the attribute. <code class="docutils literal notranslate"><span class="pre">shortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>dataType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Type constant present on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnData</span></code></a> representing the default data type.
+Supported constants are: <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kComponentList</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#abb49793d69dace7df98f9da7a2fb4594" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kDoubleArray</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a5095973bb6092507d9ea86a3d278d9eb" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kIntArray</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a27d916fe38d2b6a17e115fc4d49a31bf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMatrix</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#aa4fc8af047bca4a078a175379e10e9ec" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMesh</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a71be2a91175e97598b9ba812b9496128" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kNurbsCurve</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a35d051160f13f889c8dd225f139f35fd" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kNurbsSurface</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#ad3b9cae41dd3ca75560c178a47f681bb" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kPlugin</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a3f9ad0c080ed6d1b4c9442e1575cdbe0" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kPointArray</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a7924c2d30ab7de658af947d8ec0181e8" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kString</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a4f55e1748fc8eafe5113ba31fc4e7a4c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kStringArray</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a7ee44fd8ca886158da31541a9f34651c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kVectorArray</span></code></a>. Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a7924c2d30ab7de658af947d8ec0181e8" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kString</span></code></a>.</li>
+<li><strong>value</strong> (<em>any</em><em>, </em><em>optional</em>) – <p>Default value for the attribute. The following values are compatible with each <code class="docutils literal notranslate"><span class="pre">dataType</span></code> constant:</p>
+<ul>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kComponentList</span></code></a>: An <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> referencing derived <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a82b17f4078f71ebb2472ca1b4b7ff084" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kComponent</span></code></a> type data.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a27d916fe38d2b6a17e115fc4d49a31bf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMatrix</span></code></a>: An <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MMatrix</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_transformation_matrix_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MTransformationMatrix</span></code></a>.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#abb49793d69dace7df98f9da7a2fb4594" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kDoubleArray</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a5095973bb6092507d9ea86a3d278d9eb" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kIntArray</span></code></a>: An iterable of numeric data.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a7ee44fd8ca886158da31541a9f34651c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kVectorArray</span></code></a>: An iterable of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_vector_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MVector</span></code></a> data.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a3f9ad0c080ed6d1b4c9442e1575cdbe0" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kPointArray</span></code></a>: An iterable of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_point_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MPoint</span></code></a> data.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a4f55e1748fc8eafe5113ba31fc4e7a4c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kStringArray</span></code></a>: An iterable of <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a> or <a class="reference external" href="https://docs.python.org/2.7/library/json.html#module-json" title="(in Python v2.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">json</span></code></a> serializable data.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a7924c2d30ab7de658af947d8ec0181e8" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kString</span></code></a>: A <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a> or <a class="reference external" href="https://docs.python.org/2.7/library/json.html#module-json" title="(in Python v2.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">json</span></code></a> serializable data.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#ad3b9cae41dd3ca75560c178a47f681bb" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kPlugin</span></code></a>: An <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_type_id_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MTypeId</span></code></a> specifying a user defined data type.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#aa4fc8af047bca4a078a175379e10e9ec" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kMesh</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a71be2a91175e97598b9ba812b9496128" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kNurbsCurve</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a35d051160f13f889c8dd225f139f35fd" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kNurbsSurface</span></code></a>: <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+<p>Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+</li>
+<li><strong>**kwargs</strong> – Keyword arguments where each argument corresponds to a writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> such as
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keyable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">channelBox</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#ac62847e8f885c4f2c032b3ba08080a68" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hidden</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5cef49750d639de2ea255df869ce05b3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">storable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a30b6bf689842a1bad6564c7f4c7648ca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">readable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a1a726a957560b6c387b1d441f25a789b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">writable</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#aca27048c0bd4dcbad86993630ccf592f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">connectable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a824cfeeaeaa3b7f2dd4332ada992e1db" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">array</span></code></a>.
+See default values <a class="reference internal" href="#properties"><span class="std std-ref">above</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">shortName</span></code> and <code class="docutils literal notranslate"><span class="pre">longName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> is unsupported (eg. <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#adb1f47b3d7e376a887762e2b04a95f52" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kNumeric</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a6883471718151a11b20a0018c9de0854" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kFloatArray</span></code></a>, etc).</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> is <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kComponentList</span></code></a> and the <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> <code class="docutils literal notranslate"><span class="pre">value</span></code> does not reference component data.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the <code class="docutils literal notranslate"><span class="pre">value</span></code> type is incompatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper of the attribute object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.createUnitAttribute">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">createUnitAttribute</code><span class="sig-paren">(</span><em>shortName=None</em>, <em>longName=None</em>, <em>dataType=2</em>, <em>value=None</em>, <em>min_=None</em>, <em>max_=None</em>, <em>softMin=None</em>, <em>softMax=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.createUnitAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dynamic unit attribute based on a data type constant from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_unit_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnUnitAttribute</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name for the attribute. <code class="docutils literal notranslate"><span class="pre">longName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name for the attribute. <code class="docutils literal notranslate"><span class="pre">shortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>dataType</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Type constant present on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_unit_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnUnitAttribute</span></code></a> representing the default data type.
+Valid values are <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_unit_attribute_html#a99d5d486213367e138944f194d9f239a" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kAngle</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_unit_attribute_html#a710f818579f9d1452ca37d859a1faf26" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kDistance</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_unit_attribute_html#ac8821de355f6b0b9d8692847c8218ed3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kTime</span></code></a>.
+Defaults to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_unit_attribute_html#a710f818579f9d1452ca37d859a1faf26" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kDistance</span></code></a>.</li>
+<li><strong>value</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_angle_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MAngle</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_distance_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDistance</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_time_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MTime</span></code></a>, optional) – Default value for the attribute, must be compatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> constant. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>min_</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_angle_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MAngle</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_distance_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDistance</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_time_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MTime</span></code></a>, optional) – Min value for the attribute, must be compatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> constant. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>max_</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_angle_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MAngle</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_distance_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDistance</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_time_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MTime</span></code></a>, optional) – Max value for the attribute, must be compatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> constant. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>softMin</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_angle_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MAngle</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_distance_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDistance</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_time_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MTime</span></code></a>, optional) – Soft min value for the attribute, must be compatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> constant. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>softMax</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_angle_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MAngle</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_distance_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDistance</span></code></a> | <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_time_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MTime</span></code></a>, optional) – Soft max value for the attribute, must be compatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code> constant. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>**kwargs</strong> – Keyword arguments where each argument corresponds to a writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> such as
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keyable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">channelBox</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#ac62847e8f885c4f2c032b3ba08080a68" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hidden</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5cef49750d639de2ea255df869ce05b3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">storable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a30b6bf689842a1bad6564c7f4c7648ca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">readable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a1a726a957560b6c387b1d441f25a789b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">writable</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#aca27048c0bd4dcbad86993630ccf592f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">connectable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a824cfeeaeaa3b7f2dd4332ada992e1db" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">array</span></code></a>.
+See default values <a class="reference internal" href="#properties"><span class="std std-ref">above</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">shortName</span></code> and <code class="docutils literal notranslate"><span class="pre">longName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.TypeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If the <code class="docutils literal notranslate"><span class="pre">value</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">softMin</span></code> or <code class="docutils literal notranslate"><span class="pre">softMax</span></code> type is incompatible with the <code class="docutils literal notranslate"><span class="pre">dataType</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrapper of the attribute object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.iterChildren">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">iterChildren</code><span class="sig-paren">(</span><em>attribute</em>, <em>recurse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.iterChildren" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield the children of a compound attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>attribute</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a compound attribute object.</li>
+<li><strong>recurse</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – Whether to search recursively for child attributes if child compound attributes exist. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#False" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">False</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> does not reference a compound attribute.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> – Wrappers of the child attributes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.removeFromNode">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">removeFromNode</code><span class="sig-paren">(</span><em>node</em>, <em>attribute</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.removeFromNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a dynamic, non-child attribute from a dependency node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function safely handles the issue described by <a class="reference internal" href="msTools.core.maya.plug_utils.html#warning-1"><span class="std std-ref">warning-1</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of an unlocked dependency node.</li>
+<li><strong>attribute</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dynamic, non-child attribute that exists on <code class="docutils literal notranslate"><span class="pre">node</span></code>.
+Must correspond to an unlocked plug which has no locked and connected descendant plugs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaLookupError" title="msTools.core.maya.exceptions.MayaLookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaLookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> does not exist on <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> does not reference an attribute.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> references a static attribute.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> references a child attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> is locked.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the plug corresponding to <code class="docutils literal notranslate"><span class="pre">attribute</span></code> is locked or has a locked and connected descendant plug.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.removeFromNodeByName">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">removeFromNodeByName</code><span class="sig-paren">(</span><em>node</em>, <em>attributeName</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.removeFromNodeByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a dynamic, non-child attribute from a dependency node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function safely handles the issue described by <a class="reference internal" href="msTools.core.maya.plug_utils.html#warning-1"><span class="std std-ref">warning-1</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of an unlocked dependency node.</li>
+<li><strong>attributeName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – Name of a dynamic, non-child attribute that exists on <code class="docutils literal notranslate"><span class="pre">node</span></code>.
+Must correspond to an unlocked plug which has no locked and connected descendant plugs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaLookupError" title="msTools.core.maya.exceptions.MayaLookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaLookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attributeName</span></code> does not exist on <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attributeName</span></code> references a static attribute.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attributeName</span></code> references a child attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> is locked.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the plug corresponding to <code class="docutils literal notranslate"><span class="pre">attributeName</span></code> is locked or has a locked and connected descendant plug.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.renameOnNode">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">renameOnNode</code><span class="sig-paren">(</span><em>node</em>, <em>attribute</em>, <em>newShortName=None</em>, <em>newLongName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.renameOnNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rename a dynamic attribute on a dependency node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of an unlocked dependency node.</li>
+<li><strong>attribute</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of a dynamic attribute that exists on <code class="docutils literal notranslate"><span class="pre">node</span></code> and corresponds to an unlocked plug.</li>
+<li><strong>newShortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – New short name for <code class="docutils literal notranslate"><span class="pre">attribute</span></code>. Must not clash with an existing attribute on <code class="docutils literal notranslate"><span class="pre">node</span></code>.
+<code class="docutils literal notranslate"><span class="pre">newLongName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>newLongName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – New long name for <code class="docutils literal notranslate"><span class="pre">attribute</span></code>. Must not clash with an existing attribute on <code class="docutils literal notranslate"><span class="pre">node</span></code>.
+<code class="docutils literal notranslate"><span class="pre">newShortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> does not reference an attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">newShortName</span></code> and <code class="docutils literal notranslate"><span class="pre">newLongName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If either of the <code class="docutils literal notranslate"><span class="pre">newShortName</span></code> or <code class="docutils literal notranslate"><span class="pre">newLongName</span></code> already exists on <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaLookupError" title="msTools.core.maya.exceptions.MayaLookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaLookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> does not exist on <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> references a static attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the plug corresponding to <code class="docutils literal notranslate"><span class="pre">attribute</span></code> is locked.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> is locked.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.renameOnNodeByName">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">renameOnNodeByName</code><span class="sig-paren">(</span><em>node</em>, <em>attributeName</em>, <em>newShortName=None</em>, <em>newLongName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.renameOnNodeByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rename a dynamic attribute on a dependency node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of an unlocked dependency node.</li>
+<li><strong>attributeName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – Name of a dynamic attribute that exists on <code class="docutils literal notranslate"><span class="pre">node</span></code> and corresponds to an unlocked plug.</li>
+<li><strong>newShortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – New short name for the attribute corresponding to <code class="docutils literal notranslate"><span class="pre">attributeName</span></code>. Must not clash with an existing attribute on <code class="docutils literal notranslate"><span class="pre">node</span></code>.
+<code class="docutils literal notranslate"><span class="pre">newLongName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>newLongName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – New long name for the attribute corresponding to <code class="docutils literal notranslate"><span class="pre">attributeName</span></code>. Must not clash with an existing attribute on <code class="docutils literal notranslate"><span class="pre">node</span></code>.
+<code class="docutils literal notranslate"><span class="pre">newShortName</span></code> used if <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> does not reference a dependency node.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">newShortName</span></code> and <code class="docutils literal notranslate"><span class="pre">newLongName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If either of the <code class="docutils literal notranslate"><span class="pre">newShortName</span></code> or <code class="docutils literal notranslate"><span class="pre">newLongName</span></code> already exists on <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaLookupError" title="msTools.core.maya.exceptions.MayaLookupError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaLookupError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attributeName</span></code> does not exist on <code class="docutils literal notranslate"><span class="pre">node</span></code>.</li>
+<li><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attributeName</span></code> references a static attribute.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If the plug corresponding to <code class="docutils literal notranslate"><span class="pre">attributeName</span></code> is locked.</li>
+<li><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.RuntimeError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">node</span></code> is locked.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.setProperties">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">setProperties</code><span class="sig-paren">(</span><em>attribute</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.setProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set properties corresponding to any writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> for any attribute. Changes are placed on the undo queue.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See <a class="reference internal" href="#modifying"><span class="std std-ref">modifying</span></a> attributes as well as <a class="reference internal" href="#note-3"><span class="std std-ref">note-3</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>attribute</strong> (<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a>) – Wrapper of an attribute object.</li>
+<li><strong>**kwargs</strong> – Keyword arguments where each argument corresponds to a writable property on <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnAttribute</span></code></a> such as
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a426fdd97a3195a9207111980f950a610" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keyable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5d602a291fd22d884bd56e554fbe2291" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">channelBox</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#ac62847e8f885c4f2c032b3ba08080a68" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hidden</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a5cef49750d639de2ea255df869ce05b3" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">storable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a30b6bf689842a1bad6564c7f4c7648ca" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">readable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a1a726a957560b6c387b1d441f25a789b" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">writable</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#aca27048c0bd4dcbad86993630ccf592f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">connectable</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_attribute_html#a824cfeeaeaa3b7f2dd4332ada992e1db" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">array</span></code></a>.
+See default values <a class="reference internal" href="#properties"><span class="std std-ref">above</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference internal" href="msTools.core.maya.exceptions.html#msTools.core.maya.exceptions.MayaTypeError" title="msTools.core.maya.exceptions.MayaTypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">msTools.core.maya.exceptions.MayaTypeError</span></code></a> – If <code class="docutils literal notranslate"><span class="pre">attribute</span></code> does not reference an attribute.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set `attribute` keyable and unreadable</span>
+<span class="n">setProperties</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="n">keyable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.attribute_utils.validateNames">
+<code class="descclassname">msTools.core.maya.attribute_utils.</code><code class="descname">validateNames</code><span class="sig-paren">(</span><em>shortName=None</em>, <em>longName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.attribute_utils.validateNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to return valid attribute names from the data given.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>shortName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Short name of an attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>longName</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Long name of an attribute. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.ValueError" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If both <code class="docutils literal notranslate"><span class="pre">shortName</span></code> and <code class="docutils literal notranslate"><span class="pre">longName</span></code> are <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – A two-element <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#tuple" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>.<ol class="arabic simple">
+<li>Short name of an attribute.</li>
+<li>Long name of an attribute.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.core.maya.callback_utils.html" class="btn btn-neutral float-right" title="callback_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to msTools’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

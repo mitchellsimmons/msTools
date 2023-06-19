@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>logging_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="metaclasses" href="msTools.core.py.metaclasses.html" />
+    <link rel="prev" title="decorator_utils" href="msTools.core.py.decorator_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">logging_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.py.logging_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#logging-logger"><code class="docutils literal notranslate"><span class="pre">logging.Logger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-streamhandler"><code class="docutils literal notranslate"><span class="pre">logging.StreamHandler</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-formatter"><code class="docutils literal notranslate"><span class="pre">logging.Formatter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-filter"><code class="docutils literal notranslate"><span class="pre">logging.Filter</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>logging_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.py.logging_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="logging-utils">
+<h1>logging_utils<a class="headerlink" href="#logging-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.core.py.logging_utils.Logger" title="msTools.core.py.logging_utils.Logger"><code class="xref py py-class docutils literal notranslate"><span class="pre">Logger</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.logging_utils.Logger.makeRecord" title="msTools.core.py.logging_utils.Logger.makeRecord"><code class="xref py py-meth docutils literal notranslate"><span class="pre">makeRecord()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.logging_utils.Logger.timeit" title="msTools.core.py.logging_utils.Logger.timeit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeit()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="autobasicsummary-header head"><a class="reference internal" href="#msTools.core.py.logging_utils.NoParsingFilter" title="msTools.core.py.logging_utils.NoParsingFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoParsingFilter</span></code></a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.logging_utils.NoParsingFilter.__init__" title="msTools.core.py.logging_utils.NoParsingFilter.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-method-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.py.logging_utils.NoParsingFilter.filter" title="msTools.core.py.logging_utils.NoParsingFilter.filter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">filter()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.py.logging_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.py.logging_utils" title="Permalink to this headline">¶</a></h2>
+<p>General purpose logging objects.</p>
+<hr class="docutils" />
+<div class="section" id="logging-logger">
+<h3><a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Logger" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code></a><a class="headerlink" href="#logging-logger" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Responsible for creating and processing log records.
+Instantiated with a call to <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.getLogger" title="(in Python v2.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.getLogger()</span></code></a> using the name of a module.</p>
+<ul class="simple">
+<li>Passing the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> attribute of a module will return a logger for that module.</li>
+<li>Not passing a name will return the root logger.</li>
+</ul>
+<p>Each module logger is a descendant of the root logger.
+Messages from descendant loggers are propagated upstream through the hierarchy of ancestral loggers.
+Propagation of messages can be disabled via the <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Logger.propagate" title="(in Python v2.7)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">logging.Logger.propagate</span></code></a> property.</p>
+<p>Any logger which has a handler will format the message and output it to a stream or file depending on the type of handler.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="logging-streamhandler">
+<h3><a class="reference external" href="https://docs.python.org/2.7/library/logging.handlers.html#logging.StreamHandler" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.StreamHandler</span></code></a><a class="headerlink" href="#logging-streamhandler" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Responsible for sending log records to streams such as <a class="reference external" href="https://docs.python.org/2.7/library/sys.html#sys.stdout" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stdout</span></code></a> or <a class="reference external" href="https://docs.python.org/2.7/library/sys.html#sys.stderr" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a>.
+A handler can be added to a logger via <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Logger.addHandler" title="(in Python v2.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">logging.Logger.addHandler()</span></code></a>.</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="logging-formatter">
+<h3><a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Formatter" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code></a><a class="headerlink" href="#logging-formatter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Responsible for formatting the layout of log records before outputting to the final destination.
+They determine what information should be logged.
+A formatter can be set to a handler with <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Handler.setFormatter" title="(in Python v2.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">logging.Handler.setFormatter()</span></code></a>.</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="logging-filter">
+<h3><a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Filter" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Filter</span></code></a><a class="headerlink" href="#logging-filter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Provide the ability to filter log records received by a handler.
+A filter can be added to a handler with <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Handler.addFilter" title="(in Python v2.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">logging.Handler.addFilter()</span></code></a>.</div></blockquote>
+<hr class="docutils" />
+<dl class="class">
+<dt id="msTools.core.py.logging_utils.Logger">
+<em class="property">class </em><code class="descclassname">msTools.core.py.logging_utils.</code><code class="descname">Logger</code><span class="sig-paren">(</span><em>name</em>, <em>level=0</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.logging_utils.Logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Logger" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code></a></p>
+<p>Extends the functionality of the current logger class by inheriting from the result of <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.getLoggerClass" title="(in Python v2.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.getLoggerClass()</span></code></a>.</p>
+<p>The resulting class must be set using <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.setLoggerClass" title="(in Python v2.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.setLoggerClass()</span></code></a> in order for <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.getLogger" title="(in Python v2.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.getLogger()</span></code></a> to return instances of this class.</p>
+<dl class="method">
+<dt id="msTools.core.py.logging_utils.Logger.makeRecord">
+<code class="descname">makeRecord</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.logging_utils.Logger.makeRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends the functionality of <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.LogRecord" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.LogRecord</span></code></a> objects produces by instances of this logger.</p>
+<p>The following attributes are added to <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.LogRecord" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.LogRecord</span></code></a> objects and can be used to format the layout of the final output.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">funcNameLineno</span></code>: Uses format <cite>%(funcNameLineno)s</cite>. Produces output <cite>funcName:lineno</cite>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">nameFuncNameLineno</span></code>: Uses format <cite>%(nameFuncNameLineno)s</cite>. Produces output <cite>name - funcName:lineno</cite>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">levelNameFuncNameLineno</span></code>: Uses format <cite>%(levelNameFuncNameLineno)s</cite>. Produces output <cite>levelname - funcName:lineno</cite>.</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.logging_utils.Logger.timeit">
+<code class="descname">timeit</code><span class="sig-paren">(</span><em>level</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.logging_utils.Logger.timeit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator factory for producing a decorator which will time a decorated function and log a record of the result.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>level</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – A level constant from <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Logger" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code></a> representing the level at which to log the timing message.
+Possible attributes are <cite>NOTSET</cite>, <cite>DEBUG</cite>, <cite>INFO</cite>, <cite>WARNING</cite>, <cite>ERROR</cite>, <cite>CRITICAL</cite></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@logger</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Produces a logging output which details the running time of the `foo` call</span>
+<span class="n">foo</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="msTools.core.py.logging_utils.NoParsingFilter">
+<em class="property">class </em><code class="descclassname">msTools.core.py.logging_utils.</code><code class="descname">NoParsingFilter</code><span class="sig-paren">(</span><em>filterNamePrefix</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.logging_utils.NoParsingFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Filter" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Filter</span></code></a></p>
+<p>A <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Filter" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Filter</span></code></a> subclass used to prevent a handler from processing <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.LogRecord" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.LogRecord</span></code></a> objects from certain loggers.</p>
+<dl class="method">
+<dt id="msTools.core.py.logging_utils.NoParsingFilter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>filterNamePrefix</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.logging_utils.NoParsingFilter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialise the filter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filterNamePrefix</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – Used to filter <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.LogRecord" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.LogRecord</span></code></a> objects.
+If the <cite>name</cite> attribute starts with this prefix, the handler to which this filter is assigned will not process the record.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msTools.core.py.logging_utils.NoParsingFilter.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.py.logging_utils.NoParsingFilter.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override of <a class="reference external" href="https://docs.python.org/2.7/library/logging.html#logging.Filter.filter" title="(in Python v2.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">logging.Filter.filter()</span></code></a>. Filters based on the initialised prefix.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.core.py.metaclasses.html" class="btn btn-neutral float-right" title="metaclasses" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.core.py.decorator_utils.html" class="btn btn-neutral float-left" title="decorator_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

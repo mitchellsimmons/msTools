@@ -1,0 +1,566 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>constants &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="context_utils" href="msTools.core.maya.context_utils.html" />
+    <link rel="prev" title="component_utils" href="msTools.core.maya.component_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">constants</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.maya.constants">Description</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>constants</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.maya.constants.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="constants">
+<h1>constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.ANGLE_UNIT_CONSTANT_NAME_MAPPING" title="msTools.core.maya.constants.ANGLE_UNIT_CONSTANT_NAME_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">ANGLE_UNIT_CONSTANT_NAME_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.COMPONENT_CONSTANT_CLASS_MAPPING" title="msTools.core.maya.constants.COMPONENT_CONSTANT_CLASS_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">COMPONENT_CONSTANT_CLASS_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.COMPONENT_CONSTANT_ITERATOR_CLASS_MAPPING" title="msTools.core.maya.constants.COMPONENT_CONSTANT_ITERATOR_CLASS_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">COMPONENT_CONSTANT_ITERATOR_CLASS_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.CONSTANT_NAME_MAPPING" title="msTools.core.maya.constants.CONSTANT_NAME_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">CONSTANT_NAME_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.DATA_CONSTANT_CLASS_MAPPING" title="msTools.core.maya.constants.DATA_CONSTANT_CLASS_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">DATA_CONSTANT_CLASS_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.DATA_CONSTANT_NAME_MAPPING" title="msTools.core.maya.constants.DATA_CONSTANT_NAME_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">DATA_CONSTANT_NAME_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.DISTANCE_UNIT_CONSTANT_NAME_MAPPING" title="msTools.core.maya.constants.DISTANCE_UNIT_CONSTANT_NAME_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">DISTANCE_UNIT_CONSTANT_NAME_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_NAME_MAPPING" title="msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_NAME_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">NUMERIC_DATA_CONSTANT_NAME_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_SIZE_MAPPING" title="msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_SIZE_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">NUMERIC_DATA_CONSTANT_SIZE_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_TYPE_MAPPING" title="msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_TYPE_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">NUMERIC_DATA_CONSTANT_TYPE_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.SHAPE_CONSTANT_CLASS_MAPPING" title="msTools.core.maya.constants.SHAPE_CONSTANT_CLASS_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">SHAPE_CONSTANT_CLASS_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.SHAPE_CONSTANT_COMPONENT_CONSTANTS_MAPPING" title="msTools.core.maya.constants.SHAPE_CONSTANT_COMPONENT_CONSTANTS_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">SHAPE_CONSTANT_COMPONENT_CONSTANTS_MAPPING</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-data-data first last"><cite>dict</cite> <a class="reference internal" href="#msTools.core.maya.constants.TIME_UNIT_CONSTANT_NAME_MAPPING" title="msTools.core.maya.constants.TIME_UNIT_CONSTANT_NAME_MAPPING"><code class="xref py py-data docutils literal notranslate"><span class="pre">TIME_UNIT_CONSTANT_NAME_MAPPING</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.maya.constants">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.maya.constants" title="Permalink to this headline">¶</a></h2>
+<p>Contant data relating to the <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_index_html">OpenMaya</a> API.</p>
+<hr class="docutils" />
+<dl class="data">
+<dt id="msTools.core.maya.constants.ANGLE_UNIT_CONSTANT_NAME_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">ANGLE_UNIT_CONSTANT_NAME_MAPPING</code><em class="property"> = {0: 'kInvalid', 1: 'kRadians', 2: 'kDegrees', 3: 'kAngMinutes', 4: 'kAngSeconds', 5: 'kLast'}</em><a class="headerlink" href="#msTools.core.maya.constants.ANGLE_UNIT_CONSTANT_NAME_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_angle_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MAngle</span></code></a> unit type constants to their respective names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.COMPONENT_CONSTANT_CLASS_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">COMPONENT_CONSTANT_CLASS_MAPPING</code><em class="property"> = {532: &lt;type 'OpenMaya.MFnSingleIndexedComponent'&gt;, 538: &lt;type 'OpenMaya.MFnDoubleIndexedComponent'&gt;, 547: &lt;type 'OpenMaya.MFnSingleIndexedComponent'&gt;, 548: &lt;type 'OpenMaya.MFnSingleIndexedComponent'&gt;, 550: &lt;type 'OpenMaya.MFnSingleIndexedComponent'&gt;, 740: &lt;type 'OpenMaya.MFnDoubleIndexedComponent'&gt;}</em><a class="headerlink" href="#msTools.core.maya.constants.COMPONENT_CONSTANT_CLASS_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a> component type constants to their respective component function set class.
+Each function set is a strict subclass of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_component_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnComponent</span></code></a>.</p>
+<p>Valid component type constants are <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a79f7f7a74396b937f933884a26b16643" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMeshVertComponent</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#ae8cb0b0c6e0aef41fa1c899436343450" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMeshEdgeComponent</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a5e902149ccefaf00f51f68f3396634bc" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMeshPolygonComponent</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#ad2f6898c38aa4c0a0ddc1ad92f287103" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMeshVtxFaceComponent</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a76e1e3f56d510ab42c7823bc629cb944" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kSurfaceCVComponent</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a0f7674aec6d6d0a2153988c6b2c71a04" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kCurveCVComponent</span></code></a>.</p>
+<p>The function set classes can be used to create or inspect a component encapsulation of the respective component type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#type" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.COMPONENT_CONSTANT_ITERATOR_CLASS_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">COMPONENT_CONSTANT_ITERATOR_CLASS_MAPPING</code><em class="property"> = {538: &lt;type 'OpenMaya.MItSurfaceCV'&gt;, 547: &lt;type 'OpenMaya.MItMeshEdge'&gt;, 548: &lt;type 'OpenMaya.MItMeshPolygon'&gt;, 550: &lt;type 'OpenMaya.MItMeshVertex'&gt;, 740: &lt;type 'OpenMaya.MItMeshFaceVertex'&gt;}</em><a class="headerlink" href="#msTools.core.maya.constants.COMPONENT_CONSTANT_ITERATOR_CLASS_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a> component type constants to their respective iterator class.</p>
+<p>Valid component type constants are <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a79f7f7a74396b937f933884a26b16643" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMeshVertComponent</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#ae8cb0b0c6e0aef41fa1c899436343450" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMeshEdgeComponent</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a5e902149ccefaf00f51f68f3396634bc" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMeshPolygonComponent</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#ad2f6898c38aa4c0a0ddc1ad92f287103" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMeshVtxFaceComponent</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a76e1e3f56d510ab42c7823bc629cb944" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kSurfaceCVComponent</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a0f7674aec6d6d0a2153988c6b2c71a04" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kCurveCVComponent</span></code></a> does not have an iterator.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#type" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.CONSTANT_NAME_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">CONSTANT_NAME_MAPPING</code><em class="property"> = {0: 'kInvalid', 1: 'kBase', 2: 'kNamedObject', 3: 'kModel', 4: 'kDependencyNode', 5: 'kAddDoubleLinear', 6: 'kAffect', 7: 'kAnimCurve', 8: 'kAnimCurveTimeToAngular', 9: 'kAnimCurveTimeToDistance', 10: 'kAnimCurveTimeToTime', 11: 'kAnimCurveTimeToUnitless', 12: 'kAnimCurveUnitlessToAngular', 13: 'kAnimCurveUnitlessToDistance', 14: 'kAnimCurveUnitlessToTime', 15: 'kAnimCurveUnitlessToUnitless', 16: 'kResultCurve', 17: 'kResultCurveTimeToAngular', 18: 'kResultCurveTimeToDistance', 19: 'kResultCurveTimeToTime', 20: 'kResultCurveTimeToUnitless', 21: 'kAngleBetween', 22: 'kAudio', 23: 'kBackground', 24: 'kColorBackground', 25: 'kFileBackground', 26: 'kRampBackground', 27: 'kBlend', 28: 'kBlendTwoAttr', 29: 'kBlendWeighted', 30: 'kBlendDevice', 31: 'kBlendColors', 32: 'kBump', 33: 'kBump3d', 34: 'kCameraView', 35: 'kChainToSpline', 36: 'kChoice', 37: 'kCondition', 38: 'kContrast', 39: 'kClampColor', 40: 'kCreate', 41: 'kAlignCurve', 42: 'kAlignSurface', 43: 'kAttachCurve', 44: 'kAttachSurface', 45: 'kAvgCurves', 46: 'kAvgSurfacePoints', 47: 'kAvgNurbsSurfacePoints', 48: 'kBevel', 49: 'kBirailSrf', 50: 'kDPbirailSrf', 51: 'kMPbirailSrf', 52: 'kSPbirailSrf', 53: 'kBoundary', 54: 'kCircle', 55: 'kCloseCurve', 56: 'kClosestPointOnSurface', 57: 'kCloseSurface', 58: 'kCurveFromSurface', 59: 'kCurveFromSurfaceBnd', 60: 'kCurveFromSurfaceCoS', 61: 'kCurveFromSurfaceIso', 62: 'kCurveInfo', 63: 'kDetachCurve', 64: 'kDetachSurface', 65: 'kExtendCurve', 66: 'kExtendSurface', 67: 'kExtrude', 68: 'kFFblendSrf', 69: 'kFFfilletSrf', 70: 'kFilletCurve', 71: 'kFitBspline', 72: 'kFlow', 73: 'kHardenPointCurve', 74: 'kIllustratorCurve', 75: 'kInsertKnotCrv', 76: 'kInsertKnotSrf', 77: 'kIntersectSurface', 78: 'kNurbsTesselate', 79: 'kNurbsPlane', 80: 'kNurbsCube', 81: 'kOffsetCos', 82: 'kOffsetCurve', 83: 'kPlanarTrimSrf', 84: 'kPointOnCurveInfo', 85: 'kPointOnSurfaceInfo', 86: 'kPrimitive', 87: 'kProjectCurve', 88: 'kProjectTangent', 89: 'kRBFsurface', 90: 'kRebuildCurve', 91: 'kRebuildSurface', 92: 'kReverseCurve', 93: 'kReverseSurface', 94: 'kRevolve', 95: 'kRevolvedPrimitive', 96: 'kCone', 97: 'kRenderCone', 98: 'kCylinder', 99: 'kSphere', 100: 'kSkin', 101: 'kStitchSrf', 102: 'kSubCurve', 103: 'kSurfaceInfo', 104: 'kTextCurves', 105: 'kTrim', 106: 'kUntrim', 107: 'kDagNode', 108: 'kProxy', 109: 'kUnderWorld', 110: 'kTransform', 111: 'kAimConstraint', 112: 'kLookAt', 113: 'kGeometryConstraint', 114: 'kGeometryVarGroup', 115: 'kAnyGeometryVarGroup', 116: 'kCurveVarGroup', 117: 'kMeshVarGroup', 118: 'kSurfaceVarGroup', 119: 'kIkEffector', 120: 'kIkHandle', 121: 'kJoint', 122: 'kManipulator3D', 123: 'kArrowManip', 124: 'kAxesActionManip', 125: 'kBallProjectionManip', 126: 'kCircleManip', 127: 'kScreenAlignedCircleManip', 128: 'kCircleSweepManip', 129: 'kConcentricProjectionManip', 130: 'kCubicProjectionManip', 131: 'kCylindricalProjectionManip', 132: 'kDiscManip', 133: 'kFreePointManip', 134: 'kCenterManip', 135: 'kLimitManip', 136: 'kEnableManip', 137: 'kFreePointTriadManip', 138: 'kPropMoveTriadManip', 139: 'kTowPointManip', 140: 'kPolyCreateToolManip', 141: 'kPolySplitToolManip', 142: 'kGeometryOnLineManip', 143: 'kCameraPlaneManip', 144: 'kToggleOnLineManip', 145: 'kStateManip', 146: 'kIsoparmManip', 147: 'kLineManip', 148: 'kManipContainer', 149: 'kAverageCurveManip', 150: 'kBarnDoorManip', 151: 'kBevelManip', 152: 'kBlendManip', 153: 'kButtonManip', 154: 'kCameraManip', 155: 'kCoiManip', 156: 'kCpManip', 157: 'kCreateCVManip', 158: 'kCreateEPManip', 159: 'kCurveEdManip', 160: 'kCurveSegmentManip', 161: 'kDirectionManip', 162: 'kDofManip', 163: 'kDropoffManip', 164: 'kExtendCurveDistanceManip', 165: 'kExtrudeManip', 166: 'kIkSplineManip', 167: 'kIkRPManip', 168: 'kJointClusterManip', 169: 'kLightManip', 170: 'kMotionPathManip', 171: 'kOffsetCosManip', 172: 'kOffsetCurveManip', 173: 'kProjectionManip', 174: 'kPolyProjectionManip', 175: 'kProjectionUVManip', 176: 'kProjectionMultiManip', 177: 'kProjectTangentManip', 178: 'kPropModManip', 179: 'kQuadPtOnLineManip', 180: 'kRbfSrfManip', 181: 'kReverseCurveManip', 182: 'kReverseCrvManip', 183: 'kReverseSurfaceManip', 184: 'kRevolveManip', 185: 'kRevolvedPrimitiveManip', 186: 'kSpotManip', 187: 'kSpotCylinderManip', 188: 'kTriplanarProjectionManip', 189: 'kTrsManip', 190: 'kDblTrsManip', 191: 'kPivotManip2D', 192: 'kManip2DContainer', 193: 'kPolyMoveUVManip', 194: 'kPolyMappingManip', 195: 'kPolyModifierManip', 196: 'kPolyMoveVertexManip', 197: 'kPolyVertexNormalManip', 198: 'kTexSmudgeUVManip', 199: 'kTexLatticeDeformManip', 200: 'kTexLattice', 201: 'kTexSmoothManip', 202: 'kTrsTransManip', 203: 'kTrsInsertManip', 204: 'kTrsXformManip', 205: 'kManipulator2D', 206: 'kTranslateManip2D', 207: 'kPlanarProjectionManip', 208: 'kPointOnCurveManip', 209: 'kTowPointOnCurveManip', 210: 'kMarkerManip', 211: 'kPointOnLineManip', 212: 'kPointOnSurfaceManip', 213: 'kTranslateUVManip', 214: 'kRotateBoxManip', 215: 'kRotateManip', 216: 'kHandleRotateManip', 217: 'kRotateLimitsManip', 218: 'kScaleLimitsManip', 219: 'kScaleManip', 220: 'kScalingBoxManip', 221: 'kScriptManip', 222: 'kSphericalProjectionManip', 223: 'kTextureManip3D', 224: 'kToggleManip', 225: 'kTranslateBoxManip', 226: 'kTranslateLimitsManip', 227: 'kTranslateManip', 228: 'kTrimManip', 229: 'kJointTranslateManip', 230: 'kManipulator', 231: 'kCirclePointManip', 232: 'kDimensionManip', 233: 'kFixedLineManip', 234: 'kLightProjectionGeometry', 235: 'kLineArrowManip', 236: 'kPointManip', 237: 'kTriadManip', 238: 'kNormalConstraint', 239: 'kOrientConstraint', 240: 'kPointConstraint', 241: 'kSymmetryConstraint', 242: 'kParentConstraint', 243: 'kPoleVectorConstraint', 244: 'kScaleConstraint', 245: 'kTangentConstraint', 246: 'kUnknownTransform', 247: 'kWorld', 248: 'kShape', 249: 'kBaseLattice', 250: 'kCamera', 251: 'kCluster', 252: 'kSoftMod', 253: 'kCollision', 254: 'kDummy', 255: 'kEmitter', 256: 'kField', 257: 'kAir', 258: 'kDrag', 259: 'kGravity', 260: 'kNewton', 261: 'kRadial', 262: 'kTurbulence', 263: 'kUniform', 264: 'kVortex', 265: 'kGeometric', 266: 'kCurve', 267: 'kNurbsCurve', 268: 'kNurbsCurveGeom', 269: 'kDimension', 270: 'kAngle', 271: 'kAnnotation', 272: 'kDistance', 273: 'kArcLength', 274: 'kRadius', 275: 'kParamDimension', 276: 'kDirectedDisc', 277: 'kRenderRect', 278: 'kEnvFogShape', 279: 'kLattice', 280: 'kLatticeGeom', 281: 'kLocator', 282: 'kDropoffLocator', 283: 'kMarker', 284: 'kOrientationMarker', 285: 'kPositionMarker', 286: 'kOrientationLocator', 287: 'kTrimLocator', 288: 'kPlane', 289: 'kSketchPlane', 290: 'kGroundPlane', 291: 'kOrthoGrid', 292: 'kSprite', 293: 'kSurface', 294: 'kNurbsSurface', 295: 'kNurbsSurfaceGeom', 296: 'kMesh', 297: 'kMeshGeom', 298: 'kRenderSphere', 299: 'kFlexor', 300: 'kClusterFlexor', 301: 'kGuideLine', 302: 'kLight', 303: 'kAmbientLight', 304: 'kNonAmbientLight', 305: 'kAreaLight', 306: 'kLinearLight', 307: 'kNonExtendedLight', 308: 'kDirectionalLight', 309: 'kPointLight', 310: 'kSpotLight', 311: 'kParticle', 312: 'kPolyToolFeedbackShape', 313: 'kRigidConstraint', 314: 'kRigid', 315: 'kSpring', 316: 'kUnknownDag', 317: 'kDefaultLightList', 318: 'kDeleteComponent', 319: 'kDispatchCompute', 320: 'kShadingEngine', 321: 'kDisplacementShader', 322: 'kDistanceBetween', 323: 'kDOF', 324: 'kDummyConnectable', 325: 'kDynamicsController', 326: 'kGeoConnectable', 327: 'kExpression', 328: 'kExtract', 329: 'kFilter', 330: 'kFilterClosestSample', 331: 'kFilterEuler', 332: 'kFilterSimplify', 333: 'kGammaCorrect', 334: 'kGeometryFilt', 335: 'kBendLattice', 336: 'kBlendShape', 337: 'kCombinationShape', 338: 'kBulgeLattice', 339: 'kFFD', 340: 'kFfdDualBase', 341: 'kRigidDeform', 342: 'kSculpt', 343: 'kTextureDeformer', 344: 'kTextureDeformerHandle', 345: 'kTweak', 346: 'kWeightGeometryFilt', 347: 'kClusterFilter', 348: 'kSoftModFilter', 349: 'kJointCluster', 350: 'kDeltaMush', 351: 'kTension', 352: 'kProxWrap', 353: 'kWire', 354: 'kGroupId', 355: 'kGroupParts', 356: 'kGuide', 357: 'kHsvToRgb', 358: 'kHyperGraphInfo', 359: 'kHyperLayout', 360: 'kHyperView', 361: 'kIkSolver', 362: 'kMCsolver', 363: 'kPASolver', 364: 'kSCsolver', 365: 'kRPsolver', 366: 'kSplineSolver', 367: 'kIkSystem', 368: 'kImagePlane', 369: 'kLambert', 370: 'kReflect', 371: 'kBlinn', 372: 'kPhong', 373: 'kPhongExplorer', 374: 'kLayeredShader', 375: 'kLightInfo', 376: 'kLeastSquares', 377: 'kLightFogMaterial', 378: 'kEnvFogMaterial', 379: 'kLightList', 380: 'kLightSource', 381: 'kLuminance', 382: 'kMakeGroup', 383: 'kMaterial', 384: 'kDiffuseMaterial', 385: 'kLambertMaterial', 386: 'kBlinnMaterial', 387: 'kPhongMaterial', 388: 'kLightSourceMaterial', 389: 'kMaterialInfo', 390: 'kMatrixAdd', 391: 'kMatrixHold', 392: 'kMatrixMult', 393: 'kMatrixPass', 394: 'kMatrixWtAdd', 395: 'kMidModifier', 396: 'kMidModifierWithMatrix', 397: 'kPolyBevel', 398: 'kPolyTweak', 399: 'kPolyAppend', 400: 'kPolyChipOff', 401: 'kPolyCloseBorder', 402: 'kPolyCollapseEdge', 403: 'kPolyCollapseF', 404: 'kPolyCylProj', 405: 'kPolyDelEdge', 406: 'kPolyDelFacet', 407: 'kPolyDelVertex', 408: 'kPolyExtrudeFacet', 409: 'kPolyMapCut', 410: 'kPolyMapDel', 411: 'kPolyMapSew', 412: 'kPolyMergeEdge', 413: 'kPolyMergeFacet', 414: 'kPolyMoveEdge', 415: 'kPolyMoveFacet', 416: 'kPolyMoveFacetUV', 417: 'kPolyMoveUV', 418: 'kPolyMoveVertex', 419: 'kPolyMoveVertexUV', 420: 'kPolyNormal', 421: 'kPolyPlanProj', 422: 'kPolyProj', 423: 'kPolyQuad', 424: 'kPolySmooth', 425: 'kPolySoftEdge', 426: 'kPolySphProj', 427: 'kPolySplit', 428: 'kPolySubdEdge', 429: 'kPolySubdFacet', 430: 'kPolyTriangulate', 431: 'kPolyCreator', 432: 'kPolyPrimitive', 433: 'kPolyCone', 434: 'kPolyCube', 435: 'kPolyCylinder', 436: 'kPolyMesh', 437: 'kPolySphere', 438: 'kPolyTorus', 439: 'kPolyCreateFacet', 440: 'kPolyUnite', 441: 'kMotionPath', 442: 'kPluginMotionPathNode', 443: 'kMultilisterLight', 444: 'kMultiplyDivide', 445: 'kOldGeometryConstraint', 446: 'kOpticalFX', 447: 'kParticleAgeMapper', 448: 'kParticleCloud', 449: 'kParticleColorMapper', 450: 'kParticleIncandecenceMapper', 451: 'kParticleTransparencyMapper', 452: 'kPartition', 453: 'kPlace2dTexture', 454: 'kPlace3dTexture', 455: 'kPluginDependNode', 456: 'kPluginLocatorNode', 457: 'kPlusMinusAverage', 458: 'kPointMatrixMult', 459: 'kPolySeparate', 460: 'kPostProcessList', 461: 'kProjection', 462: 'kRecord', 463: 'kRenderUtilityList', 464: 'kReverse', 465: 'kRgbToHsv', 466: 'kRigidSolver', 467: 'kSet', 468: 'kTextureBakeSet', 469: 'kVertexBakeSet', 470: 'kSetRange', 471: 'kShaderGlow', 472: 'kShaderList', 473: 'kShadingMap', 474: 'kSamplerInfo', 475: 'kShapeFragment', 476: 'kSimpleVolumeShader', 477: 'kSl60', 478: 'kSnapshot', 479: 'kStoryBoard', 480: 'kSummaryObject', 481: 'kSuper', 482: 'kControl', 483: 'kSurfaceLuminance', 484: 'kSurfaceShader', 485: 'kTextureList', 486: 'kTextureEnv', 487: 'kEnvBall', 488: 'kEnvCube', 489: 'kEnvChrome', 490: 'kEnvSky', 491: 'kEnvSphere', 492: 'kTexture2d', 493: 'kBulge', 494: 'kChecker', 495: 'kCloth', 496: 'kFileTexture', 497: 'kFractal', 498: 'kGrid', 499: 'kMountain', 500: 'kRamp', 501: 'kStencil', 502: 'kWater', 503: 'kTexture3d', 504: 'kBrownian', 505: 'kCloud', 506: 'kCrater', 507: 'kGranite', 508: 'kLeather', 509: 'kMarble', 510: 'kRock', 511: 'kSnow', 512: 'kSolidFractal', 513: 'kStucco', 514: 'kTxSl', 515: 'kWood', 516: 'kTime', 517: 'kTimeToUnitConversion', 518: 'kRenderSetup', 519: 'kRenderGlobals', 520: 'kRenderGlobalsList', 521: 'kRenderQuality', 522: 'kResolution', 523: 'kHardwareRenderGlobals', 524: 'kArrayMapper', 525: 'kUnitConversion', 526: 'kUnitToTimeConversion', 527: 'kUseBackground', 528: 'kUnknown', 529: 'kVectorProduct', 530: 'kVolumeShader', 531: 'kComponent', 532: 'kCurveCVComponent', 533: 'kCurveEPComponent', 534: 'kCurveKnotComponent', 535: 'kCurveParamComponent', 536: 'kIsoparmComponent', 537: 'kPivotComponent', 538: 'kSurfaceCVComponent', 539: 'kSurfaceEPComponent', 540: 'kSurfaceKnotComponent', 541: 'kEdgeComponent', 542: 'kLatticeComponent', 543: 'kSurfaceRangeComponent', 544: 'kDecayRegionCapComponent', 545: 'kDecayRegionComponent', 546: 'kMeshComponent', 547: 'kMeshEdgeComponent', 548: 'kMeshPolygonComponent', 549: 'kMeshFrEdgeComponent', 550: 'kMeshVertComponent', 551: 'kMeshFaceVertComponent', 552: 'kOrientationComponent', 553: 'kSubVertexComponent', 554: 'kMultiSubVertexComponent', 555: 'kSetGroupComponent', 556: 'kDynParticleSetComponent', 557: 'kSelectionItem', 558: 'kDagSelectionItem', 559: 'kNonDagSelectionItem', 560: 'kItemList', 561: 'kAttribute', 562: 'kNumericAttribute', 563: 'kDoubleAngleAttribute', 564: 'kFloatAngleAttribute', 565: 'kDoubleLinearAttribute', 566: 'kFloatLinearAttribute', 567: 'kTimeAttribute', 568: 'kEnumAttribute', 569: 'kUnitAttribute', 570: 'kTypedAttribute', 571: 'kCompoundAttribute', 572: 'kGenericAttribute', 573: 'kLightDataAttribute', 574: 'kMatrixAttribute', 575: 'kFloatMatrixAttribute', 576: 'kMessageAttribute', 577: 'kPlugin', 578: 'kData', 579: 'kComponentListData', 580: 'kDoubleArrayData', 581: 'kIntArrayData', 582: 'kLatticeData', 583: 'kMatrixData', 584: 'kMeshData', 585: 'kNurbsSurfaceData', 586: 'kNurbsCurveData', 587: 'kNumericData', 588: 'kData2Double', 589: 'kData2Float', 590: 'kData2Int', 591: 'kData2Short', 592: 'kData3Double', 593: 'kData3Float', 594: 'kData3Long', 595: 'kData3Short', 596: 'kPluginData', 597: 'kPointArrayData', 598: 'kMatrixArrayData', 599: 'kSphereData', 600: 'kStringData', 601: 'kStringArrayData', 602: 'kVectorArrayData', 603: 'kSelectionList', 604: 'kTransformGeometry', 605: 'kCommEdgePtManip', 606: 'kCommEdgeOperManip', 607: 'kCommEdgeSegmentManip', 608: 'kCommCornerManip', 609: 'kCommCornerOperManip', 610: 'kPluginDeformerNode', 611: 'kTorus', 612: 'kPolyBoolOp', 613: 'kSingleShadingSwitch', 614: 'kDoubleShadingSwitch', 615: 'kTripleShadingSwitch', 616: 'kNurbsSquare', 617: 'kAnisotropy', 618: 'kNonLinear', 619: 'kDeformFunc', 620: 'kDeformBend', 621: 'kDeformTwist', 622: 'kDeformSquash', 623: 'kDeformFlare', 624: 'kDeformSine', 625: 'kDeformWave', 626: 'kDeformBendManip', 627: 'kDeformTwistManip', 628: 'kDeformSquashManip', 629: 'kDeformFlareManip', 630: 'kDeformSineManip', 631: 'kDeformWaveManip', 632: 'kSoftModManip', 633: 'kDistanceManip', 634: 'kScript', 635: 'kCurveFromMeshEdge', 636: 'kCurveCurveIntersect', 637: 'kNurbsCircular3PtArc', 638: 'kNurbsCircular2PtArc', 639: 'kOffsetSurface', 640: 'kRoundConstantRadius', 641: 'kRoundRadiusManip', 642: 'kRoundRadiusCrvManip', 643: 'kRoundConstantRadiusManip', 644: 'kThreePointArcManip', 645: 'kTwoPointArcManip', 646: 'kTextButtonManip', 647: 'kOffsetSurfaceManip', 648: 'kImageData', 649: 'kImageLoad', 650: 'kImageSave', 651: 'kImageNetSrc', 652: 'kImageNetDest', 653: 'kImageRender', 654: 'kImageAdd', 655: 'kImageDiff', 656: 'kImageMultiply', 657: 'kImageOver', 658: 'kImageUnder', 659: 'kImageColorCorrect', 660: 'kImageBlur', 661: 'kImageFilter', 662: 'kImageDepth', 663: 'kImageDisplay', 664: 'kImageView', 665: 'kImageMotionBlur', 666: 'kViewColorManager', 667: 'kMatrixFloatData', 668: 'kSkinShader', 669: 'kComponentManip', 670: 'kSelectionListData', 671: 'kObjectFilter', 672: 'kObjectMultiFilter', 673: 'kObjectNameFilter', 674: 'kObjectTypeFilter', 675: 'kObjectAttrFilter', 676: 'kObjectRenderFilter', 677: 'kObjectScriptFilter', 678: 'kSelectionListOperator', 679: 'kSubdiv', 680: 'kPolyToSubdiv', 681: 'kSkinClusterFilter', 682: 'kKeyingGroup', 683: 'kCharacter', 684: 'kCharacterOffset', 685: 'kDagPose', 686: 'kStitchAsNurbsShell', 687: 'kExplodeNurbsShell', 688: 'kNurbsBoolean', 689: 'kStitchSrfManip', 690: 'kForceUpdateManip', 691: 'kPluginManipContainer', 692: 'kPolySewEdge', 693: 'kPolyMergeVert', 694: 'kPolySmoothFacet', 695: 'kSmoothCurve', 696: 'kGlobalStitch', 697: 'kSubdivCVComponent', 698: 'kSubdivEdgeComponent', 699: 'kSubdivFaceComponent', 700: 'kUVManip2D', 701: 'kTranslateUVManip2D', 702: 'kRotateUVManip2D', 703: 'kScaleUVManip2D', 704: 'kPolyTweakUV', 705: 'kMoveUVShellManip2D', 706: 'kPluginShape', 707: 'kGeometryData', 708: 'kSingleIndexedComponent', 709: 'kDoubleIndexedComponent', 710: 'kTripleIndexedComponent', 711: 'kExtendSurfaceDistanceManip', 712: 'kSquareSrf', 713: 'kSquareSrfManip', 714: 'kSubdivToPoly', 715: 'kDynBase', 716: 'kDynEmitterManip', 717: 'kDynFieldsManip', 718: 'kDynBaseFieldManip', 719: 'kDynAirManip', 720: 'kDynNewtonManip', 721: 'kDynTurbulenceManip', 722: 'kDynSpreadManip', 723: 'kDynAttenuationManip', 724: 'kDynArrayAttrsData', 725: 'kPluginFieldNode', 726: 'kPluginEmitterNode', 727: 'kPluginSpringNode', 728: 'kDisplayLayer', 729: 'kDisplayLayerManager', 730: 'kPolyColorPerVertex', 731: 'kCreateColorSet', 732: 'kDeleteColorSet', 733: 'kCopyColorSet', 734: 'kBlendColorSet', 735: 'kPolyColorMod', 736: 'kPolyColorDel', 737: 'kCharacterMappingData', 738: 'kDynSweptGeometryData', 739: 'kWrapFilter', 740: 'kMeshVtxFaceComponent', 741: 'kBinaryData', 742: 'kAttribute2Double', 743: 'kAttribute2Float', 744: 'kAttribute2Short', 745: 'kAttribute2Int', 746: 'kAttribute3Double', 747: 'kAttribute3Float', 748: 'kAttribute3Short', 749: 'kAttribute3Long', 750: 'kReference', 751: 'kBlindData', 752: 'kBlindDataTemplate', 753: 'kPolyBlindData', 754: 'kPolyNormalPerVertex', 755: 'kNurbsToSubdiv', 756: 'kPluginIkSolver', 757: 'kInstancer', 758: 'kMoveVertexManip', 759: 'kStroke', 760: 'kBrush', 761: 'kStrokeGlobals', 762: 'kPluginGeometryData', 763: 'kLightLink', 764: 'kDynGlobals', 765: 'kPolyReduce', 766: 'kLodThresholds', 767: 'kChooser', 768: 'kLodGroup', 769: 'kMultDoubleLinear', 770: 'kFourByFourMatrix', 771: 'kTowPointOnSurfaceManip', 772: 'kSurfaceEdManip', 773: 'kSurfaceFaceComponent', 774: 'kClipScheduler', 775: 'kClipLibrary', 776: 'kSubSurface', 777: 'kSmoothTangentSrf', 778: 'kRenderPass', 779: 'kRenderPassSet', 780: 'kRenderLayer', 781: 'kRenderLayerManager', 782: 'kPassContributionMap', 783: 'kPrecompExport', 784: 'kRenderTarget', 785: 'kRenderedImageSource', 786: 'kImageSource', 787: 'kPolyFlipEdge', 788: 'kPolyExtrudeEdge', 789: 'kAnimBlend', 790: 'kAnimBlendInOut', 791: 'kPolyAppendVertex', 792: 'kUvChooser', 793: 'kSubdivCompId', 794: 'kVolumeAxis', 795: 'kDeleteUVSet', 796: 'kSubdHierBlind', 797: 'kSubdBlindData', 798: 'kCharacterMap', 799: 'kLayeredTexture', 800: 'kSubdivCollapse', 801: 'kParticleSamplerInfo', 802: 'kCopyUVSet', 803: 'kCreateUVSet', 804: 'kClip', 805: 'kPolySplitVert', 806: 'kSubdivData', 807: 'kSubdivGeom', 808: 'kUInt64ArrayData', 809: 'kInt64ArrayData', 810: 'kPolySplitEdge', 811: 'kSubdivReverseFaces', 812: 'kMeshMapComponent', 813: 'kSectionManip', 814: 'kXsectionSubdivEdit', 815: 'kSubdivToNurbs', 816: 'kEditCurve', 817: 'kEditCurveManip', 818: 'kCrossSectionManager', 819: 'kCreateSectionManip', 820: 'kCrossSectionEditManip', 821: 'kDropOffFunction', 822: 'kSubdBoolean', 823: 'kSubdModifyEdge', 824: 'kModifyEdgeCrvManip', 825: 'kModifyEdgeManip', 826: 'kScalePointManip', 827: 'kTransformBoxManip', 828: 'kSymmetryLocator', 829: 'kSymmetryMapVector', 830: 'kSymmetryMapCurve', 831: 'kCurveFromSubdivEdge', 832: 'kCreateBPManip', 833: 'kModifyEdgeBaseManip', 834: 'kSubdExtrudeFace', 835: 'kSubdivSurfaceVarGroup', 836: 'kSfRevolveManip', 837: 'kCurveFromSubdivFace', 838: 'kUnused1', 839: 'kUnused2', 840: 'kUnused3', 841: 'kUnused4', 842: 'kUnused5', 843: 'kUnused6', 844: 'kPolyTransfer', 845: 'kPolyAverageVertex', 846: 'kPolyAutoProj', 847: 'kPolyLayoutUV', 848: 'kPolyMapSewMove', 849: 'kSubdModifier', 850: 'kSubdMoveVertex', 851: 'kSubdMoveEdge', 852: 'kSubdMoveFace', 853: 'kSubdDelFace', 854: 'kSnapshotShape', 855: 'kSubdivMapComponent', 856: 'kJiggleDeformer', 857: 'kGlobalCacheControls', 858: 'kDiskCache', 859: 'kSubdCloseBorder', 860: 'kSubdMergeVert', 861: 'kBoxData', 862: 'kBox', 863: 'kRenderBox', 864: 'kSubdSplitFace', 865: 'kVolumeFog', 866: 'kSubdTweakUV', 867: 'kSubdMapCut', 868: 'kSubdLayoutUV', 869: 'kSubdMapSewMove', 870: 'kOcean', 871: 'kVolumeNoise', 872: 'kSubdAutoProj', 873: 'kSubdSubdivideFace', 874: 'kNoise', 875: 'kAttribute4Double', 876: 'kData4Double', 877: 'kSubdPlanProj', 878: 'kSubdTweak', 879: 'kSubdProjectionManip', 880: 'kSubdMappingManip', 881: 'kHardwareReflectionMap', 882: 'kPolyNormalizeUV', 883: 'kPolyFlipUV', 884: 'kHwShaderNode', 885: 'kPluginHardwareShader', 886: 'kPluginHwShaderNode', 887: 'kSubdAddTopology', 888: 'kSubdCleanTopology', 889: 'kImplicitCone', 890: 'kImplicitSphere', 891: 'kRampShader', 892: 'kVolumeLight', 893: 'kOceanShader', 894: 'kBevelPlus', 895: 'kStyleCurve', 896: 'kPolyCut', 897: 'kPolyPoke', 898: 'kPolyWedgeFace', 899: 'kPolyCutManipContainer', 900: 'kPolyCutManip', 901: 'kPolyMirrorManipContainer', 902: 'kPolyPokeManip', 903: 'kFluidTexture3D', 904: 'kFluidTexture2D', 905: 'kPolyMergeUV', 906: 'kPolyStraightenUVBorder', 907: 'kAlignManip', 908: 'kPluginTransformNode', 909: 'kFluid', 910: 'kFluidGeom', 911: 'kFluidData', 912: 'kSmear', 913: 'kStringShadingSwitch', 914: 'kStudioClearCoat', 915: 'kFluidEmitter', 916: 'kHeightField', 917: 'kGeoConnector', 918: 'kSnapshotPath', 919: 'kPluginObjectSet', 920: 'kQuadShadingSwitch', 921: 'kPolyExtrudeVertex', 922: 'kPairBlend', 923: 'kTextManip', 924: 'kViewManip', 925: 'kXformManip', 926: 'kMute', 927: 'kConstraint', 928: 'kTrimWithBoundaries', 929: 'kCurveFromMeshCoM', 930: 'kFollicle', 931: 'kHairSystem', 932: 'kRemapValue', 933: 'kRemapColor', 934: 'kRemapHsv', 935: 'kHairConstraint', 936: 'kTimeFunction', 937: 'kMentalRayTexture', 938: 'kObjectBinFilter', 939: 'kPolySmoothProxy', 940: 'kPfxGeometry', 941: 'kPfxHair', 942: 'kHairTubeShader', 943: 'kPsdFileTexture', 944: 'kKeyframeDelta', 945: 'kKeyframeDeltaMove', 946: 'kKeyframeDeltaScale', 947: 'kKeyframeDeltaAddRemove', 948: 'kKeyframeDeltaBlockAddRemove', 949: 'kKeyframeDeltaInfType', 950: 'kKeyframeDeltaTangent', 951: 'kKeyframeDeltaWeighted', 952: 'kKeyframeDeltaBreakdown', 953: 'kPolyMirror', 954: 'kPolyCreaseEdge', 955: 'kPolyPinUV', 956: 'kHikEffector', 957: 'kHikIKEffector', 958: 'kHikFKJoint', 959: 'kHikSolver', 960: 'kHikHandle', 961: 'kProxyManager', 962: 'kPolyAutoProjManip', 963: 'kPolyPrism', 964: 'kPolyPyramid', 965: 'kPolySplitRing', 966: 'kPfxToon', 967: 'kToonLineAttributes', 968: 'kPolyDuplicateEdge', 969: 'kFacade', 970: 'kMaterialFacade', 971: 'kEnvFacade', 972: 'kAISEnvFacade', 973: 'kLineModifier', 974: 'kPolyArrow', 975: 'kPolyPrimitiveMisc', 976: 'kPolyPlatonicSolid', 977: 'kPolyPipe', 978: 'kHikFloorContactMarker', 979: 'kHikGroundPlane', 980: 'kPolyComponentData', 981: 'kPolyHelix', 982: 'kCacheFile', 983: 'kHistorySwitch', 984: 'kClosestPointOnMesh', 985: 'kPinToGeometryUV', 986: 'kPinToGeometryProx', 987: 'kTransferAttributes', 988: 'kDynamicConstraint', 989: 'kNComponent', 990: 'kPolyBridgeEdge', 991: 'kCacheableNode', 992: 'kNucleus', 993: 'kNBase', 994: 'kCacheBase', 995: 'kCacheBlend', 996: 'kCacheTrack', 997: 'kKeyframeRegionManip', 998: 'kCurveNormalizerAngle', 999: 'kCurveNormalizerLinear', 1000: 'kHyperLayoutDG', 1001: 'kPluginImagePlaneNode', 1002: 'kNCloth', 1003: 'kNParticle', 1004: 'kNRigid', 1005: 'kPluginParticleAttributeMapperNode', 1006: 'kCameraSet', 1007: 'kPluginCameraSet', 1008: 'kContainer', 1009: 'kFloatVectorArrayData', 1010: 'kNObjectData', 1011: 'kNObject', 1012: 'kPluginConstraintNode', 1013: 'kAsset', 1014: 'kPolyEdgeToCurve', 1015: 'kAnimLayer', 1016: 'kBlendNodeBase', 1017: 'kBlendNodeBoolean', 1018: 'kBlendNodeDouble', 1019: 'kBlendNodeDoubleAngle', 1020: 'kBlendNodeDoubleLinear', 1021: 'kBlendNodeEnum', 1022: 'kBlendNodeFloat', 1023: 'kBlendNodeFloatAngle', 1024: 'kBlendNodeFloatLinear', 1025: 'kBlendNodeInt16', 1026: 'kBlendNodeInt32', 1027: 'kBlendNodeAdditiveScale', 1028: 'kBlendNodeAdditiveRotation', 1029: 'kPluginManipulatorNode', 1030: 'kNIdData', 1031: 'kNId', 1032: 'kFloatArrayData', 1033: 'kMembrane', 1034: 'kMergeVertsToolManip', 1035: 'kUint64SingleIndexedComponent', 1036: 'kPolyToolFeedbackManip', 1037: 'kPolySelectEditFeedbackManip', 1038: 'kWriteToFrameBuffer', 1039: 'kWriteToColorBuffer', 1040: 'kWriteToVectorBuffer', 1041: 'kWriteToDepthBuffer', 1042: 'kWriteToLabelBuffer', 1043: 'kStereoCameraMaster', 1044: 'kSequenceManager', 1045: 'kSequencer', 1046: 'kShot', 1047: 'kBlendNodeTime', 1048: 'kCreateBezierManip', 1049: 'kBezierCurve', 1050: 'kBezierCurveData', 1051: 'kNurbsCurveToBezier', 1052: 'kBezierCurveToNurbs', 1053: 'kPolySpinEdge', 1054: 'kPolyHoleFace', 1055: 'kPointOnPolyConstraint', 1056: 'kPolyConnectComponents', 1057: 'kSkinBinding', 1058: 'kVolumeBindManip', 1059: 'kVertexWeightSet', 1060: 'kNearestPointOnCurve', 1061: 'kColorProfile', 1062: 'kAdskMaterial', 1063: 'kContainerBase', 1064: 'kDagContainer', 1065: 'kPolyUVRectangle', 1066: 'kHardwareRenderingGlobals', 1067: 'kPolyProjectCurve', 1068: 'kRenderingList', 1069: 'kPolyExtrudeManip', 1070: 'kPolyExtrudeManipContainer', 1071: 'kThreadedDevice', 1072: 'kClientDevice', 1073: 'kPluginClientDevice', 1074: 'kPluginThreadedDevice', 1075: 'kTimeWarp', 1076: 'kAssembly', 1077: 'kClipGhostShape', 1078: 'kClipToGhostData', 1079: 'kMandelbrot', 1080: 'kMandelbrot3D', 1081: 'kGreasePlane', 1082: 'kGreasePlaneRenderShape', 1083: 'kGreasePencilSequence', 1084: 'kEditMetadata', 1085: 'kCreaseSet', 1086: 'kPolyEditEdgeFlow', 1087: 'kFosterParent', 1088: 'kSnapUVManip2D', 1089: 'kToolContext', 1090: 'kNLE', 1091: 'kShrinkWrapFilter', 1092: 'kEditsManager', 1093: 'kPolyBevel2', 1094: 'kPolyCBoolOp', 1095: 'kGeomBind', 1096: 'kColorMgtGlobals', 1097: 'kPolyBevel3', 1098: 'kTimeEditorClipBase', 1099: 'kTimeEditorClipEvaluator', 1100: 'kTimeEditorClip', 1101: 'kTimeEditor', 1102: 'kTimeEditorTracks', 1103: 'kTimeEditorInterpolator', 1104: 'kTimeEditorAnimSource', 1105: 'kCaddyManipBase', 1106: 'kPolyCaddyManip', 1107: 'kPolyModifierManipContainer', 1108: 'kPolyRemesh', 1109: 'kPolyContourProj', 1110: 'kContourProjectionManip', 1111: 'kNodeGraphEditorInfo', 1112: 'kNodeGraphEditorBookmarks', 1113: 'kNodeGraphEditorBookmarkInfo', 1114: 'kPluginSkinCluster', 1115: 'kPluginGeometryFilter', 1116: 'kPluginBlendShape', 1117: 'kPolyPassThru', 1118: 'kTrackInfoManager', 1119: 'kPolyClean', 1120: 'kShapeEditorManager', 1121: 'kOceanDeformer', 1122: 'kPoseInterpolatorManager', 1123: 'kControllerTag', 1124: 'kReForm', 1125: 'kCustomEvaluatorClusterNode', 1126: 'kPolyCircularize', 1127: 'kArubaTesselate', 1128: 'kReorderUVSet', 1129: 'kUfeProxyTransform', 1130: 'kLast'}</em><a class="headerlink" href="#msTools.core.maya.constants.CONSTANT_NAME_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a> type constants to their respective names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.DATA_CONSTANT_CLASS_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">DATA_CONSTANT_CLASS_MAPPING</code><em class="property"> = {1: &lt;type 'OpenMaya.MFnNumericData'&gt;, 2: &lt;type 'OpenMaya.MFnPluginData'&gt;, 3: &lt;type 'OpenMaya.MFnGeometryData'&gt;, 4: &lt;type 'OpenMaya.MFnStringData'&gt;, 5: &lt;type 'OpenMaya.MFnMatrixData'&gt;, 6: &lt;type 'OpenMaya.MFnStringArrayData'&gt;, 7: &lt;type 'OpenMaya.MFnDoubleArrayData'&gt;, 9: &lt;type 'OpenMaya.MFnIntArrayData'&gt;, 10: &lt;type 'OpenMaya.MFnPointArrayData'&gt;, 11: &lt;type 'OpenMaya.MFnVectorArrayData'&gt;, 13: &lt;type 'OpenMaya.MFnComponentListData'&gt;, 14: &lt;type 'OpenMaya.MFnMeshData'&gt;, 16: &lt;type 'OpenMaya.MFnNurbsCurveData'&gt;, 17: &lt;type 'OpenMaya.MFnNurbsSurfaceData'&gt;}</em><a class="headerlink" href="#msTools.core.maya.constants.DATA_CONSTANT_CLASS_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnData</span></code></a> data type constants to their respective function set class.
+Each function set is a strict subclass of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnData</span></code></a>.</p>
+<p>Valid data type constants are <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a2289df63092c4b8162836bb55bdcac0e" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kComponentList</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#abb49793d69dace7df98f9da7a2fb4594" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kDoubleArray</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a5095973bb6092507d9ea86a3d278d9eb" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kIntArray</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a27d916fe38d2b6a17e115fc4d49a31bf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kMatrix</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#aa4fc8af047bca4a078a175379e10e9ec" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kMesh</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#adb1f47b3d7e376a887762e2b04a95f52" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kNumeric</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a71be2a91175e97598b9ba812b9496128" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kNurbsCurve</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a35d051160f13f889c8dd225f139f35fd" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kNurbsSurface</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#ad3b9cae41dd3ca75560c178a47f681bb" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kPlugin</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a20df7651a663e765832e9c70e65e2477" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kPluginGeometry</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a3f9ad0c080ed6d1b4c9442e1575cdbe0" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kPointArray</span></code></a>,
+<a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a7924c2d30ab7de658af947d8ec0181e8" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kString</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a4f55e1748fc8eafe5113ba31fc4e7a4c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kStringArray</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a7ee44fd8ca886158da31541a9f34651c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kVectorArray</span></code></a>.</p>
+<p>The function set classes can be used to extract data from <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> wrappers of the corresponding data types.
+They can also be used to create <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_object_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MObject</span></code></a> data wrappers which can be used as default values when creating typed attributes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Function sets corresponding to the following data types cannot be used for the creation of typed attributes.</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#adb1f47b3d7e376a887762e2b04a95f52" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kNumeric</span></code></a>: Use function sets corresponding to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#abb49793d69dace7df98f9da7a2fb4594" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kDoubleArray</span></code></a> or <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a5095973bb6092507d9ea86a3d278d9eb" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kIntArray</span></code></a> to encapsulate numeric data.</li>
+<li><a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a20df7651a663e765832e9c70e65e2477" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kPluginGeometry</span></code></a>: Corresponds to the base function set type for <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#aa4fc8af047bca4a078a175379e10e9ec" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kMesh</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a71be2a91175e97598b9ba812b9496128" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kNurbsCurve</span></code></a> and <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html#a35d051160f13f889c8dd225f139f35fd" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFnData.kNurbsSurface</span></code></a>.</li>
+</ul>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#type" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.DATA_CONSTANT_NAME_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">DATA_CONSTANT_NAME_MAPPING</code><em class="property"> = {0: 'kInvalid', 1: 'kNumeric', 2: 'kPlugin', 3: 'kPluginGeometry', 4: 'kString', 5: 'kMatrix', 6: 'kStringArray', 7: 'kDoubleArray', 8: 'kFloatArray', 9: 'kIntArray', 10: 'kPointArray', 11: 'kVectorArray', 12: 'kMatrixArray', 13: 'kComponentList', 14: 'kMesh', 15: 'kLattice', 16: 'kNurbsCurve', 17: 'kNurbsSurface', 18: 'kSphere', 19: 'kDynArrayAttrs', 20: 'kDynSweptGeometry', 21: 'kSubdSurface', 22: 'kNObject', 23: 'kNId', 24: 'kAny', 25: 'kLast'}</em><a class="headerlink" href="#msTools.core.maya.constants.DATA_CONSTANT_NAME_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnData</span></code></a> data type constants to their respective names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.DISTANCE_UNIT_CONSTANT_NAME_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">DISTANCE_UNIT_CONSTANT_NAME_MAPPING</code><em class="property"> = {0: 'kInvalid', 1: 'kInches', 2: 'kFeet', 3: 'kYards', 4: 'kMiles', 5: 'kMillimeters', 6: 'kCentimeters', 7: 'kKilometers', 8: 'kMeters', 9: 'kLast'}</em><a class="headerlink" href="#msTools.core.maya.constants.DISTANCE_UNIT_CONSTANT_NAME_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_distance_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MDistance</span></code></a> unit type constants to their respective names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_NAME_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">NUMERIC_DATA_CONSTANT_NAME_MAPPING</code><em class="property"> = {0: 'kInvalid', 1: 'kBoolean', 2: 'kByte', 3: 'kChar', 4: 'kShort', 5: 'k2Short', 6: 'k3Short', 7: 'kInt', 8: 'k2Long', 9: 'k3Int', 10: 'kInt64', 11: 'kFloat', 12: 'k2Float', 13: 'k3Float', 14: 'kDouble', 15: 'k2Double', 16: 'k3Double', 17: 'k4Double', 18: 'kAddr', 19: 'kLast'}</em><a class="headerlink" href="#msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_NAME_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnNumericData</span></code></a> numeric type constants to their respective names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_SIZE_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">NUMERIC_DATA_CONSTANT_SIZE_MAPPING</code><em class="property"> = {1: 1, 2: 1, 3: 1, 4: 1, 5: 2, 6: 3, 7: 1, 8: 2, 9: 3, 10: 1, 11: 1, 12: 2, 13: 3, 14: 1, 15: 2, 16: 3, 17: 4, 18: 1}</em><a class="headerlink" href="#msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_SIZE_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnNumericData</span></code></a> numeric type constants to a value representing the size of the numeric type.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NUMERIC_DATA_CONSTANT_SIZE_MAPPING</span><span class="p">[</span><span class="n">OpenMaya</span><span class="o">.</span><span class="n">MFnNumericData</span><span class="o">.</span><span class="n">kFloat</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="n">NUMERIC_DATA_CONSTANT_SIZE_MAPPING</span><span class="p">[</span><span class="n">OpenMaya</span><span class="o">.</span><span class="n">MFnNumericData</span><span class="o">.</span><span class="n">k3Int</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_TYPE_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">NUMERIC_DATA_CONSTANT_TYPE_MAPPING</code><em class="property"> = {1: &lt;type 'bool'&gt;, 2: &lt;type 'int'&gt;, 3: &lt;type 'int'&gt;, 4: &lt;type 'int'&gt;, 5: &lt;type 'int'&gt;, 6: &lt;type 'int'&gt;, 7: &lt;type 'int'&gt;, 8: &lt;type 'int'&gt;, 9: &lt;type 'int'&gt;, 10: &lt;type 'int'&gt;, 11: &lt;type 'float'&gt;, 12: &lt;type 'float'&gt;, 13: &lt;type 'float'&gt;, 14: &lt;type 'float'&gt;, 15: &lt;type 'float'&gt;, 16: &lt;type 'float'&gt;, 17: &lt;type 'float'&gt;, 18: &lt;type 'int'&gt;}</em><a class="headerlink" href="#msTools.core.maya.constants.NUMERIC_DATA_CONSTANT_TYPE_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_numeric_data_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnNumericData</span></code></a> numeric type constants to the class of the corresponding numeric data type.
+Classes are either <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> or <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#type" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.SHAPE_CONSTANT_CLASS_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">SHAPE_CONSTANT_CLASS_MAPPING</code><em class="property"> = {250: &lt;type 'OpenMaya.MFnCamera'&gt;, 267: &lt;type 'OpenMaya.MFnNurbsCurve'&gt;, 294: &lt;type 'OpenMaya.MFnNurbsSurface'&gt;, 296: &lt;type 'OpenMaya.MFnMesh'&gt;}</em><a class="headerlink" href="#msTools.core.maya.constants.SHAPE_CONSTANT_CLASS_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a> shape type constants to their respective shape function set class.
+Each function set is a strict subclass of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_dag_node_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFnDagNode</span></code></a>.</p>
+<p>Valid shape type constants are <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a2e5dcab7b4c031a8d17cf8315724071c" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kCamera</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aca1e204a1581fafb7c439d66c4ff5adf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMesh</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#ac1f3c226756e74e9222636085351e08f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kNurbsCurve</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a13b2152ddfc55c0400431d8cc2c0c701" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kNurbsSurface</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Not all shape types have a respective function set.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#type" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.SHAPE_CONSTANT_COMPONENT_CONSTANTS_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">SHAPE_CONSTANT_COMPONENT_CONSTANTS_MAPPING</code><em class="property"> = {267: (532,), 294: (538,), 296: (550, 547, 548, 740)}</em><a class="headerlink" href="#msTools.core.maya.constants.SHAPE_CONSTANT_COMPONENT_CONSTANTS_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a> shape type constants to <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MFn</span></code></a> component type constants.</p>
+<p>Valid shape type constants are <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#aca1e204a1581fafb7c439d66c4ff5adf" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kMesh</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#a13b2152ddfc55c0400431d8cc2c0c701" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kNurbsSurface</span></code></a>, <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_fn_html#ac1f3c226756e74e9222636085351e08f" title="(in Maya Python API v2.0)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">OpenMaya.MFn.kNurbsCurve</span></code></a>.</p>
+<p>Each shape type constant maps to one or more component type constants, representing the types of components which can be retrieved from a shape of the given type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, …)]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="msTools.core.maya.constants.TIME_UNIT_CONSTANT_NAME_MAPPING">
+<code class="descclassname">msTools.core.maya.constants.</code><code class="descname">TIME_UNIT_CONSTANT_NAME_MAPPING</code><em class="property"> = {0: 'kInvalid', 1: 'kHours', 2: 'kMinutes', 3: 'kSeconds', 4: 'kMilliseconds', 5: 'kGames', 6: 'k24FPS', 7: 'k25FPS', 8: 'kNTSCFrame', 9: 'kShowScan', 10: 'kPALField', 11: 'kNTSCField', 12: 'k2FPS', 13: 'k3FPS', 14: 'k4FPS', 15: 'k5FPS', 16: 'k6FPS', 17: 'k8FPS', 18: 'k10FPS', 19: 'k12FPS', 20: 'k16FPS', 21: 'k20FPS', 22: 'k40FPS', 23: 'k75FPS', 24: 'k80FPS', 25: 'k100FPS', 26: 'k120FPS', 27: 'k125FPS', 28: 'k150FPS', 29: 'k200FPS', 30: 'k240FPS', 31: 'k250FPS', 32: 'k300FPS', 33: 'k375FPS', 34: 'k400FPS', 35: 'k500FPS', 36: 'k600FPS', 37: 'k750FPS', 38: 'k1200FPS', 39: 'k1500FPS', 40: 'k2000FPS', 41: 'k3000FPS', 42: 'k6000FPS', 43: 'k23_976FPS', 44: 'k29_97FPS', 45: 'k29_97DF', 46: 'k47_952FPS', 47: 'k59_94FPS', 48: 'k44100FPS', 49: 'k48000FPS', 50: 'k90FPS', 51: 'kUserDef', 52: 'kLast'}</em><a class="headerlink" href="#msTools.core.maya.constants.TIME_UNIT_CONSTANT_NAME_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant mapping of <a class="reference external" href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=Maya_SDK_MERGED_py_ref_class_open_maya_1_1_m_time_html" title="(in Maya Python API v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenMaya.MTime</span></code></a> unit type constants to their respective names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/stdtypes.html#dict" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.core.maya.context_utils.html" class="btn btn-neutral float-right" title="context_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.core.maya.component_utils.html" class="btn btn-neutral float-left" title="component_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

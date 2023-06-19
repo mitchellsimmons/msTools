@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>decorator_utils &mdash; msTools 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/update_sidebar.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="dg_utils" href="msTools.core.maya.dg_utils.html" />
+    <link rel="prev" title="dag_utils" href="msTools.core.maya.dag_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> msTools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">msTools.core.maya</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.attribute_utils.html">attribute_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.callback_utils.html">callback_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.component_utils.html">component_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dag_utils.html">dag_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">decorator_utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-msTools.core.maya.decorator_utils">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.dg_utils.html">dg_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.math_utils.html">math_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.name_utils.html">name_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.om_utils.html">om_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.plug_utils.html">plug_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.reference_utils.html">reference_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.shader_utils.html">shader_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.maya.uuid_utils.html">uuid_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.core.py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.class_utils.html">class_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.decorator_utils.html">decorator_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.logging_utils.html">logging_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.metaclasses.html">metaclasses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.module_utils.html">module_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.path_utils.html">path_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.core.py.structures.html">structures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.maya</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.exceptions.html">exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.nodeEditor_utils.html">nodeEditor_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.maya.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.coreUI.qt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.animation_utils.html">animation_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.application_utils.html">application_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.constants.html">constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.context_utils.html">context_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.event_utils.html">event_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.graphicsItem_utils.html">graphicsItem_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.inspect_utils.html">inspect_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.resource_utils.html">resource_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.shape_utils.html">shape_utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.coreUI.qt.widget_utils.html">widget_utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.metadata.systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.metadata.systems.base.html">base</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.callback_manager.html">callback_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.tool_manager.html">tool_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.uuid_manager.html">uuid_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.docExplorer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.main_setup.html">main_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.docExplorer.maya_setup.html">maya_setup</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.nodeEditorExtensions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.alignNodeTool_setup.html">alignNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.backgroundOptimisation_manager.html">backgroundOptimisation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.createNodeTool_setup.html">createNodeTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.importExportTool_setup.html">importExportTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.layoutTool_setup.html">layoutTool_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.maintainLayout_manager.html">maintainLayout_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.menu_setup.html">menu_setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.nodeGraphEditorInfo_manager.html">nodeGraphEditorInfo_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.setup.html">setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.sceneActivation_manager.html">sceneActivation_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.nodeEditorExtensions.shakeToDisconnect_manager.html">shakeToDisconnect_manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">msTools.tools.menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msTools.tools.menu.setup.html">setup</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">msTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>decorator_utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/msTools.core.maya.decorator_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="decorator-utils">
+<h1>decorator_utils<a class="headerlink" href="#decorator-utils" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.disableCycleChecks" title="msTools.core.maya.decorator_utils.disableCycleChecks"><code class="xref py py-func docutils literal notranslate"><span class="pre">disableCycleChecks()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.disableFilePrompting" title="msTools.core.maya.decorator_utils.disableFilePrompting"><code class="xref py py-func docutils literal notranslate"><span class="pre">disableFilePrompting()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.disableUndoQueue" title="msTools.core.maya.decorator_utils.disableUndoQueue"><code class="xref py py-func docutils literal notranslate"><span class="pre">disableUndoQueue()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.restoreSelection" title="msTools.core.maya.decorator_utils.restoreSelection"><code class="xref py py-func docutils literal notranslate"><span class="pre">restoreSelection()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.returnNodesCreatedBy" title="msTools.core.maya.decorator_utils.returnNodesCreatedBy"><code class="xref py py-func docutils literal notranslate"><span class="pre">returnNodesCreatedBy()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.setActiveNamespace" title="msTools.core.maya.decorator_utils.setActiveNamespace"><code class="xref py py-func docutils literal notranslate"><span class="pre">setActiveNamespace()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.setActiveUnit" title="msTools.core.maya.decorator_utils.setActiveUnit"><code class="xref py py-func docutils literal notranslate"><span class="pre">setActiveUnit()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.undo" title="msTools.core.maya.decorator_utils.undo"><code class="xref py py-func docutils literal notranslate"><span class="pre">undo()</span></code></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="autobasicsummary-function-data first last"><cite>def</cite> <a class="reference internal" href="#msTools.core.maya.decorator_utils.undoOnError" title="msTools.core.maya.decorator_utils.undoOnError"><code class="xref py py-func docutils literal notranslate"><span class="pre">undoOnError()</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-msTools.core.maya.decorator_utils">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-msTools.core.maya.decorator_utils" title="Permalink to this headline">¶</a></h2>
+<p>Decorators for use in Maya.</p>
+<hr class="docutils" />
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Decorators are used to modify a function by wrapping it in an outer scope.
+The outer scope is often used to create a temporary context for the decorated function or complete some setup and/or teardown task.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@decorator</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">completeDecoratedActions</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></blockquote>
+<hr class="docutils" />
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.disableCycleChecks">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">disableCycleChecks</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.disableCycleChecks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for temporarily disabling cycle checks.</p>
+<p>Designed for situations where a benign cycle is known to momentarily occur.
+Should not be used to supress warnings resulting from malign cycles.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.disableFilePrompting">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">disableFilePrompting</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.disableFilePrompting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for temporarily disabling file prompting.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">File prompting dialogs include error messages that require user confirmation and missing file reference dialogs.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.disableUndoQueue">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">disableUndoQueue</code><span class="sig-paren">(</span><em>flush=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.disableUndoQueue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator factory for producing a decorator which will temporarily disable the undo queue.</p>
+<p>Allows the user to specify whether the generated decorator will flush the undo queue upon disabling.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Performing destructive operations whilst the undo queue is disabled and unflushed can produce an unstable state once the queue is re-enabled.
+Maya may be unable to properly reconstruct the former state of the scene when undoing operations that try to bypass some destructive action.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flush</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – If <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>, flush the undo queue upon calling the decorated function, otherwise leave the queue unflushed.
+Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#True" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@disableUndoQueue</span><span class="p">(</span><span class="n">flush</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Completes some actions with the undo queue disabled but unflushed.&quot;&quot;&quot;</span>
+    <span class="n">completeSomeActions</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.restoreSelection">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">restoreSelection</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.restoreSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for restoring an initial selection after completing some actions which affect the active selection list.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@restoreSelection</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Creates a transform then restores the initial selection.&quot;&quot;&quot;</span>
+    <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.returnNodesCreatedBy">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">returnNodesCreatedBy</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.returnNodesCreatedBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator whichs returns nodes created during the execution of a function.</p>
+<p>Simple wrapper of <a class="reference internal" href="msTools.core.maya.callback_utils.html#msTools.core.maya.callback_utils.getNodesCreatedBy" title="msTools.core.maya.callback_utils.getNodesCreatedBy"><code class="xref py py-func docutils literal notranslate"><span class="pre">msTools.core.maya.callback_utils.getNodesCreatedBy()</span></code></a>.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@returnNodesCreatedBy</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Creates a couple of transforms and returns a list containing pointers to each.&quot;&quot;&quot;</span>
+    <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">)</span>
+    <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.setActiveNamespace">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">setActiveNamespace</code><span class="sig-paren">(</span><em>namespace</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.setActiveNamespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator factory for producing a decorator which will temporarily change the active namespace.</p>
+<p>Allows the user to specify which namespace the generated decorator will set active.
+Useful if you want to create some nodes and have them automatically assigned to a namespace.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>namespace</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>) – <p>Absolute or relative namespace.</p>
+<ul class="simple">
+<li>If absolute, a leading <code class="docutils literal notranslate"><span class="pre">':'</span></code> representing the root namespace must be used.</li>
+<li>If relative, <code class="docutils literal notranslate"><span class="pre">namespace</span></code> must be a child of the current namespace.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@setActiveNamespace</span><span class="p">(</span><span class="s2">&quot;:bar&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Completes some actions with &quot;:bar&quot; set as the active namespace.&quot;&quot;&quot;</span>
+    <span class="n">completeSomeActions</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.setActiveUnit">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">setActiveUnit</code><span class="sig-paren">(</span><em>angle=None</em>, <em>linear=None</em>, <em>time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.setActiveUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator factory for producing a decorator which can temporarily change the current units.</p>
+<p>Allows the user to specify which units the generated decorator will change.
+Only unit types with non-<a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a> values will be changed upon calling the decorated function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Set the current angular unit. Valid values are
+<code class="docutils literal notranslate"><span class="pre">'deg'</span></code>, <code class="docutils literal notranslate"><span class="pre">'degree'</span></code>, <code class="docutils literal notranslate"><span class="pre">'rad'</span></code>, <code class="docutils literal notranslate"><span class="pre">'radian'</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>linear</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Set the current linear unit. Valid values are
+<code class="docutils literal notranslate"><span class="pre">'mm'</span></code>, <code class="docutils literal notranslate"><span class="pre">'millimeter'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cm'</span></code>, <code class="docutils literal notranslate"><span class="pre">'centimeter'</span></code>, <code class="docutils literal notranslate"><span class="pre">'m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'meter'</span></code>, <code class="docutils literal notranslate"><span class="pre">'km'</span></code>, <code class="docutils literal notranslate"><span class="pre">'kilometer'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'in'</span></code>, <code class="docutils literal notranslate"><span class="pre">'inch'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ft'</span></code>, <code class="docutils literal notranslate"><span class="pre">'foot'</span></code>, <code class="docutils literal notranslate"><span class="pre">'yd'</span></code>, <code class="docutils literal notranslate"><span class="pre">'yard'</span></code>, <code class="docutils literal notranslate"><span class="pre">'mi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'mile'</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+<li><strong>time</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#basestring" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">basestring</span></code></a>, optional) – Set the current time unit. Valid values are
+<code class="docutils literal notranslate"><span class="pre">'hour'</span></code>, <code class="docutils literal notranslate"><span class="pre">'min'</span></code>, <code class="docutils literal notranslate"><span class="pre">'sec'</span></code>, <code class="docutils literal notranslate"><span class="pre">'millisec'</span></code>, <code class="docutils literal notranslate"><span class="pre">'game'</span></code>, <code class="docutils literal notranslate"><span class="pre">'film'</span></code>, <code class="docutils literal notranslate"><span class="pre">'pal'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ntsc'</span></code>, <code class="docutils literal notranslate"><span class="pre">'show'</span></code>, <code class="docutils literal notranslate"><span class="pre">'palf'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'ntscf'</span></code>, <code class="docutils literal notranslate"><span class="pre">'23.976fps'</span></code>, <code class="docutils literal notranslate"><span class="pre">'29.97fps'</span></code>, <code class="docutils literal notranslate"><span class="pre">'29.97df'</span></code>, <code class="docutils literal notranslate"><span class="pre">'47.952fps'</span></code>, <code class="docutils literal notranslate"><span class="pre">'59.94fps'</span></code>, <code class="docutils literal notranslate"><span class="pre">'44100fps'</span></code>, <code class="docutils literal notranslate"><span class="pre">'48000fps'</span></code>. Defaults to <a class="reference external" href="https://docs.python.org/2.7/library/constants.html#None" title="(in Python v2.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@setActiveUnit</span><span class="p">(</span><span class="n">linear</span><span class="o">=</span><span class="s2">&quot;meter&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Completes some actions with the linear unit set to meters.&quot;&quot;&quot;</span>
+    <span class="n">completeSomeActions</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.undo">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">undo</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.undo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for encapsulating Maya commands in a chunk which will be undone upon exiting the decorated function. Mostly useful for testing purposes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The chunk is undone regardless of any exceptions raised from within the decorated function.</p>
+</div>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@undo</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Creates a transform then immediately undoes the operation.&quot;&quot;&quot;</span>
+    <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="msTools.core.maya.decorator_utils.undoOnError">
+<code class="descclassname">msTools.core.maya.decorator_utils.</code><code class="descname">undoOnError</code><span class="sig-paren">(</span><em>*exceptionTypes</em><span class="sig-paren">)</span><a class="headerlink" href="#msTools.core.maya.decorator_utils.undoOnError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator factory for producing a decorator which will encapsulate Maya commands in an undoable chunk.
+The chunk will be undone if certain types of unhandled exceptions are raised from within the decorated function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>*exceptionTypes</strong> – Sequence of class types which are (non-strict) subclasses of <a class="reference external" href="https://docs.python.org/2.7/library/exceptions.html#exceptions.Exception" title="(in Python v2.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">Exception</span></code></a>.
+Unhandled exceptions of these types or any subtypes will result in all encapsulated operations being undone before the exception is propagated further.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@undoOnError</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Completes some actions which will be undone if a RuntimeError is raised.&quot;&quot;&quot;</span>
+    <span class="n">completeSomeActions</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msTools.core.maya.dg_utils.html" class="btn btn-neutral float-right" title="dg_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="msTools.core.maya.dag_utils.html" class="btn btn-neutral float-left" title="dag_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mitchell Simmons
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
